@@ -345,6 +345,7 @@ code {
 }
 #header {
   background: #26272b;
+  background-image: url("/css/images/background.jpeg");
   padding-bottom: 60px;
   position: relative;
 }
@@ -1618,6 +1619,7 @@ a.article-title:hover {
 }
 #footer {
   background: #33363b;
+  background-image: url("/css/images/background.jpeg");
   margin-top: 60px;
   color: #aaa;
   line-height: 1.6em;
