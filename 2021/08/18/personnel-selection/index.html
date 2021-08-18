@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+
+    
+
+    
+    <title>人员选择器 | survival_F</title>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="keywords" content="Vue3,ElementPlus" />
+    
+    <meta name="description" content="使用 Element-plus 中的 Transfer 穿梭框 组件封装的一个人员选择器，使用的是 VUE3 中的 setup 语法糖写法 选择器子组件的.vue 文件代码userMailList  为全部人员 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051">
+<meta property="og:type" content="article">
+<meta property="og:title" content="人员选择器">
+<meta property="og:url" content="https://surviavalf.github.io/2021/08/18/personnel-selection/index.html">
+<meta property="og:site_name" content="survival_F">
+<meta property="og:description" content="使用 Element-plus 中的 Transfer 穿梭框 组件封装的一个人员选择器，使用的是 VUE3 中的 setup 语法糖写法 选择器子组件的.vue 文件代码userMailList  为全部人员 123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://surviavalf.github.io/css/images/webFrontEnd/peopleSelect.png">
+<meta property="article:published_time" content="2021-08-18T03:14:07.000Z">
+<meta property="article:modified_time" content="2021-08-18T05:01:40.610Z">
+<meta property="article:author" content="zhangyifeng">
+<meta property="article:tag" content="Vue3">
+<meta property="article:tag" content="ElementPlus">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://surviavalf.github.io/css/images/webFrontEnd/peopleSelect.png">
+    
+
+    
+        <link rel="alternate" href="/" title="survival_F" type="application/atom+xml" />
+    
+
+    
+        <link rel="icon" href="/css/images/bitbug_favicon.ico" />
+    
+
+    
+<link rel="stylesheet" href="/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/libs/titillium-web/styles.css">
+
+    
+<link rel="stylesheet" href="/libs/source-code-pro/styles.css">
+
+
+    
+<link rel="stylesheet" href="/css/style.css">
+
+
+    
+<script src="/libs/jquery/3.5.0/jquery.min.js"></script>
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/lightgallery/css/lightgallery.min.css">
+
+    
+    
+        
+<link rel="stylesheet" href="/libs/justified-gallery/justifiedGallery.min.css">
+
+    
+    
+    
+    
+
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+    <div id="header-outer" class="outer">
+        <div class="container">
+            <div class="container-inner">
+                <div id="header-title">
+                    <h1 class="logo-wrap">
+                        <a href="/" class="logo"></a>
+                    </h1>
+                    
+                </div>
+                <div id="header-inner" class="nav-container">
+                    <a id="main-nav-toggle" class="nav-icon fa fa-bars"></a>
+                    <div class="nav-container-inner">
+                        <ul id="main-nav">
+                            
+                                <li class="main-nav-list-item" >
+                                    <a class="main-nav-list-link" href="/">主页</a>
+                                </li>
+                            
+                                    <ul class="main-nav-list"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><ul class="main-nav-list-child"><li class="main-nav-list-item"><a class="main-nav-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Element%E7%BB%84%E4%BB%B6/">Element组件</a></li></ul></li></ul>
+                                
+                        </ul>
+                        <nav id="sub-nav">
+                            <div id="search-form-wrap">
+
+    <form class="search-form">
+        <input type="text" class="ins-search-input search-form-input" placeholder="搜索" />
+        <button type="submit" class="search-form-submit"></button>
+    </form>
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="想要查找什么..." />
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+            UNTITLED: '(未命名)',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+
+<script src="/js/insight.js"></script>
+
+
+</div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+        <div class="container">
+            <div class="main-body container-inner">
+                <div class="main-body-inner">
+                    <section id="main">
+                        <div class="main-body-header">
+    <h1 class="header">
+    
+    <a class="page-title-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><i class="icon fa fa-angle-right"></i><a class="page-title-link" href="/categories/web%E5%89%8D%E7%AB%AF/Element%E7%BB%84%E4%BB%B6/">Element组件</a>
+    </h1>
+</div>
+
+                        <div class="main-body-content">
+                            <article id="post-personnel-selection" class="article article-single article-type-post" itemscope itemprop="blogPost">
+    <div class="article-inner">
+        
+            <header class="article-header">
+                
+    
+        <h1 class="article-title" itemprop="name">
+        人员选择器
+        </h1>
+    
+
+            </header>
+        
+        
+            <div class="article-meta">
+                
+  <div class="article-date">
+    <i class="fa fa-calendar"></i>
+    <a href="/2021/08/18/personnel-selection/" class="article-date">
+       <time datetime="2021-08-18T03:14:07.000Z" itemprop="datePublished">2021-08-18</time>
+    </a>
+  </div>
+
+
+<div class="article-date">
+  <i class="fa fa-calendar-plus-o"></i>
+  <a href="/2021/08/18/personnel-selection/" class="article-date">
+     <time datetime="2021-08-18T05:01:40.610Z" itemprop="dateModified">2021-08-18</time>
+  </a>
+</div>
+
+
+                
+
+                
+    <div class="article-tag">
+        <i class="fa fa-tag"></i>
+        <a class="tag-link-link" href="/tags/ElementPlus/" rel="tag">ElementPlus</a>, <a class="tag-link-link" href="/tags/Vue3/" rel="tag">Vue3</a>
+    </div>
+
+                
+
+                
+
+            </div>
+        
+        
+        <div class="article-entry" itemprop="articleBody">
+            
+
+            
+
+            
+
+            <p><img src="/css/images/webFrontEnd/peopleSelect.png"></p>
+<p>使用 <a target="_blank" rel="noopener" href="https://element-plus.gitee.io/#/zh-CN">Element-plus</a> 中的 <a target="_blank" rel="noopener" href="https://element-plus.gitee.io/#/zh-CN/component/transfer">Transfer 穿梭框</a> 组件封装的一个人员选择器，使用的是 VUE3 中的 setup 语法糖写法</p>
+<h2 id="选择器子组件的-vue-文件代码"><a href="#选择器子组件的-vue-文件代码" class="headerlink" title="选择器子组件的.vue 文件代码"></a>选择器子组件的.vue 文件代码</h2><p>userMailList  为全部人员</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br><span class="line">82</span><br><span class="line">83</span><br><span class="line">84</span><br><span class="line">85</span><br><span class="line">86</span><br><span class="line">87</span><br><span class="line">88</span><br><span class="line">89</span><br><span class="line">90</span><br><span class="line">91</span><br><span class="line">92</span><br><span class="line">93</span><br><span class="line">94</span><br><span class="line">95</span><br><span class="line">96</span><br><span class="line">97</span><br><span class="line">98</span><br><span class="line">99</span><br><span class="line">100</span><br><span class="line">101</span><br><span class="line">102</span><br><span class="line">103</span><br><span class="line">104</span><br><span class="line">105</span><br><span class="line">106</span><br><span class="line">107</span><br><span class="line">108</span><br><span class="line">109</span><br><span class="line">110</span><br><span class="line">111</span><br><span class="line">112</span><br><span class="line">113</span><br><span class="line">114</span><br><span class="line">115</span><br><span class="line">116</span><br><span class="line">117</span><br><span class="line">118</span><br><span class="line">119</span><br><span class="line">120</span><br><span class="line">121</span><br><span class="line">122</span><br><span class="line">123</span><br><span class="line">124</span><br><span class="line">125</span><br><span class="line">126</span><br><span class="line">127</span><br><span class="line">128</span><br><span class="line">129</span><br><span class="line">130</span><br><span class="line">131</span><br><span class="line">132</span><br><span class="line">133</span><br></pre></td><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">el-dialog</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">    <span class="attr">title</span>=<span class="string">&quot;人员选择&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">    <span class="attr">v-model</span>=<span class="string">&quot;show&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">    <span class="attr">width</span>=<span class="string">&quot;640px&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">    <span class="attr">:close-on-click-modal</span>=<span class="string">&quot;false&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">    <span class="attr">center</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">    @<span class="attr">close</span>=<span class="string">&quot;clearitems&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">  &gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;peopleCheck&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">el-transfer</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">        <span class="attr">v-model</span>=<span class="string">&quot;yetPeople&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">        <span class="attr">filterable</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">        <span class="attr">:filter-method</span>=<span class="string">&quot;filterMethod&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">        <span class="attr">filter-placeholder</span>=<span class="string">&quot;请输入人员拼音&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">        <span class="attr">:data</span>=<span class="string">&quot;allPeople&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">        @<span class="attr">left-check-change</span>=<span class="string">&quot;changeLeftPeople&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">        <span class="attr">:titles</span>=<span class="string">&quot;[&#x27;未选人员&#x27;, &#x27;已选人员&#x27;]&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">      /&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">template</span> #<span class="attr">footer</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">&quot;dialog-footer&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">el-button</span> @<span class="attr">click</span>=<span class="string">&quot;check&quot;</span>&gt;</span>确认<span class="tag">&lt;/<span class="name">el-button</span>&gt;</span></span></span><br><span class="line"><span class="xml">      <span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml">  <span class="tag">&lt;/<span class="name">el-dialog</span>&gt;</span></span></span><br><span class="line">&lt;/template&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">setup</span>&gt;</span><span class="javascript"></span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="keyword">import</span> &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  ref,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  reactive,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  onMounted,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  defineEmits,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  defineProps,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  defineExpose,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  watch,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">&#125; <span class="keyword">from</span> <span class="string">&quot;vue&quot;</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="keyword">import</span> &#123; userMailList &#125; <span class="keyword">from</span> <span class="string">&quot;@/http/api/workbench&quot;</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="keyword">const</span> emits = defineEmits([<span class="string">&quot;clearitems&quot;</span>, <span class="string">&quot;backData&quot;</span>]);</span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="keyword">const</span> props = defineProps(&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  <span class="attr">choosePeople</span>: &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="attr">type</span>: <span class="built_in">Array</span>,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="attr">default</span>: <span class="function">() =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="keyword">return</span> [];</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  &#125;,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  <span class="attr">type</span>: &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="attr">type</span>: <span class="built_in">String</span>,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="attr">default</span>: <span class="function">() =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  &#125;,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">&#125;);</span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="keyword">let</span> show = ref(<span class="literal">true</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="keyword">let</span> yetPeople = ref([]);</span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="keyword">let</span> allPeople = ref([]);</span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="keyword">let</span> leftPeople = ref(<span class="string">&quot;&quot;</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="comment">//拉取数据</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="keyword">const</span> generateData = <span class="keyword">async</span> () =&gt; &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  <span class="keyword">let</span> res = <span class="keyword">await</span> userMailList(&#123;&#125;);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  <span class="keyword">let</span> peopleList = res.data;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  <span class="keyword">const</span> datain = [];</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  peopleList.forEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    datain.push(&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="attr">label</span>: item.userName,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="attr">key</span>: item.accountId,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="attr">spell</span>: item.userName,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="attr">disabled</span>: item.isMain === <span class="literal">true</span> ? <span class="literal">true</span> : <span class="literal">false</span>,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="attr">isAdmin</span>: item.isMain,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  &#125;);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  allPeople.value = datain;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  yetPeople.value = <span class="built_in">JSON</span>.parse(<span class="built_in">JSON</span>.stringify(props.choosePeople));</span></span></span><br><span class="line"><span class="javascript"><span class="xml">&#125;;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="comment">//确认</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="keyword">const</span> check = <span class="function">() =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  emits(<span class="string">&quot;backData&quot;</span>, yetPeople.value);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  clearitems();</span></span></span><br><span class="line"><span class="javascript"><span class="xml">&#125;;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="comment">//左侧选择的人员监听</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="keyword">const</span> changeLeftPeople = <span class="function">(<span class="params">query, item</span>) =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  leftPeople.value = query;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">&#125;;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="comment">//退出</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="keyword">const</span> clearitems = <span class="function">() =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  emits(<span class="string">&quot;clearitems&quot;</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">&#125;;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="comment">//自定义搜索方法</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="keyword">const</span> filterMethod = <span class="function">(<span class="params">query, item</span>) =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  <span class="keyword">return</span> item.spell.indexOf(query) &gt; -<span class="number">1</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">&#125;;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="comment">// 监听</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="comment">//监听左侧人员选择状态</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">watch(leftPeople, <span class="function">(<span class="params">nVal</span>) =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  <span class="keyword">if</span> (leftPeople.value.length &gt; <span class="number">0</span> &amp;&amp; props.type == <span class="string">&quot;limt1&quot;</span>) &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    allPeople.value.forEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="keyword">if</span> (item.key != leftPeople.value) &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        item.disabled = <span class="literal">true</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  &#125; <span class="keyword">else</span> <span class="keyword">if</span> (props.type == <span class="string">&quot;limt1&quot;</span>) &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    allPeople.value.forEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="keyword">if</span> (item.isAdmin !== <span class="literal">true</span>) &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        item.disabled = <span class="literal">false</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">&#125;);</span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="comment">//监听右侧是否有已选择的人员</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">watch(yetPeople, <span class="function">(<span class="params">nVal</span>) =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  <span class="keyword">if</span> (yetPeople.value.length == <span class="number">0</span> &amp;&amp; props.type == <span class="string">&quot;limt1&quot;</span>) &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    allPeople.value.forEach(<span class="function">(<span class="params">item, index</span>) =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="keyword">if</span> (item.isAdmin !== <span class="literal">true</span>) &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        item.disabled = <span class="literal">false</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">&#125;);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">onMounted(<span class="function">() =&gt;</span> &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  generateData();</span></span></span><br><span class="line"><span class="javascript"><span class="xml">&#125;);</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">style</span> <span class="attr">lang</span>=<span class="string">&quot;scss&quot;</span> <span class="attr">scoped</span>&gt;</span><span class="css"></span></span></span><br><span class="line"><span class="css"><span class="xml"><span class="selector-class">.peopleCheck</span> &#123;</span></span></span><br><span class="line"><span class="css"><span class="xml">  <span class="attribute">height</span>: <span class="number">500px</span>;</span></span></span><br><span class="line"><span class="css"><span class="xml">  ::<span class="built_in">v-deep</span>(.el-transfer-panel__body) &#123;</span></span></span><br><span class="line"><span class="css"><span class="xml">    height: <span class="number">350px</span>;</span></span></span><br><span class="line"><span class="css"><span class="xml">  &#125;</span></span></span><br><span class="line"><span class="css"><span class="xml">  ::<span class="built_in">v-deep</span>(.el-transfer-panel__list.is-filterable) &#123;</span></span></span><br><span class="line"><span class="css"><span class="xml">    height: <span class="number">350px</span>;</span></span></span><br><span class="line"><span class="css"><span class="xml">  &#125;</span></span></span><br><span class="line"><span class="css"><span class="xml">&#125;</span></span></span><br><span class="line"><span class="css"><span class="xml"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="父组件的部分代码"><a href="#父组件的部分代码" class="headerlink" title="父组件的部分代码"></a>父组件的部分代码</h2><h3 id="template-内引入子组件"><a href="#template-内引入子组件" class="headerlink" title="template 内引入子组件"></a>template 内引入子组件</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;PeopleCheck</span><br><span class="line">	ref=<span class="string">&quot;refPeopleCheck&quot;</span></span><br><span class="line">	v-<span class="keyword">if</span>=<span class="string">&quot;checkPeopleCheck&quot;</span></span><br><span class="line">	:choosePeople=<span class="string">&quot;choosePeople&quot;</span> 已选的人员的ID数组</span><br><span class="line">	type=<span class="string">&quot;limt1&quot;</span>                 打开只能从左侧选择一个人的模式</span><br><span class="line">	@backData=<span class="string">&quot;backData&quot;</span>         回显</span><br><span class="line">	@clearitems=<span class="string">&quot;clearitems&quot;</span>     关闭</span><br><span class="line">    /&gt;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="js"><a href="#js" class="headerlink" title="js"></a>js</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓成员选择组件↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓//</span></span><br><span class="line"><span class="comment">//打开成员选择</span></span><br><span class="line"><span class="keyword">const</span> peopleCheckShow = <span class="keyword">async</span> (row) =&gt; &#123;</span><br><span class="line">  <span class="comment">//已选择的人</span></span><br><span class="line">  choosePeople.value = &#123;&#123;子组件中peopleList的key相对应 &#125;&#125;</span><br><span class="line">  checkPeopleCheck.value = <span class="literal">true</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//成员选择回显的数据</span></span><br><span class="line"><span class="keyword">const</span> backData = <span class="function">(<span class="params">data</span>) =&gt;</span> &#123;&#125;;</span><br><span class="line"><span class="comment">//关闭</span></span><br><span class="line"><span class="keyword">const</span> clearitems = <span class="function">(<span class="params">row</span>) =&gt;</span> &#123;</span><br><span class="line">  checkPeopleCheck.value = <span class="literal">false</span>;</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑成员选择组件↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑//</span></span><br></pre></td></tr></table></figure>
+
+        </div>
+        <footer class="article-footer">
+            
+
+
+
+    <a data-url="https://surviavalf.github.io/2021/08/18/personnel-selection/" data-id="cksh136ay0001qsusfkr7hxyy" class="article-share-link"><i class="fa fa-share"></i>分享到</a>
+<script>
+    (function ($) {
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+</script>
+
+        </footer>
+    </div>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "author": {
+            "@type": "Person",
+            "name": "zhangyifeng"
+        },
+        "headline": "人员选择器",
+        "image": "https://surviavalf.github.io/css/images/webFrontEnd/peopleSelect.png",
+        "keywords": "Vue3 ElementPlus",
+        "genre": "web前端 Element组件",
+        "datePublished": "2021-08-18",
+        "dateCreated": "2021-08-18",
+        "dateModified": "2021-08-18",
+        "url": "https://surviavalf.github.io/2021/08/18/personnel-selection/",
+        "description": "
+使用 Element-plus 中的 Transfer 穿梭框 组件封装的一个人员选择器，使用的是 VUE3 中的 setup 语法糖写法
+选择器子组件的.vue 文件代码userMailList  为全部人员
+123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051",
+        "wordCount": 835
+    }
+</script>
+
+</article>
+
+    <section id="comments">
+    
+        
+    <div id="disqus_thread">
+        <noscript>Please enable JavaScript to view the <a target="_blank" rel="noopener" href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+
+
+    
+    </section>
+
+
+
+                        </div>
+                    </section>
+                    <aside id="sidebar">
+    <a class="sidebar-toggle" title="Expand Sidebar"><i class="toggle icon"></i></a>
+    <div class="sidebar-top">
+        <p>关注我 :</p>
+        <ul class="social-links">
+            
+                
+                <li>
+                    <a class="social-tooltip" title="twitter" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-twitter"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="facebook" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-facebook"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="stack-overflow" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-stack-overflow"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="github" href="https://github.com/ppoffice/hexo-theme-hueman" target="_blank" rel="noopener">
+                        <i class="icon fa fa-github"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="weibo" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-weibo"></i>
+                    </a>
+                </li>
+                
+            
+                
+                <li>
+                    <a class="social-tooltip" title="rss" href="/" target="_blank" rel="noopener">
+                        <i class="icon fa fa-rss"></i>
+                    </a>
+                </li>
+                
+            
+        </ul>
+    </div>
+    
+        
+<nav id="article-nav">
+    
+    
+        <a href="/2021/08/16/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+        <strong class="article-nav-caption">上一篇</strong>
+        <p class="article-nav-title">Hello World</p>
+        <i class="icon fa fa-chevron-left" id="icon-chevron-left"></i>
+        </a>
+    
+</nav>
+
+    
+    <div class="widgets-container">
+        
+            
+                
+
+            
+                
+    <div class="widget-wrap">
+        <h3 class="widget-title">最新文章</h3>
+        <div class="widget">
+            <ul id="recent-post" class="">
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2021/08/18/personnel-selection/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/css/images/webFrontEnd/peopleSelect.png)" alt="人员选择器" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"><a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><i class="icon fa fa-angle-right"></i><a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/Element%E7%BB%84%E4%BB%B6/">Element组件</a></p>
+                            <p class="item-title"><a href="/2021/08/18/personnel-selection/" class="title">人员选择器</a></p>
+                            <p class="item-date"><time datetime="2021-08-18T03:14:07.000Z" itemprop="datePublished">2021-08-18</time></p>
+                        </div>
+                    </li>
+                
+                    <li>
+                        
+                        <div class="item-thumbnail">
+                            <a href="/2021/08/16/hello-world/" class="thumbnail">
+    
+    
+        <span style="background-image:url(/css/images/summer-dog.png)" alt="Hello World" class="thumbnail-image"></span>
+    
+    
+</a>
+
+                        </div>
+                        
+                        <div class="item-inner">
+                            <p class="item-category"></p>
+                            <p class="item-title"><a href="/2021/08/16/hello-world/" class="title">Hello World</a></p>
+                            <p class="item-date"><time datetime="2021-08-16T06:11:30.000Z" itemprop="datePublished">2021-08-16</time></p>
+                        </div>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">分类</h3>
+        <div class="widget">
+            <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a><span class="category-list-count">1</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/web%E5%89%8D%E7%AB%AF/Element%E7%BB%84%E4%BB%B6/">Element组件</a><span class="category-list-count">1</span></li></ul></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">归档</h3>
+        <div class="widget">
+            <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/08/">八月 2021</a><span class="archive-list-count">2</span></li></ul>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-float">
+        <h3 class="widget-title">标签</h3>
+        <div class="widget tagcloud">
+            <a href="/tags/ElementPlus/" style="font-size: 10px;">ElementPlus</a> <a href="/tags/Vue3/" style="font-size: 10px;">Vue3</a>
+        </div>
+    </div>
+
+
+            
+                
+    <div class="widget-wrap widget-list">
+        <h3 class="widget-title">链接</h3>
+        <div class="widget">
+            <ul>
+                
+                    <li>
+                        <a target="_blank" rel="noopener" href="http://hexo.io">Hexo</a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+
+
+            
+        
+    </div>
+</aside>
+
+                </div>
+            </div>
+        </div>
+        <footer id="footer">
+    <div class="container">
+        <div class="container-inner">
+            <a id="back-to-top" href="javascript:;"><i class="icon fa fa-angle-up"></i></a>
+            <div class="credit">
+                <h1 class="logo-wrap">
+                    <a href="/" class="logo"></a>
+                </h1>
+                <p>&copy; 2021 zhangyifeng</p>
+                
+                <p>Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>. Theme by <a href="https://github.com/ppoffice" target="_blank">PPOffice</a></p>
+                
+            </div>
+            <div class="footer-plugins">
+              
+    
+
+
+            </div>
+        </div>
+    </div>
+</footer>
+
+    </div>
+    
+    
+    <script>
+    var disqus_shortname = 'hexo-theme-hueman';
+    
+    
+    var disqus_url = 'https://surviavalf.github.io/2021/08/18/personnel-selection/';
+    
+    (function() {
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+    </script>
+
+
+
+
+
+    
+        
+<script src="/libs/lightgallery/js/lightgallery.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-thumbnail.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-pager.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-autoplay.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-fullscreen.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-zoom.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-hash.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-share.min.js"></script>
+
+        
+<script src="/libs/lightgallery/js/lg-video.min.js"></script>
+
+    
+    
+        
+<script src="/libs/justified-gallery/jquery.justifiedGallery.min.js"></script>
+
+    
+    
+
+    
+    
+    
+
+
+
+<!-- Custom Scripts -->
+
+<script src="/js/main.js"></script>
+
+
+</body>
+</html>
