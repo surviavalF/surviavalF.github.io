@@ -10,7 +10,7 @@ author: zhangyifeng
 date: 2021-08-18 11:14:07
 ---
 
-![](/css/images/webFrontEnd/peopleSelect.png)
+![](/medias/webFrontEnd/peopleSelect.png)
 
 使用 [Element-plus](https://element-plus.gitee.io/#/zh-CN) 中的 [Transfer 穿梭框](https://element-plus.gitee.io/#/zh-CN/component/transfer) 组件封装的一个人员选择器，使用的是 VUE3 中的 setup 语法糖写法
 
