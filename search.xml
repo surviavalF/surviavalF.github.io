@@ -166,33 +166,6 @@
     
     
     <entry>
-      <title>hexo博客搭建过程</title>
-      <link href="/2021/08/20/build-your-blogs/"/>
-      <url>/2021/08/20/build-your-blogs/</url>
-      
-        <content type="html"><![CDATA[<h1 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h1><h2 id="1-安装Git-Bash"><a href="#1-安装Git-Bash" class="headerlink" title="1.安装Git Bash"></a>1.安装Git Bash</h2><p><a href="/accessory/Git-2.17.0-64-bit.exe">点击下载</a><br><a href="https://gitforwindows.org/">下載地址</a><br>安装步骤：双击下载好的exe文件，一路next就好啦</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> web前端 </category>
-          
-          <category> 博客建立 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Hexo </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>人员选择器</title>
       <link href="/2021/08/18/personnel-selection/"/>
       <url>/2021/08/18/personnel-selection/</url>
