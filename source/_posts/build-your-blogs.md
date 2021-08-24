@@ -12,7 +12,7 @@ top: true
 
 # 步骤
 
-## 安装Git Bash
+## 1.安装Git Bash
 
 [点击下载](/accessory/Git-2.17.0-64-bit.exe)
 [下載地址](https://gitforwindows.org/)
