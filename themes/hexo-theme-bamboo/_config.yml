@@ -406,10 +406,10 @@ danmu:
 
 # 归档页面图片、描述、视频，全屏 or 'http://xxx'
 archive:
-  title: 'archive'
+  title: '归档'
   img: 'https://pic1.zhimg.com/80/v2-1414b3a4b205e19060db18a20d08723a_1440w.jpg?source=1940ef5c'
-  desc: '愿你如风，被人温柔以待'
-  full: true # 设置为true，则图片全屏显示
+  desc: 'Do what you love, Love what you do'
+  full: false # 设置为true，则图片全屏显示
   video: '' # 如果有值，则在屏幕大于920px的时候，全屏显示视频，为空则显示图片(img)
   background: '' # red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")
   yearColor: '' # 年份字体颜色
@@ -418,9 +418,9 @@ archive:
 
 # 标签页面，配置同上
 tag:
-  title: 'tags'
+  title: '标签'
   img: 'https://pic2.zhimg.com/80/v2-bf6c555e7c61a57ba4a1fd95a9a32975_1440w.jpg' # 标签页上面的图片
-  desc: '愿你如风，被人温柔以待'
+  desc: 'Do what you love, Love what you do'
   full: false # 标签页上面的图片是否全屏显示
   video: '' # 如果有值，则在屏幕大于920px的时候，全屏显示视频
   background: '' # red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")
@@ -430,16 +430,16 @@ tag:
 tagDetail:
   title: 'tag'
   img: 'https://pic1.zhimg.com/80/v2-604a15cef201cf177943af2d915eb2e7_1440w.jpg?source=1940ef5c'
-  desc: '愿你如风，被人温柔以待' # 标签页详情上上面的图片上的文字
+  desc: 'Do what you love, Love what you do' # 标签页详情上上面的图片上的文字
   full: false
   video: ''
   background: '' # red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")
 
 # 分类页面，配置同上
 categories:
-  title: 'categories'
+  title: '分类'
   img: 'https://pic2.zhimg.com/80/v2-7c496c95897fb15768593cc5170c8b1a_1440w.jpg?source=1940ef5c'
-  desc: '愿你如风，被人温柔以待'
+  desc: 'Do what you love, Love what you do'
   full: false
   video: ''
   background: '' # red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")
@@ -449,7 +449,7 @@ categories:
 categoryDetail:
   title: 'category'
   img: 'https://pic3.zhimg.com/80/v2-98dcd81cb0d1fee52a807c13cedb8338_1440w.jpg?source=1940ef5c'
-  desc: '愿你如风，被人温柔以待'
+  desc: 'Do what you love, Love what you do'
   full: false
   video: ''
   background: '' # red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")
@@ -458,7 +458,7 @@ categoryDetail:
 about:
   title: 'about'
   img: 'https://pic4.zhimg.com/80/v2-d12b0c9802720897793993a5a199720f_1440w.jpg'
-  desc: '愿你如风，被人温柔以待'
+  desc: 'Do what you love, Love what you do'
   full: false
   video: ''
   background: '' # red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")
@@ -468,7 +468,7 @@ about:
 friends:
   title: 'friends'
   img: 'https://pic2.zhimg.com/80/v2-2407599a217ba89f9499c282f129d44d_1440w.jpg?source=1940ef5c'
-  desc: '愿你如风，被人温柔以待'
+  desc: 'Do what you love, Love what you do'
   full: false
   video: ''
   background: '' # red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")
@@ -629,7 +629,7 @@ highlight:
 
 # wordcount字数统计, 需要 npm i hexo-wordcount 安装
 wordcount:
-  on: false
+  on: true
 
 # 自己嵌入css或者script
 import:
