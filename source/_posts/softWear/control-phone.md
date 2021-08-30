@@ -8,7 +8,7 @@ date: 2021-08-27 14:13:50
 
 ## QtScrcpy 软件
 
-![](/medias/else/qtscrcpy.png)
+![](/medias/softWear/qtscrcpy.png)
 
 实时显示 Android 设备屏幕,实时键鼠控制 Android 设备。支持 GNU/Linux，Windows 和 MacOS
 

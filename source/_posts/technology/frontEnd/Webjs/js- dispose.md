@@ -1,5 +1,5 @@
 ---
-title: 部分数据方式
+title: 部分数据处理方式
 tags:
   - Vue
 categories:

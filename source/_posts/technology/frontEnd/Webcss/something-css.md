@@ -18,6 +18,10 @@ top: true
 
 ## 2.el-input 属性 type="number"时去掉右侧箭头
 
+{% tabs tab-id %}
+
+<!-- tab 本人使用过的 -->
+
 ```css
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button  {
@@ -37,7 +41,9 @@ input[type="number"]  {
 }
 ```
 
-未确定好不好用
+<!-- endtab -->
+
+<!-- tab 未确定好不好用的 -->
 
 ```css
 /deep/.[className] input::-webkit-outer-spin-button,
@@ -48,6 +54,10 @@ input[type="number"]  {
     -moz-appearance: textfield;
 }
 ```
+
+<!-- endtab -->
+
+{% endtabs %}
 
 ## 3.选中改变样式
 
