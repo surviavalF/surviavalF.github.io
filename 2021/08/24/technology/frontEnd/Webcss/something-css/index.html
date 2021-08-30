@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>动态表头 | survival_F</title>
+  <title>css修改 | survival_F</title>
 
   
     
@@ -534,7 +534,7 @@
 
 
 
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/9.jpg" style="background-repeat: no-repeat; background-size: cover; 
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/10.jpg" style="background-repeat: no-repeat; background-size: cover; 
   background-position: center center;position: relative;">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
@@ -542,7 +542,7 @@
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        动态表头
+        css修改
       </span>
     </div>
     
@@ -561,8 +561,8 @@
               web前端
             </a>
           
-            <a href="/categories/web%E5%89%8D%E7%AB%AF/Element%E7%BB%84%E4%BB%B6/" class="post-detail-header_category">
-              Element组件
+            <a href="/categories/web%E5%89%8D%E7%AB%AF/CSS/" class="post-detail-header_category">
+              CSS
             </a>
           
         </span>
@@ -571,7 +571,7 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fa fa-file-text-o"></i> 字数统计: 411 |
+            <i class="fa fa-file-text-o"></i> 字数统计: 438 |
           </span>
   
           <span class="min2read">
@@ -600,14 +600,30 @@
     <article class="post post-detail">
       
       <div class="post-content">
-        <h2 id="动态表头"><a href="#动态表头" class="headerlink" title="动态表头"></a>动态表头</h2><h3 id="Html"><a href="#Html" class="headerlink" title="Html"></a>Html</h3><p>表内数据的字段名需要对应表头中的 prop</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line">&lt;el-table</span><br><span class="line">    :data=<span class="string">&quot;peopleDataList&quot;</span></span><br><span class="line">    height=<span class="string">&quot;92%&quot;</span></span><br><span class="line">    border</span><br><span class="line">    style=<span class="string">&quot;width: 100%&quot;</span></span><br><span class="line">    v-loading=<span class="string">&quot;tableLoading&quot;</span></span><br><span class="line">&gt;</span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">el-table-column</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">        <span class="attr">prop</span>=<span class="string">&quot;tfUpdateDate&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">        <span class="attr">align</span>=<span class="string">&quot;center&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">        <span class="attr">label</span>=<span class="string">&quot;更新时间&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">    &gt;</span><span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span></span><br><span class="line">    <span class="xml"><span class="tag">&lt;<span class="name">el-table-column</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">        <span class="attr">align</span>=<span class="string">&quot;center&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">        <span class="attr">v-for</span>=<span class="string">&quot;(item, index, key) in equTable_columns&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">        <span class="attr">:item</span>=<span class="string">&quot;item&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">        <span class="attr">:key</span>=<span class="string">&quot;key&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">        <span class="attr">:index</span>=<span class="string">&quot;index&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">        <span class="attr">:label</span>=<span class="string">&quot;item.label&quot;</span></span></span></span><br><span class="line"><span class="tag"><span class="xml">    &gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;<span class="name">template</span> <span class="attr">v-slot:header</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;<span class="name">el-popover</span> <span class="attr">width</span>=<span class="string">&quot;400&quot;</span> <span class="attr">trigger</span>=<span class="string">&quot;hover&quot;</span> <span class="attr">placement</span>=<span class="string">&quot;top&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">              <span class="tag">&lt;<span class="name">span</span>  <span class="attr">style</span>=<span class="string">&quot;color: white;&quot;</span>&gt;</span>&#123;&#123; item.label &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">              <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">&quot;reference&quot;</span> <span class="attr">class</span>=<span class="string">&quot;header-ellipsis&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">                <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; item.label &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line"><span class="xml">              <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="xml">            <span class="tag">&lt;/<span class="name">el-popover</span>&gt;</span></span></span><br><span class="line"><span class="xml">          <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;<span class="name">template</span> <span class="attr">slot-scope</span>=<span class="string">&quot;scope&quot;</span>&gt;</span></span></span><br><span class="line"><span class="xml">            &#123;&#123; scope.row[item.prop] &#125;&#125;</span></span><br><span class="line"><span class="xml">        <span class="tag">&lt;/<span class="name">template</span>&gt;</span></span></span><br><span class="line"><span class="xml">    <span class="tag">&lt;/<span class="name">el-table-column</span>&gt;</span></span></span><br><span class="line">&lt;/el-table&gt;</span><br></pre></td></tr></table></figure>
+        <h2 id="1-箭头"><a href="#1-箭头" class="headerlink" title="1.箭头"></a>1.箭头</h2><p>↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓<br>↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑</p>
+<h2 id="2-el-input-属性-type-”number”时去掉右侧箭头"><a href="#2-el-input-属性-type-”number”时去掉右侧箭头" class="headerlink" title="2.el-input 属性 type=”number”时去掉右侧箭头"></a>2.el-input 属性 type=”number”时去掉右侧箭头</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">input</span>::-webkit-outer-spin-button,</span><br><span class="line">input::-webkit-inner-spin-button  &#123;</span><br><span class="line">    -webkit-appearance: none <span class="meta">!important</span>;</span><br><span class="line">    -moz-appearance: none <span class="meta">!important</span>;</span><br><span class="line">    -o-appearance: none <span class="meta">!important</span>;</span><br><span class="line">    -ms-appearance: none <span class="meta">!important</span>;</span><br><span class="line">    appearance: none <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">&quot;number&quot;</span>]</span>  &#123;</span><br><span class="line">    -webkit-appearance: textfield;</span><br><span class="line">    -moz-appearance: textfield;</span><br><span class="line">    -o-appearance: textfield;</span><br><span class="line">    -ms-appearance: textfield;</span><br><span class="line">    appearance: textfield;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="Data"><a href="#Data" class="headerlink" title="Data"></a>Data</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//表头信息</span></span><br><span class="line"><span class="attr">equTable_columns</span>: [</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">prop</span>: <span class="string">&quot;name1&quot;</span>,</span><br><span class="line">    <span class="attr">label</span>: <span class="string">&quot;事件A&quot;</span>,</span><br><span class="line">    <span class="attr">width</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">prop</span>: <span class="string">&quot;name2&quot;</span>,</span><br><span class="line">    <span class="attr">label</span>: <span class="string">&quot;事件B&quot;</span>,</span><br><span class="line">    <span class="attr">width</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">prop</span>: <span class="string">&quot;name3&quot;</span>,</span><br><span class="line">    <span class="attr">label</span>: <span class="string">&quot;事件C&quot;</span>,</span><br><span class="line">    <span class="attr">width</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">&#125;,</span><br><span class="line">&#123;</span><br><span class="line">    <span class="attr">prop</span>: <span class="string">&quot;name4&quot;</span>,</span><br><span class="line">    <span class="attr">label</span>: <span class="string">&quot;事件D&quot;</span>,</span><br><span class="line">    <span class="attr">width</span>: <span class="string">&quot;&quot;</span>,</span><br><span class="line">&#125;,</span><br><span class="line">],</span><br><span class="line"><span class="comment">//表内信息</span></span><br><span class="line"><span class="attr">peopleDataList</span>:[</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">tfUpdateDate</span>: <span class="string">&quot;2021-10-9&quot;</span>,</span><br><span class="line">        <span class="attr">name1</span>:<span class="string">&quot;事件1&quot;</span></span><br><span class="line">    &#125;,</span><br><span class="line">    &#123;</span><br><span class="line">        <span class="attr">tfUpdateDate</span>: <span class="string">&quot;2021-10-9&quot;</span>,</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<p>未确定好不好用</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">/deep/.<span class="selector-attr">[className]</span> <span class="selector-tag">input</span>::-webkit-outer-spin-button,</span><br><span class="line">/deep/.[className] input::-webkit-inner-spin-button  &#123;</span><br><span class="line">    -webkit-appearance: none <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line">/deep/.<span class="selector-attr">[className]</span> <span class="selector-tag">input</span><span class="selector-attr">[type=<span class="string">&quot;number&quot;</span>]</span>  &#123;</span><br><span class="line">    -moz-appearance: textfield;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<h2 id="表头过长隐藏"><a href="#表头过长隐藏" class="headerlink" title="表头过长隐藏"></a>表头过长隐藏</h2><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">template</span> <span class="attr">v-slot:header</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;<span class="name">el-popover</span> <span class="attr">width</span>=<span class="string">&quot;400&quot;</span> <span class="attr">trigger</span>=<span class="string">&quot;hover&quot;</span> <span class="attr">placement</span>=<span class="string">&quot;top&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">&quot;color: white;&quot;</span>&gt;</span>&#123;&#123; item.label &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">slot</span>=<span class="string">&quot;reference&quot;</span> <span class="attr">class</span>=<span class="string">&quot;header-ellipsis&quot;</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">span</span>&gt;</span>&#123;&#123; item.label &#125;&#125;<span class="tag">&lt;/<span class="name">span</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line">  <span class="tag">&lt;/<span class="name">el-popover</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">template</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h2 id="3-选中改变样式"><a href="#3-选中改变样式" class="headerlink" title="3.选中改变样式"></a>3.选中改变样式</h2><p>data 里<br>isActive:-1,</p>
+<p>method 里</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">checkedItem</span>(<span class="params">index</span>)</span>&#123;</span><br><span class="line">	<span class="built_in">this</span>.isActive=index;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">/deep/<span class="selector-class">.el-popover</span> &#123;</span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">200px</span>;</span><br><span class="line">    <span class="attribute">width</span>: none;</span><br><span class="line">    <span class="attribute">text-align</span>: center <span class="meta">!important</span>;</span><br><span class="line">&#125;</span><br><span class="line"><span class="selector-class">.header-ellipsis</span>  &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">120px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: <span class="number">0px</span>;</span><br><span class="line">    <span class="attribute">overflow</span>: hidden;</span><br><span class="line">    <span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">    <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>页面里</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">v-for</span>=<span class="string">&quot;(item,index) in nameoptions&quot;</span> <span class="attr">class</span>=<span class="string">&quot;class名&quot;</span> <span class="attr">:class</span>=<span class="string">&quot;&#123;新加的class样式:index==isActive&#125;&quot;</span> @<span class="attr">click</span>=<span class="string">&quot;checkItem(index)&gt;&#123;&#123;item.name&#125;&#125;&lt;/div&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="4-Element-滚动条样式"><a href="#4-Element-滚动条样式" class="headerlink" title="4.Element 滚动条样式"></a>4.Element 滚动条样式</h2><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"> <span class="selector-class">.el-table__body-wrapper</span>::-webkit-scrollbar &#123;</span><br><span class="line">     width: <span class="number">0px</span> <span class="meta">!important</span>;</span><br><span class="line">     <span class="attribute">height</span>: <span class="number">0px</span> <span class="meta">!important</span>;</span><br><span class="line"> &#125;</span><br><span class="line"> <span class="selector-class">.el-table__body-wrapper</span>::-webkit-scrollbar-thumb &#123;</span><br><span class="line">    border-radius: <span class="number">0px</span> <span class="meta">!important</span>;</span><br><span class="line">    <span class="attribute">background</span>: transparent <span class="meta">!important</span>;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="5-鼠标悬停样式"><a href="#5-鼠标悬停样式" class="headerlink" title="5.鼠标悬停样式"></a>5.鼠标悬停样式</h2><p>用 css 添加手状样式,鼠标移上去变小手,变小手</p>
+<p>cursor:pointer;</p>
+<p>cursor 其他取值  <br>auto                    ：标准光标  <br>default                 ：标准箭头  <br>pointer, hand                   ：手形光标  <br>wait                     ：等待光标  <br>text                      ：I 形光标  <br>vertical-text          ：水平 I 形光标  <br>no-drop                ：不可拖动光标  <br>not-allowed           ：无效光标  <br>help                     ：帮助光标  <br>all-scroll         ：三角方向标  <br>move                     ：移动标  <br>crosshair           ：十字标  <br>e-resize  <br>n-resize  <br>nw-resize  <br>w-resize  <br>s-resize  <br>se-resize  <br>sw-resize</p>
+<p>用 JS 使鼠标变小手 onmouseover(鼠标越过的时候)<br>onmouseover=”this.style.cursor=’hand’”</p>
+<h2 id="6-纯英文，数字不换行问题处理"><a href="#6-纯英文，数字不换行问题处理" class="headerlink" title="6.纯英文，数字不换行问题处理"></a>6.纯英文，数字不换行问题处理</h2><p>1.问题描述：</p>
+<p>用户输入一串英文字母，设置了换行，但是只有中文换行，英文不换行</p>
+<p>2.处理方式：</p>
+<p>英文一串字母，被认为是一个单词，所以不换行</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> &#123;</span><br><span class="line">  <span class="attribute">overflow</span>: hidden;</span><br><span class="line">  <span class="attribute">white-space</span>: normal;</span><br><span class="line">  <span class="attribute">word-wrap</span>: break-word;</span><br><span class="line">  <span class="attribute">word-break</span>: break-all;</span><br><span class="line">  <span class="attribute">text-overflow</span>: ellipsis;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
       </div>
       <div class="post-tags-categories">
@@ -616,6 +632,10 @@
           
             <a href="/tags/Vue/" class="">
               Vue
+            </a>
+          
+            <a href="/tags/CSS/" class="">
+              CSS
             </a>
           
         </div>
@@ -629,7 +649,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2021/08/24/dynamic-table-header/" target="_blank" title="动态表头">https://surviavalf.github.io/2021/08/24/dynamic-table-header/</a>
+    <a href="/2021/08/24/technology/frontEnd/Webcss/something-css/" target="_blank" title="css修改">https://surviavalf.github.io/2021/08/24/technology/frontEnd/Webcss/something-css/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -649,17 +669,17 @@
 
   
   <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/12.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/15.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/08/24/table-data-matching/" class="post-nav-link">
+    <a href="/2021/08/24/technology/frontEnd/Webjs/set-El-tree/" class="post-nav-link">
       <div class="title">
         <i class="fa fa-angle-left"></i> 上一篇:
-        <div class="title-text">table列表匹配</div>
+        <div class="title-text">El-tree设置</div>
       </div>
       
       <!-- <div class="content">
-        table 列表数据匹配123456789101112131415161718//Html&lt;el-table-co
+        El-tree 设置El-tree 横向显示12345678910&lt;el-tree  class=&quot;el
       </div> -->
     </a>
   </div>
@@ -668,16 +688,16 @@
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/10.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/12.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/08/24/recursion/" class="post-nav-link">
+    <a href="/2021/08/24/technology/frontEnd/Webjs/table-data-matching/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div class="title-text">递归</div>
+        <div class="title-text">table列表匹配</div>
       </div>
       <!-- <div class="content">
-        vue 递归代码123456789101112131415161718192021222324caltaskScoreP
+        table 列表数据匹配123456789101112131415161718//Html&lt;el-table-co
       </div> -->
     </a>
   </div>

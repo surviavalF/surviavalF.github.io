@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>El-tree设置 | survival_F</title>
+  <title>标签: Hexo | survival_F</title>
 
   
     
@@ -523,383 +523,100 @@
     <!-- 内容区域 -->
     <main class="main" id="pjax-container" style="margin-top: 0;">
       
- <!-- prismjs 代码高亮 -->
- 
 
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
+<div class="bg-light-floor-tagDetail" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
 
-<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
-
-<!-- 文章详情页顶部图片和标题 -->
-
-
-
-
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/15.jpg" style="background-repeat: no-repeat; background-size: cover; 
-  background-position: center center;position: relative;">
-  <div class="post-detail-header-mask"></div>
-  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
-  
-  <div class="post-detail-header_info-box">
-    <div class="title-box">
-      <span class="title">
-        El-tree设置
-      </span>
-    </div>
-    
-    
-      
-        <span class="post-detail-header_date">
-          <i class="fa fa-calendar"></i> 发表于：2021-08-24 |
-        </span>
-      
-
-      
-        <span class="post-detail-header_categories">
-          <i class="iconfont iconbookmark1"></i> 分类：
-          
-            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-detail-header_category">
-              web前端
-            </a>
-          
-            <a href="/categories/web%E5%89%8D%E7%AB%AF/Element%E7%BB%84%E4%BB%B6/" class="post-detail-header_category">
-              Element组件
-            </a>
-          
-        </span>
-      
-
-      
-        <div class="post-detail-header_wordcount">
-          <span class="totalcount">
-            <i class="fa fa-file-text-o"></i> 字数统计: 1k |
-          </span>
-  
-          <span class="min2read">
-            <i class="fa fa-clock-o"></i> 阅读时长: 4分钟 |
-          </span>
-  
-          
-            <span class="reading">
-              <i class="fa fa-eye"></i> 阅读量：<span id="busuanzi_value_page_pv"></span>
-            </span>
-          
-        </div>
-      
-    
+<div class="lazyload tag-header" data-original="https://pic1.zhimg.com/80/v2-604a15cef201cf177943af2d915eb2e7_1440w.jpg?source=1940ef5c">
+  <div class="tag-header-title">
+    tag
   </div>
+  <div class="tag-header-desc">
   
-  
-    <script src="/js/bubble/bubble.js"></script>
-  
-</div>
-
-
-
-<div class="row justify-position">
-  <div class="main-content">
-    <article class="post post-detail">
-      
-      <div class="post-content">
-        <h2 id="El-tree-设置"><a href="#El-tree-设置" class="headerlink" title="El-tree 设置"></a>El-tree 设置</h2><h3 id="El-tree-横向显示"><a href="#El-tree-横向显示" class="headerlink" title="El-tree 横向显示"></a>El-tree 横向显示</h3><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">el-tree</span></span></span><br><span class="line"><span class="tag">  <span class="attr">class</span>=<span class="string">&quot;el-tree&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">ref</span>=<span class="string">&quot;refElTree&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:data</span>=<span class="string">&quot;routeList&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">show-checkbox</span></span></span><br><span class="line"><span class="tag">  <span class="attr">node-key</span>=<span class="string">&quot;value&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:props</span>=<span class="string">&quot;defaultProps&quot;</span></span></span><br><span class="line"><span class="tag">  @<span class="attr">node-expand</span>=<span class="string">&quot;handleExpand&quot;</span></span></span><br><span class="line"><span class="tag">  <span class="attr">:render-content</span>=<span class="string">&quot;renderContent&quot;</span></span></span><br><span class="line"><span class="tag">&gt;</span><span class="tag">&lt;/<span class="name">el-tree</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>data</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> routeList = ref([]); <span class="comment">//树节点let defaultProps = ref(&#123;</span></span><br><span class="line">  children: <span class="string">&quot;children&quot;</span>,</span><br><span class="line">  <span class="attr">label</span>: <span class="string">&quot;label&quot;</span>,</span><br><span class="line">&#125;); <span class="comment">//树节点</span></span><br></pre></td></tr></table></figure>
-
-<p>js</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//树节点的内容区的渲染 Function</span></span><br><span class="line"><span class="keyword">const</span> renderContent = <span class="function">(<span class="params">h, &#123; node, data, store &#125;</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> classname = <span class="string">&quot;&quot;</span>; <span class="comment">// 由于项目中有三级菜单也有四级级菜单，就要在此做出判断</span></span><br><span class="line">  <span class="keyword">if</span> (node.level === <span class="number">4</span>) &#123;</span><br><span class="line">    classname = <span class="string">&quot;foo&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (node.level === <span class="number">3</span> &amp;&amp; node.childNodes.length === <span class="number">0</span>) &#123;</span><br><span class="line">    classname = <span class="string">&quot;foo&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">if</span> (node.level === <span class="number">2</span> &amp;&amp; node.childNodes.length === <span class="number">0</span>) &#123;</span><br><span class="line">    classname = <span class="string">&quot;foo&quot;</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> h(</span><br><span class="line">    <span class="string">&quot;p&quot;</span>,</span><br><span class="line">    &#123;</span><br><span class="line">      <span class="attr">class</span>: classname</span><br><span class="line">    &#125;,</span><br><span class="line">    node.label</span><br><span class="line">  );</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//节点被展开时触发的事件</span></span><br><span class="line"><span class="keyword">const</span> handleExpand = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="comment">//因为该函数执行在renderContent函数之前，所以得加this.$nextTick()</span></span><br><span class="line">  proxy.$nextTick(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">    changeCss();</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//更改css</span></span><br><span class="line"><span class="keyword">const</span> changeCss = <span class="function">() =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> levelName = <span class="built_in">document</span>.getElementsByClassName(<span class="string">&quot;foo&quot;</span>); <span class="comment">// levelname是上面的最底层节点的名字</span></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; levelName.length; i++) &#123;</span><br><span class="line">    <span class="comment">// cssFloat 兼容 ie6-8  styleFloat 兼容ie9及标准浏览器</span></span><br><span class="line">    levelName[i].parentNode.style.cssFloat = <span class="string">&quot;left&quot;</span>; <span class="comment">// 最底层的节点，包括多选框和名字都让他左浮动</span></span><br><span class="line">    levelName[i].parentNode.style.styleFloat = <span class="string">&quot;left&quot;</span>;</span><br><span class="line">    levelName[i].parentNode.onmouseover = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>&#123;</span><br><span class="line">      <span class="built_in">this</span>.style.backgroundColor = <span class="string">&quot;#fff&quot;</span>;</span><br><span class="line">    &#125;;</span><br><span class="line">  &#125;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
-
-<h3 id="El-tree-选择的节点获取"><a href="#El-tree-选择的节点获取" class="headerlink" title="El-tree 选择的节点获取"></a>El-tree 选择的节点获取</h3><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">let</span> Nodes = [</span><br><span class="line">  ...refElTree.value.getHalfCheckedKeys(),</span><br><span class="line">  ...refElTree.value.getCheckedKeys()</span><br><span class="line">];</span><br></pre></td></tr></table></figure>
-
-<p>当父节点中的子节点未完全选择，父组件是半选择状态时，想要获取全部节点（包括半选择的父节点）使用此方法</p>
-<h4 id="以下为引用"><a href="#以下为引用" class="headerlink" title="以下为引用"></a>以下为引用</h4><p>↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓<br>el-tree 组件在获取选择的节点时，默认的逻辑是，选中父节点时所有的子节点会被选中（checked），但是当该节点下不是选中所有子节点的时候，主节点不会被选中，而是处于一种半选中状态，提交时通过 getCheckedKeys() 方法也不会提交父节点，因为半选中状态下 checked 属性是 false 的。</p>
-<p>解决办法<br>通常如果只是为了提交数据，我们可以使用 getHalfCheckedKeys()+getCheckedKeys()来获取需要的数据<br>const data=[<br>…this.$refs.tree.getHalfCheckedKeys(),<br>…this.$refs.tree.getCheckedKeys()<br>]</p>
-<p>但是如果需要保存数据且需要编辑，那在编辑初始设置选中项的时候将遇到问题，所以我们只能使用 el-tree 现有的 api 来自己实现需要的功能，el-tree 中有一个属性 check-strictly（在显示复选框的情况下，是否严格的遵循父子不互相关联的做法，默认为 false）意思就是勾选父节点和勾选子节点，没有任何的关系。这是为了解决默认选中节点加载时，选中父节点会同时选中所以子节点，显然这不是我们想要的。<br>&lt;el-tree<br>show-checkbox<br>node-key=”id”<br>check-strictly<br>@check-change=”checkChange”<br>ref=”tree”&gt;<br></el-tree><br>然后使用 check-change 事件（节点选中状态发生变化时的回调）<br>共三个参数，依次为：传递给 data 属性的数组中该节点所对应的对象、节点本身是否被选中、节点的子树中是否有被选中的节点</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="title">checkChange</span>(<span class="params">data, check</span>)</span> &#123;</span><br><span class="line">    <span class="comment">// 父节点操作</span></span><br><span class="line">    <span class="keyword">if</span> (data.parentId !== <span class="literal">null</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (check === <span class="literal">true</span>) &#123;</span><br><span class="line">            <span class="comment">// 如果选中，设置父节点为选中</span></span><br><span class="line">            <span class="built_in">this</span>.$refs.tree.setChecked(data.parentId, <span class="literal">true</span>);</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="comment">// 如果取消选中，检查父节点是否该取消选中（可能仍有子节点为选中状态）</span></span><br><span class="line">            <span class="keyword">var</span> parentNode = <span class="built_in">this</span>.$refs.tree.getNode(data.parentId);</span><br><span class="line">            <span class="keyword">var</span> parentHasCheckedChild = <span class="literal">false</span>;</span><br><span class="line">            <span class="keyword">for</span> (</span><br><span class="line">            <span class="keyword">var</span> i = <span class="number">0</span>, parentChildLen = parentNode.childNodes.length;</span><br><span class="line">            i &lt; parentChildLen;</span><br><span class="line">            i++</span><br><span class="line">            ) &#123;</span><br><span class="line">                <span class="keyword">if</span> (parentNode.childNodes[i].checked === <span class="literal">true</span>) &#123;</span><br><span class="line">                parentHasCheckedChild = <span class="literal">true</span>;</span><br><span class="line">                <span class="keyword">break</span>;</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">            <span class="keyword">if</span> (!parentHasCheckedChild)</span><br><span class="line">            <span class="built_in">this</span>.$refs.tree.setChecked(data.parentId, <span class="literal">false</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 子节点操作，如果取消选中，取消子节点选中</span></span><br><span class="line">    <span class="keyword">if</span> (data.children != <span class="literal">null</span> &amp;&amp; check === <span class="literal">false</span>) &#123;</span><br><span class="line">        <span class="keyword">for</span> (<span class="keyword">var</span> j = <span class="number">0</span>, len = data.children.length; j &lt; len; j++) &#123;</span><br><span class="line">        <span class="keyword">var</span> childNode = <span class="built_in">this</span>.$refs.tree.getNode(data.children[j].id);</span><br><span class="line">            <span class="keyword">if</span> (childNode.checked === <span class="literal">true</span>) &#123;</span><br><span class="line">            <span class="built_in">this</span>.$refs.tree.setChecked(childNode.data.id, <span class="literal">false</span>);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>作者：段邵华<br>链接：<a target="_blank" rel="noopener" href="https://www.jianshu.com/p/a482b25ac212">https://www.jianshu.com/p/a482b25ac212</a><br>来源：简书<br>著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。<br>↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑</p>
-
-      </div>
-      <div class="post-tags-categories">
-        
-        <div class="tags">
-          
-            <a href="/tags/Vue/" class="">
-              Vue
-            </a>
-          
-        </div>
-        
-      </div>
-      
-        <div class="copyright">
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-    <strong>作者:  </strong>zhangyifeng</a>
-    </li>
-    <li class="post-copyright-link">
-    <strong>文章链接:  </strong>
-    <a href="/2021/08/24/set-El-tree/" target="_blank" title="El-tree设置">https://surviavalf.github.io/2021/08/24/set-El-tree/</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong>版权声明:   </strong>
-      著作权归作者所有。<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a>
-      商业转载请联系作者获得授权，非商业转载请保留以上作者信息和原文链接。
-    </li>
-  </ul>
-<div>
-      
-    </article>
-    <!-- 上一篇文章和下一篇文章 -->
-    
-      <!-- 文章详情页的上一页和下一页 -->
-<div class="post-nav">
-
-
-
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/1.jpg" style="background-size: cover; 
-      background-position: center center;">
-    </div>
-    <a href="/2021/08/27/control-phone/" class="post-nav-link">
-      <div class="title">
-        <i class="fa fa-angle-left"></i> 上一篇:
-        <div class="title-text">电脑控制手机的小软件</div>
-      </div>
-      
-      <!-- <div class="content">
-        QtScrcpy 软件
-实时显示 Android 设备屏幕,实时键鼠控制 Android 设备。支持 GNU/Linux
-      </div> -->
-    </a>
-  </div>
-
-
-
-  
-  <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/10.jpg" style="background-size: cover; 
-      background-position: center center;">
-    </div>
-    <a href="/2021/08/24/something-css/" class="post-nav-link">
-      <div class="title">
-        下一篇: <i class="fa fa-angle-right"></i>
-        <div class="title-text">css修改</div>
-      </div>
-      <!-- <div class="content">
-        1.箭头↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
-2.el-
-      </div> -->
-    </a>
-  </div>
-
-</div>
-
-    
-    
-
-    <!-- 打赏 -->
-    
-
-    <!-- 分享 -->
-    
-      <!-- https://github.com/overtrue/share.js -->
-<!-- 文章详情页的分享 -->
-<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
-
-<script src="/js/shareJs/social-share.min.js"></script>
-</script>
-
-<style>
-  .social-share {
-    margin: 20px 0;
+    <span class="title" id="tag-header-desc"></span>
+    <script>
+  function typedFn() {
+    const el = '#tag-header-desc';
+    const type = 'tagDetail';
+    let desc = 'Do what you love, Love what you do'
+    var typed = new Typed(el, {
+      strings: [desc],
+      startDelay: 100,
+      typeSpeed: 100,
+      loop: true,
+      backSpeed: 50,
+      showCursor: true
+    });
   }
-</style>
-
-
-    
-    
-    <!-- 评论 -->
-    <!-- 评论 -->
-
-  <div id="myComment">
-    
-  </div>
-
-<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
-
-
-  </div>
-
-  <!-- 目录 -->
-  <!-- 文章详情页右侧目录 -->
-
-  <div class="toc-aside">
-    <div class="toc-main">
-      <div class="toc-aside-title">
-        <i class="fa fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
-        
-          <div class="toc-open-close">本文目录</div>
-        
-      </div>
-      <div class="toc-content">
-        <div class="toc"></div>
-      </div>
-    </div>
-  </div>
-  <!-- js在scripts目录下的的toc.ejs里面 -->
-  
-
-  <script>
-    function openBtnClickFn () {
-      let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
-      let open = eval('' || 'true');
-      openOrCloseBtn.click(function() {
-        if (open === true) {
-          $(".toc-aside").css({'width': 0, 'padding': 0});
-          $(".toc-content").css({'width': 0});
-          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
-          $(".main-content").css({'width': '75%', 'margin': '10px auto'});
-          open = false;
-        } else {
-          $(".toc-aside").css({'width': '300px', 'padding': '0 10px'});
-          $(".toc-content").css({'width': '300px'});
-          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
-          $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
-          open = true;
-        }
-      });
-    };
-    openBtnClickFn();
-    document.addEventListener('pjax:complete', function () {
-      openBtnClickFn();
-    })
-  </script>
-
-
-  
-
-  <!-- 图片放大 Wrap images with fancybox support -->
-  <script src="/js/wrapImage.js"></script>
-</div>
-
-<!-- 文章详情页背景图 -->
-<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;" :style="{'background-color': bgColor ? bgColor : 'transparent'}">
-    <transition-group tag="ul" :name="names">
-        <li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
-            <img :src="image" class="bg-swiper-img">
-        </li>
-    </transition-group>
-</div>
-<script>
-    var vm = new Vue({
-        el: '#appBgSwiper',
-        data: {
-            names: '' || 'fade' || 'fade', // translate-fade fade
-            mark: 0,
-            img: [],
-            bgColor: '',
-            time: null
-        },
-        methods: {   //添加方法
-            change(i, m) {
-                if (i > m) {
-                    // this.names = 'fade';
-                } else if (i < m) {
-                    // this.names = 'fade';
-                } else {
-                    return;
-                }
-                this.mark = i;
-            },
-            prev() {
-                // this.names = 'fade';
-                this.mark--;
-                if (this.mark === -1) {
-                    this.mark = 3;
-                    return
-                }
-            },
-            next() {
-                // this.names = 'fade';
-                this.mark++;
-                if (this.mark === this.img.length) {
-                    this.mark = 0;
-                    return
-                }
-            },
-            autoPlay() {
-                // this.names = 'fade';
-                this.mark++;
-                if (this.mark === this.img.length) {
-                    this.mark = 0;
-                    return
-                }
-            },
-            play() {
-                let bgImgDelay = '' || '180000'
-                let delay = parseInt(bgImgDelay) || 180000;
-                this.time = setInterval(this.autoPlay, delay);
-            },
-            enter() {
-                clearInterval(this.time);
-            },
-            leave() {
-                this.play();
-            }
-        },
-        created() {
-            this.play()
-        },
-        beforeDestroy() {
-            clearInterval(this.time);
-        },
-        mounted() {
-            let prop = ''|| '';
-            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
-            if (isImg) {
-                let img = prop.split(',');
-                let configRoot = '/'
-                let arrImg = [];
-                img.forEach(el => {
-                    var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
-			        var objExp = new RegExp(Expression);
-
-                    if(objExp.test(el)) {
-                        // http or https
-                        arrImg.push(el);
-                    } else {
-                        // 非http or https开头
-                        // 本地文件
-                        let firstStr = el.charAt(0);
-                        if (firstStr == '/') {
-                            el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
-                        }
-                        el = configRoot + el;
-                        arrImg.push(el);
-                    }
-                })
-                this.img = arrImg;
-            } else {
-                this.bgColor = prop;
-            }
-        }
-    })
+  typedFn();
 </script>
+    
+  </div>
+  <div class="mask-box"></div>
+</div>
 
-<style>
-    .bg-swiper-box {
-        position: absolute;
-        display: block;
-        width: 100%;
-        height: 100%;
-    }
-    .bg-swiper-img {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-    }
-</style>
+
+
+<div class="tag">
+  <div class="tag-name">
+    <div class="name" style="background-color: #E8F8F5;">Hexo 分类</div>
+  </div>
+  <section class="posts">
+    
+    <article class="post" data-aos="fade-up"
+      style="flex-direction: row-reverse;">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span class="post-time">2021-08-30</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2021/08/30/technology/hexo/chart/">hexo博客引入动态图标chart</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            
+              
+              <a href="/2021/08/30/technology/hexo/chart/" class="lazyload" data-original="/medias/13.jpg" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            
+          </div>
+          <div class="post-content">
+            
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2021/08/30/technology/hexo/chart/">
+            <i class="iconfont iconmore" pointer style="float: right;" title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        
+          <a href="/2021/08/30/technology/hexo/chart/" class="lazyload" data-original="/medias/13.jpg" style="background-size: cover; 
+            background-position: center center;">
+          </a>
+        
+      </div>
+    </article>
+    
+  </section>
+</div>
 
     </main>
 

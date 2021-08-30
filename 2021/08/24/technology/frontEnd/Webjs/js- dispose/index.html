@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>电脑控制手机的小软件 | survival_F</title>
+  <title>部分数据方式 | survival_F</title>
 
   
     
@@ -534,7 +534,7 @@
 
 
 
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/1.jpg" style="background-repeat: no-repeat; background-size: cover; 
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/6.jpg" style="background-repeat: no-repeat; background-size: cover; 
   background-position: center center;position: relative;">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
@@ -542,27 +542,40 @@
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        电脑控制手机的小软件
+        部分数据方式
       </span>
     </div>
     
     
       
         <span class="post-detail-header_date">
-          <i class="fa fa-calendar"></i> 发表于：2021-08-27 |
+          <i class="fa fa-calendar"></i> 发表于：2021-08-24 |
         </span>
       
 
+      
+        <span class="post-detail-header_categories">
+          <i class="iconfont iconbookmark1"></i> 分类：
+          
+            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-detail-header_category">
+              web前端
+            </a>
+          
+            <a href="/categories/web%E5%89%8D%E7%AB%AF/js/" class="post-detail-header_category">
+              js
+            </a>
+          
+        </span>
       
 
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fa fa-file-text-o"></i> 字数统计: 227 |
+            <i class="fa fa-file-text-o"></i> 字数统计: 510 |
           </span>
   
           <span class="min2read">
-            <i class="fa fa-clock-o"></i> 阅读时长: 1分钟 |
+            <i class="fa fa-clock-o"></i> 阅读时长: 2分钟 |
           </span>
   
           
@@ -587,22 +600,29 @@
     <article class="post post-detail">
       
       <div class="post-content">
-        <h2 id="QtScrcpy-软件"><a href="#QtScrcpy-软件" class="headerlink" title="QtScrcpy 软件"></a>QtScrcpy 软件</h2><p><img "" class="lazyload placeholder" data-original="/medias/else/qtscrcpy.png" src="https://img10.360buyimg.com/ddimg/jfs/t1/157667/29/9156/134350/603c6445Ebbc9cabe/41219c5d36d45072.gif"></p>
-<p>实时显示 Android 设备屏幕,实时键鼠控制 Android 设备。支持 GNU/Linux，Windows 和 MacOS</p>
-<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>在你的电脑上接入 Android 设备，然后运行程序，按顺序点击如下按钮即可连接到 Android 设备</p>
-<p>无线连接步骤（保证手机和电脑在同一个局域网）：</p>
-<p>安卓手机端在开发者选项中打开 usb 调试</p>
-<p>通过 usb 连接安卓手机到电脑</p>
-<p>点击刷新设备，会看到有设备号更新出来</p>
-<p>点击获取设备 IP(可能需要开启wifi)</p>
-<p>点击启动 adbd</p>
-<p>无线连接</p>
-<p>再次点击刷新设备，发现多出了一个 IP 地址开头的设备，选择这个设备</p>
-<p>启动服务</p>
-<p>备注：启动 adbd 以后不用再连着 usb 线了，以后连接断开都不再需要，除非安卓 adbd 停了需要重新启动</p>
+        <h2 id="1-计算时间差代码"><a href="#1-计算时间差代码" class="headerlink" title="1.计算时间差代码"></a>1.计算时间差代码</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"> <span class="function"><span class="title">timeChange</span>(<span class="params">data1, data2</span>)</span> &#123;</span><br><span class="line">      <span class="keyword">let</span> dateBegin = <span class="keyword">new</span> <span class="built_in">Date</span>(data2.replace(<span class="regexp">/-/g</span>, <span class="string">&quot;/&quot;</span>));</span><br><span class="line">      <span class="keyword">let</span> dateEnd = <span class="keyword">new</span> <span class="built_in">Date</span>(data1.replace(<span class="regexp">/-/g</span>, <span class="string">&quot;/&quot;</span>));</span><br><span class="line">      <span class="keyword">let</span> dateDiff = dateEnd.getTime() - dateBegin.getTime(); <span class="comment">//时间差的毫秒数</span></span><br><span class="line">      <span class="keyword">let</span> dayDiff = <span class="built_in">Math</span>.floor(dateDiff / (<span class="number">24</span> * <span class="number">3600</span> * <span class="number">1000</span>)); <span class="comment">//计算出相差天数</span></span><br><span class="line">      <span class="keyword">let</span> leave1 = dateDiff % (<span class="number">24</span> * <span class="number">3600</span> * <span class="number">1000</span>); <span class="comment">//计算天数后剩余的毫秒数</span></span><br><span class="line">      <span class="keyword">let</span> hours = <span class="built_in">Math</span>.floor(leave1 / (<span class="number">3600</span> * <span class="number">1000</span>)); <span class="comment">//计算出小时数</span></span><br><span class="line">      <span class="comment">//计算相差分钟数</span></span><br><span class="line">      <span class="keyword">let</span> leave2 = leave1 % (<span class="number">3600</span> * <span class="number">1000</span>); <span class="comment">//计算小时数后剩余的毫秒数</span></span><br><span class="line">      <span class="keyword">let</span> minutes = <span class="built_in">Math</span>.floor(leave2 / (<span class="number">60</span> * <span class="number">1000</span>)); <span class="comment">//计算相差分钟数</span></span><br><span class="line">      <span class="comment">//计算相差秒数</span></span><br><span class="line">      <span class="keyword">let</span> leave3 = leave2 % (<span class="number">60</span> * <span class="number">1000</span>); <span class="comment">//计算分钟数后剩余的毫秒数</span></span><br><span class="line">      <span class="keyword">let</span> seconds = <span class="built_in">Math</span>.round(leave3 / <span class="number">1000</span>);</span><br><span class="line">      <span class="built_in">console</span>.log(</span><br><span class="line">        <span class="string">&quot; 相差 &quot;</span> +</span><br><span class="line">          dayDiff +</span><br><span class="line">          <span class="string">&quot;天 &quot;</span> +</span><br><span class="line">          hours +</span><br><span class="line">          <span class="string">&quot;小时 &quot;</span> +</span><br><span class="line">          minutes +</span><br><span class="line">          <span class="string">&quot; 分钟&quot;</span> +</span><br><span class="line">          seconds +</span><br><span class="line">          <span class="string">&quot; 秒&quot;</span></span><br><span class="line">      );</span><br><span class="line">    &#125;,</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="2-刷新数组"><a href="#2-刷新数组" class="headerlink" title="2.刷新数组"></a>2.刷新数组</h2><p>this.$forceUpdate()</p>
+<h2 id="3-小数取整"><a href="#3-小数取整" class="headerlink" title="3.小数取整"></a>3.小数取整</h2><p>1，Math.ceil()方法向上取整，整数部分值+1：</p>
+<p>eg：Math.ceil(3/2) 输出：2</p>
+<p>2，Math.floor()方法向下取整，整数部分值不变：</p>
+<p>eg：Math.floor(3/2) 输出：1</p>
+<p>3，Math.round()方法四舍五入取整：</p>
+<p>eg：Math.round(3/2) 输出：2</p>
+<p>4，parseInt()方法 抛去小数部分，只取整数部分：</p>
+<p>eg：parseInt(3/2) 输出：1</p>
+<h2 id="4-手机号-身份证"><a href="#4-手机号-身份证" class="headerlink" title="4.手机号/身份证"></a>4.手机号/身份证</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//reg.js页面</span></span><br><span class="line"><span class="comment">//判断是否是手机号</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> isPhoneNumber = <span class="function">(<span class="params">mobile</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> reg =</span><br><span class="line">    <span class="regexp">/^1(3[0-9]|4[5,7]|5[0,1,2,3,5,6,7,8,9]|6[2,5,6,7]|7[0,1,7,8]|8[0-9]|9[1,8,9])\d&#123;8&#125;$/</span>;</span><br><span class="line">  <span class="keyword">return</span> reg.test(mobile);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//判断是否是身份证</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> isCardNo = <span class="function">(<span class="params">card</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> reg =</span><br><span class="line">    <span class="regexp">/^[1-9]\d&#123;5&#125;[1-9]\d&#123;3&#125;((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d&#123;3&#125;([0-9]|X)$/</span>;</span><br><span class="line">  <span class="keyword">return</span> reg.test(card);</span><br><span class="line">&#125;;</span><br><span class="line"><span class="comment">//手机号中间隐藏</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> mobileEncrypt = <span class="function">(<span class="params">mobile</span>) =&gt;</span> &#123;</span><br><span class="line">  mobile = mobile + <span class="string">&quot;&quot;</span>;</span><br><span class="line">  <span class="keyword">return</span> <span class="string">`+86<span class="subst">$&#123;mobile.replace(<span class="regexp">/(\d&#123;3&#125;)\d*(\d&#123;4&#125;)/</span>, <span class="string">`$1 **** $2`</span>)&#125;</span>`</span>;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">//Vue</span></span><br><span class="line"><span class="keyword">import</span> &#123; mobileEncrypt &#125; <span class="keyword">from</span> <span class="string">&quot;@/utils/reg.js&quot;</span>;</span><br><span class="line">userMobilePhone = mobileEncrypt(userMobilePhone);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
+<h2 id="5-字符长度计算（中文算两个字符）"><a href="#5-字符长度计算（中文算两个字符）" class="headerlink" title="5.字符长度计算（中文算两个字符）"></a>5.字符长度计算（中文算两个字符）</h2><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">export</span> <span class="keyword">const</span> getStringLength = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">let</span> [length, cn, en] = [<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>];</span><br><span class="line">  <span class="built_in">Array</span>.from(e).map(<span class="function">(<span class="params">item</span>) =&gt;</span> &#123;</span><br><span class="line">    <span class="keyword">if</span> (e.charAt(item).match(<span class="regexp">/[\u4e00-\u9fa5]/g</span>)) &#123;</span><br><span class="line">      length += <span class="number">2</span>;</span><br><span class="line">      cn++;</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      length += <span class="number">1</span>;</span><br><span class="line">      en++;</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;);</span><br><span class="line">  <span class="keyword">return</span> length;</span><br><span class="line">&#125;;</span><br></pre></td></tr></table></figure>
       </div>
       <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/tags/Vue/" class="">
+              Vue
+            </a>
+          
+        </div>
         
       </div>
       
@@ -613,7 +633,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2021/08/27/control-phone/" target="_blank" title="电脑控制手机的小软件">https://surviavalf.github.io/2021/08/27/control-phone/</a>
+    <a href="/2021/08/24/technology/frontEnd/Webjs/js- dispose/" target="_blank" title="部分数据方式">https://surviavalf.github.io/2021/08/24/technology/frontEnd/Webjs/js- dispose/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -631,20 +651,38 @@
 
 
 
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/medias/10.jpg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/2021/08/24/technology/frontEnd/Webjs/recursion/" class="post-nav-link">
+      <div class="title">
+        <i class="fa fa-angle-left"></i> 上一篇:
+        <div class="title-text">递归</div>
+      </div>
+      
+      <!-- <div class="content">
+        vue 递归代码123456789101112131415161718192021222324caltaskScoreP
+      </div> -->
+    </a>
+  </div>
+
 
 
   
   <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/15.jpg" style="background-size: cover; 
+    <div class="post-nav-img lazyload" data-original="/medias/12.jpg" style="background-size: cover; 
       background-position: center center;">
     </div>
-    <a href="/2021/08/24/set-El-tree/" class="post-nav-link">
+    <a href="/2021/08/18/technology/frontEnd/Webjs/personnel-selection/" class="post-nav-link">
       <div class="title">
         下一篇: <i class="fa fa-angle-right"></i>
-        <div class="title-text">El-tree设置</div>
+        <div class="title-text">人员选择器</div>
       </div>
       <!-- <div class="content">
-        El-tree 设置El-tree 横向显示12345678910&lt;el-tree  class=&quot;el
+        
+使用 Element-plus 中的 Transfer 穿梭框 组件封装的一个人员选择器，使用的是 VUE3 中的 s
       </div> -->
     </a>
   </div>
