@@ -1,5 +1,5 @@
 ---
-title: hexo博客引入动态图标chart
+title: hexo博客引入动态图表chart
 tags:
   - Hexo
 categories:
