@@ -3,6 +3,7 @@ title: 友情链接
 date: 2021-08-30 14:18:04
 onlyTitle: true # 只显示title
 toc: false # 不显示文章目录
+img: '/medias/header/friends.jpg'
 ---
 
 {% linkgroup 3%}

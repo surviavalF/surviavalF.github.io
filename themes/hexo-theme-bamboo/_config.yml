@@ -17,6 +17,7 @@ menu:
   #   icon: fa fa-user
   Friends:
     url: /friends
+    icon: fa fa-film
   # 更多: # 这是二级菜单的写法
   #  icon: fa fa-link
   #  children:
@@ -35,7 +36,7 @@ menu:
 
 # github地址, 头部导航右上角的github链接
 Github: 
-  on: true
+  on: false
   url: https://github.com/surviavalF
 
 # 网站logo
@@ -122,7 +123,7 @@ sharejs:
 # 鼠标点击特效
 cursor_effect:
   on: true
-  type: love  # fireworks: 礼花 | explosion: 爆炸 | love: 浮出爱心 | text: 浮出文字
+  type: fireworks  # fireworks: 礼花 | explosion: 爆炸 | love: 浮出爱心 | text: 浮出文字
 
 # 头部导航是否显示天气
 weather:
@@ -310,6 +311,9 @@ notice:
   title: '公告'
   background: 'url("https://img10.360buyimg.com/ddimg/jfs/t1/166587/8/21344/72069/6088c24fEda5fdeb6/f9730ab637b7ca47.png")' # url("xxx") or red or #000 or rgba() ..
   list: # list相当于数组对象，[{title:'xx',date: 'xx', url: 'xxx', color: 'red'}]根据自己实际情况，增加或者删除
+    - title: '#2021年8月30日 新增友链功能 ~'
+      date: '2021-08-30'
+      url: ''
     - title: '#博客更换为Bamboo主题 作者：yuang01'
       date: '2021-08-20'
       url: 'https://github.com/yuang01/hexo-theme-bamboo'
@@ -407,7 +411,7 @@ danmu:
 # 归档页面图片、描述、视频，全屏 or 'http://xxx'
 archive:
   title: '归档'
-  img: 'https://pic1.zhimg.com/80/v2-1414b3a4b205e19060db18a20d08723a_1440w.jpg?source=1940ef5c'
+  img: '/medias/header/archive.jpg'
   desc: 'Do what you love, Love what you do'
   full: false # 设置为true，则图片全屏显示
   video: '' # 如果有值，则在屏幕大于920px的时候，全屏显示视频，为空则显示图片(img)
@@ -467,7 +471,7 @@ about:
 # 友情链接页面，配置同上
 friends:
   title: 'friends'
-  img: 'https://pic2.zhimg.com/80/v2-2407599a217ba89f9499c282f129d44d_1440w.jpg?source=1940ef5c'
+  img: '/medias/header/friends.jpg'
   desc: 'Do what you love, Love what you do'
   full: false
   video: ''
@@ -546,9 +550,9 @@ color_scheme:
     ## 单独的文章里配置，则这bgImg，bgImgDelay，bgImgTransition三个属性优先使用单独的文章里配置的
   footer:
     # 为空则使用 theme主题色，写法: alpha(#4293b9, 0.8) or rgba(268, 264, 269, 0.8) or #4293b9 or red or 也可以是渐变颜色 linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%) or 也可以是url("图片地址")
-    background: '' 
+    background: 'alpha(#4293b9, 0.8)' 
     # 页脚里面的a标签鼠标移入时候的颜色 red or #000 or other color
-    aHover: 'orangered' 
+    aHover: '#7042B9' 
 
 # 设置网站页脚
 site_footer:
@@ -561,7 +565,8 @@ site_footer:
     #   url: https://github.com/yuang01/hexo-theme-bamboo
     # - icon: fa fa-qq
     #   url: tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1730241541
-  copyright: 'Copyright © 2021 - 2021 <a href="https://github.com/surviavalF">surviavalF</a> | Powered by <a href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a href="https://github.com/yuang01/theme">Bamboo</a> '
+    # copyright: 'Copyright © 2021 - 2021 <a href="https://github.com/surviavalF">surviavalF</a> | Powered by <a href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a href="https://github.com/yuang01/theme">Bamboo</a> '
+  copyright: 'Copyright © 2021 - 2021 surviavalF | Powered by <a href="https://hexo.io/zh-cn/docs/">Hexo</a> | Theme <a href="https://github.com/yuang01/theme">Bamboo</a> '
   custom: # 根据需要自行取消注释，label: 'markdown格式'，会在下面继续增加内容
     # - label: '<br>'
     # - label: '[Hello World](http://baidu.com)'

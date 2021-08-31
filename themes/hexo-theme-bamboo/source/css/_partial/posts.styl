@@ -1,15 +1,21 @@
 // 首页文章列表
 .posts  {
-   width: 60%;
-   margin: 0 auto;
-   margin-bottom: 20px;
+   
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+
    h3 {
     color: #273849;
     border-bottom: 1px solid #273849;
    }
   .post {
     box-shadow: 0 1px 20px -6px rgba(0,0,0,.5);
-    width: 100%;
+    width: 48%;
     height: 300px;
     display: flex;
     margin-top: 30px;
@@ -137,8 +143,11 @@
 
 @media (max-width: 992px) {
   .posts  {
+    margin: 0 auto;
+    margin-bottom: 20px;
     width: 95%;
     .post {
+      width:100%
       margin-top: 10px;
       flex-direction: column!important;
       height: auto;
