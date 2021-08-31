@@ -8,6 +8,7 @@ categories:
   - web前端
   - CSS
 author: zhangyifeng
+img: '/medias/background/3.jpg'
 top: true
 ---
 

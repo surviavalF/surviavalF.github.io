@@ -30,20 +30,20 @@ npm install hexo-tag-chart --save
 {
 type: 'line',
 data: {
-labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
-datasets: [{
-label: 'My First dataset',
-backgroundColor: 'rgb(112, 66, 185,0.5)',
-borderColor: 'rgb(112, 66, 185,0.5)',
-data: [0, 10, 5, 2, 20, 30, 45]
-}]
+    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    datasets: [{
+        label: 'My First dataset',
+        backgroundColor: 'rgb(112, 66, 185,0.5)',
+        borderColor: 'rgb(112, 66, 185,0.5)',
+        data: [0, 10, 5, 2, 20, 30, 45]
+    }]
 },
 options: {
-responsive: true,
-title: {
-display: true,
-text: 'Chart.js Line Chart'
-}
+    responsive: true,
+    title: {
+        display: true,
+        text: 'Chart.js Line Chart'
+    }
 }
 }
 {% endchart %}
