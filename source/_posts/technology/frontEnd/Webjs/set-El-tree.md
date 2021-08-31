@@ -9,9 +9,11 @@ categories:
 author: zhangyifeng
 ---
 
-## El-tree 设置
+# El-tree 设置
 
-### El-tree 横向显示
+## El-tree 横向显示
+
+{% title h3, html %}
 
 ```html
 <el-tree
@@ -25,8 +27,8 @@ author: zhangyifeng
   :render-content="renderContent"
 ></el-tree>
 ```
+{% title h3, data %}
 
-data
 
 ```js
 let routeList = ref([]); //树节点let defaultProps = ref({
@@ -35,7 +37,7 @@ let routeList = ref([]); //树节点let defaultProps = ref({
 }); //树节点
 ```
 
-js
+{% title h3, js %}
 
 ```js
 //树节点的内容区的渲染 Function
@@ -79,7 +81,7 @@ const changeCss = () => {
 };
 ```
 
-### El-tree 选择的节点获取
+## El-tree 选择的节点获取
 
 ```js
 let Nodes = [
@@ -90,8 +92,8 @@ let Nodes = [
 
 当父节点中的子节点未完全选择，父组件是半选择状态时，想要获取全部节点（包括半选择的父节点）使用此方法
 
-#### 以下为引用
 
+{% title h2, 以下为引用 %}
 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 el-tree 组件在获取选择的节点时，默认的逻辑是，选中父节点时所有的子节点会被选中（checked），但是当该节点下不是选中所有子节点的时候，主节点不会被选中，而是处于一种半选中状态，提交时通过 getCheckedKeys() 方法也不会提交父节点，因为半选中状态下 checked 属性是 false 的。
 

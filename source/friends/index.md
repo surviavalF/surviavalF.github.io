@@ -6,7 +6,7 @@ toc: false # 不显示文章目录
 img: '/medias/header/friends.jpg'
 ---
 
-{% linkgroup 3%}
+{% linkgroup %}
 
     {% link Hexo, http://hexo.io,  %}
     {% link VUE, https://cn.vuejs.org/,  %}
