@@ -24,7 +24,7 @@ npm install hexo-tag-chart --save
 ```
 
 ## 示例
-
+(可能因本人使用主题原因，第一次加载会失败，需要刷新)
 {% chart 90% 300 %}
 {
 type: 'line',

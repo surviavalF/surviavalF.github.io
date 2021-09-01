@@ -12,9 +12,9 @@ menu:
   Categories:
     url: /categories
     icon: fa fa-bookmark
-  # About:
-  #   url: /about
-  #   icon: fa fa-user
+  About:
+    url: /about
+    icon: fa fa-user
   Friends:
     url: /friends
     icon: fa fa-film
@@ -460,7 +460,7 @@ categoryDetail:
 
 # 关于我页面，配置同上
 about:
-  title: 'about'
+  title: '关于'
   img: 'https://pic4.zhimg.com/80/v2-d12b0c9802720897793993a5a199720f_1440w.jpg'
   desc: 'Do what you love, Love what you do'
   full: false
