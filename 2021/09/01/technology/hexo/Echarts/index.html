@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>归档 | survival_F</title>
+  <title>hexo博客引入Echarts | survival_F</title>
 
   
     
@@ -537,263 +537,531 @@
 
     <!-- 内容区域 -->
     <main class="main" id="pjax-container" style="margin-top: 0;">
-      <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="bg-light-floor-archive" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
-<div class="lazyload archive-header" data-original="/medias/header/archive.jpg" >
-  <div class="archive-header-title">
-    归档
-  </div>
-  <div class="archive-header-desc">
+      
+ <!-- prismjs 代码高亮 -->
+ 
+
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+<!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/background/3.jpg" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
   
-  <span class="title" id="archive-header-desc"></span>
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        hexo博客引入Echarts
+      </span>
+    </div>
+    
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fa fa-calendar"></i> 发表于：2021-09-01 |
+        </span>
+      
+
+      
+
+      
+        <div class="post-detail-header_wordcount">
+          <span class="totalcount">
+            <i class="fa fa-file-text-o"></i> 字数统计: 706 |
+          </span>
+  
+          <span class="min2read">
+            <i class="fa fa-clock-o"></i> 阅读时长: 3分钟 |
+          </span>
+  
+          
+            <span class="reading">
+              <i class="fa fa-eye"></i> 阅读量：<span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+        </div>
+      
+    
+  </div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
+</div>
+
+
+
+<div class="row justify-position">
+  <div class="main-content">
+    <article class="post post-detail">
+      
+      <div class="post-content">
+        <h2 id="Hexo-中的-Echarts"><a href="#Hexo-中的-Echarts" class="headerlink" title="Hexo 中的 Echarts"></a>Hexo 中的 Echarts</h2><p><a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/index.html">ECharts</a> 是一个使用 JavaScript 实现的开源可视化库，涵盖各行业图表，满足各种需求。功能非常强大，想要用好建议多翻看几遍官网的 API</p>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a>步骤</h2><h3 id="1-下载"><a href="#1-下载" class="headerlink" title="1.下载"></a>1.下载</h3><p>在 Hexo 博客中引入<a target="_blank" rel="noopener" href="https://echarts.apache.org/zh/index.html">ECharts</a>需要下载 Echarts 的 js 文件</p>
+<p><a target="_blank" rel="noopener" href="https://github.com/apache/echarts/tree/4.6.0/dist">echarts.min.js 传送门</a></p>
+<p>然后放在 <span class='p red'>Hexo\themes\< theme~name >\source\js</span> 下</p>
+<h3 id="2-写"><a href="#2-写" class="headerlink" title="2.写"></a>2.写</h3><p>直接在.md 文件中写就可以（本人使用的 Hexo 主题为<a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a>需要在主题的 <span class='p red'>_config.yml</span> 的 import: 下引入刚下载的 js 文件）</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;test2&quot;</span> style=<span class="string">&quot;width:100%;height:500px;&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span><span class="attr">src</span>=<span class="string">&quot;/js/echarts.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span><span class="attr">src</span>=<span class="string">&quot;/js/jquery.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="keyword">var</span>  myChart2 = echarts.init(<span class="built_in">document</span>.getElementById(<span class="string">&quot;test2&quot;</span>));<span class="comment">//div元素节点的对象</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">option = &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="attr">xAxis</span>: &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="attr">type</span>: <span class="string">&#x27;category&#x27;</span>,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="attr">data</span>: [<span class="string">&#x27;Mon&#x27;</span>, <span class="string">&#x27;Tue&#x27;</span>, <span class="string">&#x27;Wed&#x27;</span>, <span class="string">&#x27;Thu&#x27;</span>, <span class="string">&#x27;Fri&#x27;</span>, <span class="string">&#x27;Sat&#x27;</span>, <span class="string">&#x27;Sun&#x27;</span>]</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="attr">yAxis</span>: &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="attr">type</span>: <span class="string">&#x27;value&#x27;</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="attr">series</span>: [&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="attr">data</span>: [<span class="number">150</span>, <span class="number">230</span>, <span class="number">224</span>, <span class="number">218</span>, <span class="number">135</span>, <span class="number">147</span>, <span class="number">260</span>],</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="attr">type</span>: <span class="string">&#x27;line&#x27;</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;]</span></span></span><br><span class="line"><span class="javascript"><span class="xml">&#125;;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">myChart2.setOption(option);</span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="built_in">window</span>.οnresize=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    myChart2.resize();</span></span></span><br><span class="line"><span class="javascript"><span class="xml">&#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><div style="display:flex;flex-wrap: wrap;">
+    <div id="test1" style="width:50%;height:600px;"></div>
+    <div id="test2" style="width:50%;height:600px;"></div>
+    <div id="test3" style="width:50%;height:600px;"></div>
+    <div id="test4" style="width:50%;height:600px;"></div>
+</div>
+<script type="text/javascript"src="/js/echarts.min.js"></script>
+<script type="text/javascript"src="/js/jquery.js"></script>
+<script type="text/javascript">
+var  myChart1 = echarts.init(document.getElementById("test1"));
+var  myChart2 = echarts.init(document.getElementById("test2"));
+var  myChart3 = echarts.init(document.getElementById("test3"));
+var  myChart4 = echarts.init(document.getElementById("test4"));//div元素节点的对象
+option1 = {
+    xAxis: {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [150, 230, 224, 218, 135, 147, 260],
+        type: 'line'
+    }]
+};
+option2 = {
+    xAxis: {
+        type: 'category',
+        data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
+    },
+    yAxis: {
+        type: 'value'
+    },
+    series: [{
+        data: [120, 200, 150, 80, 70, 110, 130],
+        type: 'bar',
+        showBackground: true,
+        backgroundStyle: {
+            color: 'rgba(180, 180, 180, 0.2)'
+        }
+    }]
+};
+option3 = {
+    title: {
+        text: '堆叠区域图'
+    },
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {
+            type: 'cross',
+            label: {
+                backgroundColor: '#6a7985'
+            }
+        }
+    },
+    legend: {
+        data: ['邮件营销', '联盟广告', '视频广告', '直接访问', '搜索引擎']
+    },
+    toolbox: {
+        feature: {
+            saveAsImage: {}
+        }
+    },
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
+    },
+    xAxis: [
+        {
+            type: 'category',
+            boundaryGap: false,
+            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+        }
+    ],
+    yAxis: [
+        {
+            type: 'value'
+        }
+    ],
+    series: [
+        {
+            name: '邮件营销',
+            type: 'line',
+            stack: '总量',
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [120, 132, 101, 134, 90, 230, 210]
+        },
+        {
+            name: '联盟广告',
+            type: 'line',
+            stack: '总量',
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [220, 182, 191, 234, 290, 330, 310]
+        },
+        {
+            name: '视频广告',
+            type: 'line',
+            stack: '总量',
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [150, 232, 201, 154, 190, 330, 410]
+        },
+        {
+            name: '直接访问',
+            type: 'line',
+            stack: '总量',
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [320, 332, 301, 334, 390, 330, 320]
+        },
+        {
+            name: '搜索引擎',
+            type: 'line',
+            stack: '总量',
+            label: {
+                show: true,
+                position: 'top'
+            },
+            areaStyle: {},
+            emphasis: {
+                focus: 'series'
+            },
+            data: [820, 932, 901, 934, 1290, 1330, 1320]
+        }
+    ]
+};
+option4 = {
+    title: {
+        text: '某站点用户访问来源',
+        subtext: '纯属虚构',
+        left: 'center'
+    },
+    tooltip: {
+        trigger: 'item'
+    },
+    legend: {
+        orient: 'vertical',
+        left: 'left',
+    },
+    series: [
+        {
+            name: '访问来源',
+            type: 'pie',
+            radius: '50%',
+            data: [
+                {value: 1048, name: '搜索引擎'},
+                {value: 735, name: '直接访问'},
+                {value: 580, name: '邮件营销'},
+                {value: 484, name: '联盟广告'},
+                {value: 300, name: '视频广告'}
+            ],
+            emphasis: {
+                itemStyle: {
+                    shadowBlur: 10,
+                    shadowOffsetX: 0,
+                    shadowColor: 'rgba(0, 0, 0, 0.5)'
+                }
+            }
+        }
+    ]
+};
+myChart1.setOption(option1);
+myChart2.setOption(option2);
+myChart3.setOption(option3);
+myChart4.setOption(option4);
+window.οnresize=function(){
+    myChart1.resize();
+    myChart2.resize();
+    myChart3.resize();
+    myChart4.resize();
+}
+</script>
+
+
+<p>本文参考了CSDN博主「磊少1999」的原创文章 原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_41426117/article/details/105416911">https://blog.csdn.net/qq_41426117/article/details/105416911</a></p>
+
+      </div>
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/tags/Hexo/" class="">
+              Hexo
+            </a>
+          
+        </div>
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>zhangyifeng</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/2021/09/01/technology/hexo/Echarts/" target="_blank" title="hexo博客引入Echarts">https://surviavalf.github.io/2021/09/01/technology/hexo/Echarts/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      著作权归作者所有。<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a>
+      商业转载请联系作者获得授权，非商业转载请保留以上作者信息和原文链接。
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/medias/background/6.jpg" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/2021/08/30/technology/hexo/chart/" class="post-nav-link">
+      <div class="title">
+        下一篇: <i class="fa fa-angle-right"></i>
+        <div class="title-text">hexo博客引入动态图表chart</div>
+      </div>
+      <!-- <div class="content">
+        Hexo 中的 ChartjsChartjs 的文档首页，相比于 ECharts，感觉 Chart 的某些图表或动画的帧
+      </div> -->
+    </a>
+  </div>
+
+</div>
+
+    
+    
+
+    <!-- 打赏 -->
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
+</script>
+
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+  <div id="myComment">
+    
+  </div>
+
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
+
+
+  </div>
+
+  <!-- 目录 -->
+  <!-- 文章详情页右侧目录 -->
+
+  <div class="toc-aside">
+    <div class="toc-main">
+      <div class="toc-aside-title">
+        <i class="fa fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
+        
+          <div class="toc-open-close">本文目录</div>
+        
+      </div>
+      <div class="toc-content">
+        <div class="toc"></div>
+      </div>
+    </div>
+  </div>
+  <!-- js在scripts目录下的的toc.ejs里面 -->
+  
+
   <script>
-  function typedFn() {
-    const el = '#archive-header-desc';
-    const type = 'archive';
-    let desc = 'Do what you love, Love what you do'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
+    function openBtnClickFn () {
+      let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+      let open = eval('' || 'true');
+      openOrCloseBtn.click(function() {
+        if (open === true) {
+          $(".toc-aside").css({'width': 0, 'padding': 0});
+          $(".toc-content").css({'width': 0});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+          $(".main-content").css({'width': '75%', 'margin': '10px auto'});
+          open = false;
+        } else {
+          $(".toc-aside").css({'width': '300px', 'padding': '0 10px'});
+          $(".toc-content").css({'width': '300px'});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+          $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+          open = true;
+        }
+      });
+    };
+    openBtnClickFn();
+    document.addEventListener('pjax:complete', function () {
+      openBtnClickFn();
+    })
+  </script>
+
+
+  
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
+</div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;" :style="{'background-color': bgColor ? bgColor : 'transparent'}">
+    <transition-group tag="ul" :name="names">
+        <li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+            <img :src="image" class="bg-swiper-img">
+        </li>
+    </transition-group>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#appBgSwiper',
+        data: {
+            names: '' || 'fade' || 'fade', // translate-fade fade
+            mark: 0,
+            img: [],
+            bgColor: '',
+            time: null
+        },
+        methods: {   //添加方法
+            change(i, m) {
+                if (i > m) {
+                    // this.names = 'fade';
+                } else if (i < m) {
+                    // this.names = 'fade';
+                } else {
+                    return;
+                }
+                this.mark = i;
+            },
+            prev() {
+                // this.names = 'fade';
+                this.mark--;
+                if (this.mark === -1) {
+                    this.mark = 3;
+                    return
+                }
+            },
+            next() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            autoPlay() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            play() {
+                let bgImgDelay = '' || '180000'
+                let delay = parseInt(bgImgDelay) || 180000;
+                this.time = setInterval(this.autoPlay, delay);
+            },
+            enter() {
+                clearInterval(this.time);
+            },
+            leave() {
+                this.play();
+            }
+        },
+        created() {
+            this.play()
+        },
+        beforeDestroy() {
+            clearInterval(this.time);
+        },
+        mounted() {
+            let prop = ''|| '';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
+            if (isImg) {
+                let img = prop.split(',');
+                let configRoot = '/'
+                let arrImg = [];
+                img.forEach(el => {
+                    var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+			        var objExp = new RegExp(Expression);
+
+                    if(objExp.test(el)) {
+                        // http or https
+                        arrImg.push(el);
+                    } else {
+                        // 非http or https开头
+                        // 本地文件
+                        let firstStr = el.charAt(0);
+                        if (firstStr == '/') {
+                            el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+                        }
+                        el = configRoot + el;
+                        arrImg.push(el);
+                    }
+                })
+                this.img = arrImg;
+            } else {
+                this.bgColor = prop;
+            }
+        }
+    })
 </script>
-  
-  </div>
-  <div class="mask-box"></div>
-</div>
 
-<div class="archive-video">
-  <video class="full-video" autoplay loop muted>
-      <source style="width: 100%;height: 100vh;" src="/">
-  </video>
-  <div class="video-header-title">
-    归档
-  </div>
-  <div class="video-header-desc">
-  
-      <span class="title" id="archive-video-header-desc"></span>
-      <script>
-  function typedFn() {
-    const el = '#archive-video-header-desc';
-    const type = 'archive';
-    let desc = 'Do what you love, Love what you do'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
-</script>
-      
-  </div>
-  <div class="mask-box"></div>
-</div>
+<style>
+    .bg-swiper-box {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .bg-swiper-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+</style>
 
-<!-- hash算法 -->
-
-
-<div class="archive-main">
-  <section class="archive">
-    <div class="archive-content">
-      <ul class="post-archive">
-        
-        
-          
-            
-            <div class="year" data-aos="zoom-in-up">
-                <div class="bullet"></div>
-                <a href="/archives/2021">2021</a>
-            </div>
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2021/09/01/technology/hexo/Echarts/" class="post-img lazyload" data-original="/medias/background/3.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">09-01</span>
-              </div>
-              <a class="post-title" href="/2021/09/01/technology/hexo/Echarts/">hexo博客引入Echarts</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2021/08/30/technology/hexo/chart/" class="post-img lazyload" data-original="/medias/background/6.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">08-30</span>
-              </div>
-              <a class="post-title" href="/2021/08/30/technology/hexo/chart/">hexo博客引入动态图表chart</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2021/08/27/softWear/control-phone/" class="post-img lazyload" data-original="/medias/background/1.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">08-27</span>
-              </div>
-              <a class="post-title" href="/2021/08/27/softWear/control-phone/">电脑控制手机的小软件</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2021/08/24/technology/frontEnd/Webjs/set-El-tree/" class="post-img lazyload" data-original="/medias/background/15.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">08-24</span>
-              </div>
-              <a class="post-title" href="/2021/08/24/technology/frontEnd/Webjs/set-El-tree/">El-tree设置</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2021/08/24/technology/frontEnd/Webcss/something-css/" class="post-img lazyload" data-original="/medias/background/3.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">08-24</span>
-              </div>
-              <a class="post-title" href="/2021/08/24/technology/frontEnd/Webcss/something-css/">css修改</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2021/08/24/technology/frontEnd/Webjs/table-data-matching/" class="post-img lazyload" data-original="/medias/background/12.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">08-24</span>
-              </div>
-              <a class="post-title" href="/2021/08/24/technology/frontEnd/Webjs/table-data-matching/">table列表匹配</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2021/08/24/technology/frontEnd/Webjs/dynamic-table-header/" class="post-img lazyload" data-original="/medias/background/9.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">08-24</span>
-              </div>
-              <a class="post-title" href="/2021/08/24/technology/frontEnd/Webjs/dynamic-table-header/">动态表头</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2021/08/24/technology/frontEnd/Webjs/recursion/" class="post-img lazyload" data-original="/medias/background/10.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">08-24</span>
-              </div>
-              <a class="post-title" href="/2021/08/24/technology/frontEnd/Webjs/recursion/">递归</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2021/08/24/technology/frontEnd/Webjs/js-%20dispose/" class="post-img lazyload" data-original="/medias/background/6.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">08-24</span>
-              </div>
-              <a class="post-title" href="/2021/08/24/technology/frontEnd/Webjs/js-%20dispose/">部分数据处理方式</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2021/08/18/technology/frontEnd/Webjs/personnel-selection/" class="post-img lazyload" data-original="/medias/background/12.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">08-18</span>
-              </div>
-              <a class="post-title" href="/2021/08/18/technology/frontEnd/Webjs/personnel-selection/">人员选择器</a>
-            </div>
-          </li>
-        
-      </ul>
-    </div>
-  </section>
-  
-  <!-- <nav class="page-nav">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/page/2/">2</a><a class="extend next" rel="next" href="/archives/page/2/">下一页</a>
-  </nav> -->
-  <div class="page-nav">
-    
-    <div class="page-info">
-        <div class="page-info-text">1 / 2</div>
-    </div>
-    
-      <a href="/archives/page/2/"
-         class="page-nav-next">
-          <span class="mr-5">下一页</span><i class="fa fa-angle-right"></i>
-      </a>
-      
-  </div>
-
-</div>
     </main>
 
     <!-- 页脚 -->
