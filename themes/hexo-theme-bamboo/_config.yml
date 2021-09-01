@@ -644,8 +644,9 @@ import:
     - 
   script: 
     # - <script src="xxx.js"></script>
-    - 
-    - 
+    - <script type="text/javascript" src="/js/echarts.min.js"></script>
+    - <script type="text/javascript" src="/js/jquery.js"></script>
+    - <script type="text/javascript">
 
 # 文章图片
 imgs:
