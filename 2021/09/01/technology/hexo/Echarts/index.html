@@ -197,6 +197,17 @@
           
             <li class="drawer-box-content_item" style="position: relative;">
               
+                <a href="/about" class="drawer-menu-item-link">
+                  
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">关于</span>
+                </a>
+              
+            </li>
+          
+            <li class="drawer-box-content_item" style="position: relative;">
+              
                 <a href="/friends" class="drawer-menu-item-link">
                   
                     <i class="fa fa-film" aria-hidden="true"></i>
@@ -311,6 +322,17 @@
                     <i class="fa fa-bookmark" aria-hidden="true"></i>
                   
                   <span class="name">分类</span>
+                </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="/about" class="menu-item-link" title="关于">
+                  
+                    <i class="fa fa-user" aria-hidden="true"></i>
+                  
+                  <span class="name">关于</span>
                 </a>
               
             </li>
@@ -573,7 +595,7 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fa fa-file-text-o"></i> 字数统计: 706 |
+            <i class="fa fa-file-text-o"></i> 字数统计: 718 |
           </span>
   
           <span class="min2read">
@@ -608,7 +630,7 @@
 <p>然后放在 <span class='p red'>Hexo\themes\< theme~name >\source\js</span> 下</p>
 <h3 id="2-写"><a href="#2-写" class="headerlink" title="2.写"></a>2.写</h3><p>直接在.md 文件中写就可以（本人使用的 Hexo 主题为<a target="_blank" rel="noopener" href="https://github.com/yuang01/theme">Bamboo</a>需要在主题的 <span class='p red'>_config.yml</span> 的 import: 下引入刚下载的 js 文件）</p>
 <figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">&lt;div id=<span class="string">&quot;test2&quot;</span> style=<span class="string">&quot;width:100%;height:500px;&quot;</span>&gt;&lt;/div&gt;</span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span><span class="attr">src</span>=<span class="string">&quot;/js/echarts.min.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span><span class="attr">src</span>=<span class="string">&quot;/js/jquery.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="keyword">var</span>  myChart2 = echarts.init(<span class="built_in">document</span>.getElementById(<span class="string">&quot;test2&quot;</span>));<span class="comment">//div元素节点的对象</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">option = &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="attr">xAxis</span>: &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="attr">type</span>: <span class="string">&#x27;category&#x27;</span>,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="attr">data</span>: [<span class="string">&#x27;Mon&#x27;</span>, <span class="string">&#x27;Tue&#x27;</span>, <span class="string">&#x27;Wed&#x27;</span>, <span class="string">&#x27;Thu&#x27;</span>, <span class="string">&#x27;Fri&#x27;</span>, <span class="string">&#x27;Sat&#x27;</span>, <span class="string">&#x27;Sun&#x27;</span>]</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="attr">yAxis</span>: &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="attr">type</span>: <span class="string">&#x27;value&#x27;</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;,</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="attr">series</span>: [&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="attr">data</span>: [<span class="number">150</span>, <span class="number">230</span>, <span class="number">224</span>, <span class="number">218</span>, <span class="number">135</span>, <span class="number">147</span>, <span class="number">260</span>],</span></span></span><br><span class="line"><span class="javascript"><span class="xml">        <span class="attr">type</span>: <span class="string">&#x27;line&#x27;</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;]</span></span></span><br><span class="line"><span class="javascript"><span class="xml">&#125;;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">myChart2.setOption(option);</span></span></span><br><span class="line"><span class="javascript"><span class="xml"><span class="built_in">window</span>.οnresize=<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    myChart2.resize();</span></span></span><br><span class="line"><span class="javascript"><span class="xml">&#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
+<p><a target="_blank" rel="noopener" href="https://www.makeapie.com/explore.html">MAKEAPIE</a>一个非常不错的Echarts示例网站</p>
 <h2 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h2><div style="display:flex;flex-wrap: wrap;">
     <div id="test1" style="width:50%;height:600px;"></div>
     <div id="test2" style="width:50%;height:600px;"></div>
