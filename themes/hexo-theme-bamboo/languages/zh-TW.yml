@@ -20,6 +20,11 @@ category: 分類
 archives: 歸檔
 about: 關於
 aboutBasicInfo: 基本信息
+echarts: 图表
+postPublishChart: 文章发布统计图
+categoriesChart: 文章分类统计图
+top10TagsChart: TOP10 标签统计图
+postsNumberName: 文章篇数
 age: 年齡
 sex: 性别
 coordinate: 坐標

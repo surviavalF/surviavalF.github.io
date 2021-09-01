@@ -231,34 +231,34 @@ music:
 # 关于我
 baseInfo:
   on: true
-  age: 99 # 年龄
+  age: 1999 # 年龄(本人利用js改为传出生年份)
   sex: '男' # 性别
   coordinate: '火星' # 坐标
-  status: '划水中' # 状态
+  status: '改BUG中' # 状态
 
 # 关于我 技能
 skills:  # color or #000 技能
   on: true
-  # data: # data下面的值，不是固定个数的，可以自己增加或者删除
-  #   HTML5:
-  #     background: 'linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%)'
-  #     percent: 90%
-  #   JavaScript:
-  #     background: 'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)'
-  #     percent: 85%
-  #   Node.js:
-  #     background: 'linear-gradient(to right, #43e97b 0%, #38f9d7 100%)'
-  #     percent: 50%
-  #   CSS:
-  #     background: 'linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%)'
-  #     percent: 70%
-  #   Vue:
-  #     background: 'linear-gradient(to top, #0ba360 0%, #3cba92 100%)'
-  #     percent: 90%
+  data: # data下面的值，不是固定个数的，可以自己增加或者删除
+    HTML5:
+      background: 'linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%)'
+      percent: 90%
+    JavaScript:
+      background: 'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)'
+      percent: 85%
+    # Node.js:
+    #   background: 'linear-gradient(to right, #43e97b 0%, #38f9d7 100%)'
+    #   percent: 50%
+    CSS:
+      background: 'linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%)'
+      percent: 70%
+    Vue:
+      background: 'linear-gradient(to top, #0ba360 0%, #3cba92 100%)'
+      percent: 90%
 
 # 关于我 社交账号
 socialAccounts: 
-  on: true
+  on: false
   # data: # data下面的值，不是固定个数的，可以自己增加或者删除
   #   QQ:
   #     icon: fa fa-qq
@@ -271,7 +271,7 @@ socialAccounts:
 
 # 关于我 游戏
 games:
-  on: true
+  on: false
   # data: # data下面的值，不是固定个数的，可以自己增加或者删除
   #   王者荣耀:
   #     img: 'https://pic2.zhimg.com/80/v2-54730a36304842b86a57a237b8b39945_720w.jpg?source=1940ef5c'
@@ -284,7 +284,7 @@ games:
 
 # 关于我 书籍
 books:
-  on: true
+  on: false
   # data: # data下面的值，不是固定个数的，可以自己增加或者删除
   #   明朝那些事儿:
   #     img: 'https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2736238052,2078148140&fm=26&gp=0.jpg'
@@ -461,7 +461,7 @@ categoryDetail:
 # 关于我页面，配置同上
 about:
   title: '关于'
-  img: 'https://pic4.zhimg.com/80/v2-d12b0c9802720897793993a5a199720f_1440w.jpg'
+  img: '/medias/header/about.jpeg'
   desc: 'Do what you love, Love what you do'
   full: false
   video: ''

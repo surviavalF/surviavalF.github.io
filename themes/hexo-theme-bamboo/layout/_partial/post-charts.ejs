@@ -1,18 +1,26 @@
 <style type="text/css">
-  .posts-chart {
-    display: flex;
-    flex-wrap: wrap;
+  .borders {
+    width: 280px;
+    height: 280px;
+    margin: 5px;
   }
-  .aaaa {
-    width: 600px;
-    height: 600px;
-    background-color: rebeccapurple;
+  .itemsC {
+    margin-top: 30px;
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important;
   }
 </style>
-<div class="post-charts">
-  <div id="test1" class="aaaa"></div>
-    <div id="test2" class="aaaa"></div>
-    <div id="test3" class="aaaa"></div>
+<div class="basic-info" data-aos="<%= theme.aos.animate || 'fade-up' %>">
+  <div class="subtitle">
+    <i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;&nbsp;<%=
+    __('echarts') %>
+  </div>
+  <div class="items itemsC">
+    <div id="test1" class="borders"></div>
+    <div id="test2" class="borders"></div>
+    <div id="test3" class="borders"></div>
   </div>
 </div>
 
@@ -55,7 +63,6 @@
       let option1 = {
           title: {
               text: '<%- __("postPublishChart")  %>',
-              top: -5,
               x: 'center'
           },
           tooltip: {
@@ -81,18 +88,8 @@
                           type: 'max',
                           itemStyle: {color: ['#3ecf8e']},
                           name: '<%- __("maximum")  %>'
-                      }, {
-                          type: 'min',
-                          itemStyle: {color: ['#fa755a']},
-                          name: '<%- __("minimum")  %>'
                       }]
                   },
-                  markLine: {
-                      itemStyle: {color: ['#ab47bc']},
-                      data: [
-                          {type: 'average', name: '<%- __("average")  %>'}
-                      ]
-                  }
               }
           ]
       };
@@ -111,7 +108,7 @@
       let option2 = {
           title: {
               text: '<%- __("categoriesChart")  %>',
-              top: -4,
+
               x: 'center'
           },
           tooltip: {
@@ -159,7 +156,7 @@
     let option3 = {
         title: {
             text: '<%- __("top10TagsChart")  %>',
-            top: -5,
+
             x: 'center'
         },
         tooltip: {},
@@ -182,32 +179,20 @@
                 data: <%- tagCountArrJson %>,
                 markPoint: {
                     symbolSize: 45,
-                    data: [{
-                        type: 'max',
-                        itemStyle: {color: ['#3ecf8e']},
-                        name: '<%- __("maximum")  %>'
-                    }, {
-                        type: 'min',
-                        itemStyle: {color: ['#fa755a']},
-                        name: '<%- __("minimum")  %>'
-                    }],
+                    data: [],
                 },
-                markLine: {
-                    itemStyle: {color: ['#ab47bc']},
-                    data: [
-                        {type: 'average', name: '<%- __("average")  %>'}
-                    ]
-                }
             }
         ]
     };
 
-    myChart1.setOption(option1);
-    myChart2.setOption(option2);
-    myChart3.setOption(option3);
-    window.οnresize = function () {
-      myChart1.resize();
-      myChart2.resize();
-      myChart3.resize();
-    };
+  setTimeout(() => {
+      myChart1.setOption(option1);
+      myChart2.setOption(option2);
+      myChart3.setOption(option3);
+      window.οnresize = function () {
+        myChart1.resize();
+        myChart2.resize();
+        myChart3.resize();
+      };
+  }, 500);
 </script>

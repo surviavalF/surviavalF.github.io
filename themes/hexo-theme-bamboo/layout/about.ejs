@@ -50,6 +50,7 @@ var books = theme.books.data || {};
 	<div class="title">
 		<i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;<%= __('about') %>
 	</div>
+	<%- partial('_partial/post-charts') %>
 	<% if(theme.baseInfo.on) { %>
 	<div class="basic-info" data-aos="<%= theme.aos.animate || 'fade-up' %>">
 		<div class="subtitle">
@@ -61,7 +62,11 @@ var books = theme.books.data || {};
 					<i class="fa fa-heart" aria-hidden="true"></i>
 				</div>
 				<div class="text">
-					<%= __('age') %>：<%= theme.baseInfo.age %>
+					<%
+					var date = new Date();
+					var year =date.getFullYear(); //获取完整的年份(4位)
+					%>
+					<%= __('age') %>：<%= year - theme.baseInfo.age  %>
 				</div>
 			</div>
 
@@ -162,7 +167,4 @@ var books = theme.books.data || {};
 		</div>
 	</div>
 	<% } %>
-	<div>
-		<%- partial('_partial/post-charts') %>
-	</div>
 </div>
