@@ -242,20 +242,25 @@ skills:  # color or #000 技能
   data: # data下面的值，不是固定个数的，可以自己增加或者删除
     HTML5:
       background: 'linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%)'
-      percent: 90%
+      percent: 60%
     JavaScript:
       background: 'linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%)'
-      percent: 85%
+      percent: 75%
     # Node.js:
     #   background: 'linear-gradient(to right, #43e97b 0%, #38f9d7 100%)'
     #   percent: 50%
     CSS:
       background: 'linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%)'
-      percent: 70%
+      percent: 60%
     Vue:
-      background: 'linear-gradient(to top, #0ba360 0%, #3cba92 100%)'
-      percent: 90%
-
+      background: 'linear-gradient(to right, #0029FF 0%, #8FFF00 100%)'
+      percent: 80%
+    写BUG:
+      background: 'linear-gradient(to right, #43e97b 0%, #38f9d7 100%)'
+      percent: 100%
+    摸鱼:
+      background: 'linear-gradient(140.54deg, #608D00 0%, #D30000 72.37%)'
+      percent: 100%
 # 关于我 社交账号
 socialAccounts: 
   on: false

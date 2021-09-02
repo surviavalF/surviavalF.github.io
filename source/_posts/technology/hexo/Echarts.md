@@ -2,7 +2,7 @@
 title: hexo博客引入Echarts
 tags:
   - Hexo
-categories:
+categories: Hexo
 author: zhangyifeng
 date: 2021-09-01 09:55:43
 ---

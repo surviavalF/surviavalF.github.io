@@ -2,7 +2,7 @@
 title: hexo博客引入动态图表chart
 tags:
   - Hexo
-categories:
+categories: Hexo
 author: zhangyifeng
 date: 2021-08-30 10:55:43
 ---
