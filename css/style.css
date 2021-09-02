@@ -1182,7 +1182,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   color: #4293b9;
 }
 .bg-light-floor-tags {
-  background: ;
+  background: url("/medias/background/background.jpeg");
   background-size: cover;
   background-position: center center;
 }
@@ -1330,7 +1330,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   color: #4293b9;
 }
 .bg-light-floor-categories {
-  background: ;
+  background: url("/medias/background/background.jpeg");
   background-size: cover;
   background-position: center center;
 }
@@ -1867,7 +1867,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   word-break: break-all;
 }
 .bg-light-floor-archive {
-  background: ;
+  background: url("/medias/background/background.jpeg");
   background-size: cover;
   background-position: center center;
 }
@@ -1993,7 +1993,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   content: ' ';
   height: 100%;
   width: 1px;
-  background-color: #d9d9d9;
+  background-color: #7042b9;
   position: absolute;
   top: 0;
   left: -2.4em;
@@ -2017,7 +2017,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   height: 1rem;
   box-sizing: border-box;
   border-radius: 50%;
-  background: #bbb;
+  background: #7042b9;
   z-index: 1;
   position: absolute;
   left: -2.4em;
@@ -2490,7 +2490,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   }
 }
 .bg-light-floor-about {
-  background: ;
+  background: url("/medias/background/background.jpeg");
   background-size: cover;
   background-position: center center;
 }
@@ -2604,7 +2604,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
   font-size: 1.4em;
 }
 #about .basic-info {
-  background-color: #fff;
+  background-color: rgba(240,248,255,0.5);
   padding: 20px;
   border-radius: 10px;
   margin: 20px;

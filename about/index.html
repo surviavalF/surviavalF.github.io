@@ -632,7 +632,7 @@
 
       
 
-      let option1 = {
+      var option1 = {
           title: {
               text: '文章发布统计图',
               x: 'center'
@@ -651,14 +651,14 @@
               {
                   name: '文章篇数',
                   type: 'line',
-                  color: ['#6772e5'],
-                  data: [0,0,0,0,0,0,0,0,0,0,0,10,1],
+                  color: ['#1E90FF'],
+                  data: [0,0,0,0,0,0,0,0,0,0,0,10,2],
                   markPoint: {
                       symbolSize: 45,
-                      color: ['#fa755a','#3ecf8e','#82d3f4'],
+                      color: ['#7042B9'],
                       data: [{
                           type: 'max',
-                          itemStyle: {color: ['#3ecf8e']},
+                          itemStyle: {color: ['#7042B9']},
                           name: 'maximum'
                       }]
                   },
@@ -669,7 +669,7 @@
 
       
 
-      let option2 = {
+      var option2 = {
           title: {
               text: '文章分类统计图',
 
@@ -683,9 +683,9 @@
               {
                   name: '分类',
                   type: 'pie',
-                  radius: '50%',
-                  color: ['#6772e5', '#ff9e0f', '#fa755a', '#3ecf8e', '#82d3f4', '#ab47bc', '#525f7f', '#f51c47', '#26A69A'],
-                  data: [{"name":"web前端","value":7},{"name":"Element组件","value":4},{"name":"CSS","value":1},{"name":"js","value":2}],
+                  radius: ['25%','50%'],
+                  color: ['rgba(30,144,255,0.5)', 'rgba(255,255,0,0.5)', 'rgba(178,34,34,0.5)', 'rgba(50,205,50,0.5)', 'rgba(255,0,0,0.5)', 'rgba(218,112,214,0.5)', 'rgba(147,112,219,0.5)', 'rgba(30,144,255,0.5)', 'rgba(34,139,34,0.5)'],
+                  data: [{"name":"Hexo","value":3},{"name":"web前端","value":7},{"name":"CSS","value":1},{"name":"Element组件","value":4},{"name":"js","value":2}],
                   itemStyle: {
                       emphasis: {
                           shadowBlur: 10,
@@ -698,13 +698,17 @@
       };
       
 
-    let option3 = {
+    var option3 = {
         title: {
             text: 'TOP10 标签统计图',
-
             x: 'center'
         },
-        tooltip: {},
+        tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+                type: 'shadow'
+            }
+        },
         xAxis: [
             {
                 type: 'category',
@@ -719,13 +723,39 @@
         series: [
             {
                 type: 'bar',
-                color: ['#82d3f4'],
+                color: ['#1E90FF'],
                 barWidth : 18,
-                data: [6,2,1,1,1,1],
+                data: [6,3,1,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [],
                 },
+                itemStyle: {
+                    normal: {
+                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
+                            offset: 0,
+                            color: 'rgba(0,244,255,1)' // 0% 处的颜色
+                        }, {
+                            offset: 1,
+                            color: 'rgba(0,77,167,1)' // 100% 处的颜色
+                        }], false),
+                        shadowColor: 'rgba(0,160,221,1)',
+                        shadowBlur: 4,
+                    }
+                },
+                label: {
+                    normal: {
+                        show: true,
+                        lineHeight: 30,
+                        formatter: '{c}',
+                        position: 'top',
+                        textStyle: {
+                            color: '#00D6F9',
+                            fontSize: 20
+                        }
+
+                    }
+                }
             }
         ]
     };
@@ -796,26 +826,38 @@
 			
 			<div class="bar-box">
 				<span class="bar-name">HTML5</span>
-				<div class="bar" style="background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%); width: 90%"></div>
-				<span class="bar-number">90%</span>
+				<div class="bar" style="background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%); width: 60%"></div>
+				<span class="bar-number">60%</span>
 			</div>
 			
 			<div class="bar-box">
 				<span class="bar-name">JavaScript</span>
-				<div class="bar" style="background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); width: 85%"></div>
-				<span class="bar-number">85%</span>
+				<div class="bar" style="background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); width: 75%"></div>
+				<span class="bar-number">75%</span>
 			</div>
 			
 			<div class="bar-box">
 				<span class="bar-name">CSS</span>
-				<div class="bar" style="background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); width: 70%"></div>
-				<span class="bar-number">70%</span>
+				<div class="bar" style="background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); width: 60%"></div>
+				<span class="bar-number">60%</span>
 			</div>
 			
 			<div class="bar-box">
 				<span class="bar-name">Vue</span>
-				<div class="bar" style="background: linear-gradient(to top, #0ba360 0%, #3cba92 100%); width: 90%"></div>
-				<span class="bar-number">90%</span>
+				<div class="bar" style="background: linear-gradient(to right, #0029FF 0%, #8FFF00 100%); width: 80%"></div>
+				<span class="bar-number">80%</span>
+			</div>
+			
+			<div class="bar-box">
+				<span class="bar-name">写BUG</span>
+				<div class="bar" style="background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%); width: 100%"></div>
+				<span class="bar-number">100%</span>
+			</div>
+			
+			<div class="bar-box">
+				<span class="bar-name">摸鱼</span>
+				<div class="bar" style="background: linear-gradient(140.54deg, #608D00 0%, #D30000 72.37%); width: 100%"></div>
+				<span class="bar-number">100%</span>
 			</div>
 			
 		</div>
@@ -842,8 +884,7 @@
       
     </div>
     <!-- 不蒜子统计 -->
-    
-      
+     
   <!-- 不蒜子统计 -->
   <span id="busuanzi_container_site_pv">
         <i class="fa fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
@@ -853,8 +894,61 @@
         <i class="fa fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
   </span>
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
+ 
+    <div>
+  <span id="htmer_time"></span>
+</div>
 
-    
+<script type="text/javascript">
+  function secondToDate(second) {
+    if (!second) {
+      return 0;
+    }
+    second = Math.ceil(second / 1000)
+    var time = new Array(0, 0, 0, 0, 0);
+    if (second >= 365 * 24 * 3600) {
+      time[0] = parseInt(second / (365 * 24 * 3600));
+      second %= 365 * 24 * 3600;
+    }
+    if (second >= 24 * 3600) {
+      time[1] = parseInt(second / (24 * 3600));
+      second %= 24 * 3600;
+    }
+    if (second >= 3600) {
+      time[2] = parseInt(second / 3600);
+      second %= 3600;
+    }
+    if (second >= 60) {
+      time[3] = parseInt(second / 60);
+      second %= 60;
+    }
+    if (second > 0) {
+      time[4] = second;
+    }
+    return time;
+  }
+
+  function setTime() {
+    var create_time = new Date('2021-8-16 14:11:30').getTime(); 
+    var timestamp = Date.now();
+    currentTime = secondToDate(timestamp - create_time);
+    currentTimeHtml =
+      "本站已勉强运行：" +
+      currentTime[0] +
+      "年" +
+      currentTime[1] +
+      "天" +
+      currentTime[2] +
+      "时" +
+      currentTime[3] +
+      "分" +
+      currentTime[4] +
+      "秒";
+    document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+  }
+  setInterval(setTime, 1000);
+</script>
+
   </div>
 </div>
 

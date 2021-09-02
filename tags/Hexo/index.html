@@ -606,6 +606,65 @@
         <div class="post-info">
           <div class="post-time">
             <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span class="post-time">2021-09-02</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2021/09/02/technology/hexo/footer-time/">hexo博客底部显示本站已运行xx年xx月xx日</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/" rel="tag">Hexo</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            
+              
+              <a href="/2021/09/02/technology/hexo/footer-time/" class="lazyload" data-original="/medias/background/11.jpg" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            
+          </div>
+          <div class="post-content">
+            Hexo 中的 .ejs需要找到主题文件夹中的 footer.ejs (可能在Hexo\themes\< theme~name >\layout\ _partial\footer，主题不同位置不同)
+在合适的位置写
+12//不同主题配置的路
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2021/09/02/technology/hexo/footer-time/">
+            <i class="iconfont iconmore" pointer style="float: right;" title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        
+          <a href="/2021/09/02/technology/hexo/footer-time/" class="lazyload" data-original="/medias/background/11.jpg" style="background-size: cover; 
+            background-position: center center;">
+          </a>
+        
+      </div>
+    </article>
+    
+    <article class="post" data-aos="fade-up"
+      style="">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
             <span class="post-time">2021-09-01</span>
           </div>
           <div class="post-title">
@@ -621,6 +680,11 @@
             </div>
             <div class="post-categories">
               <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+</div>
 
 
             </div>
@@ -640,7 +704,7 @@
         </div>
         <div class="post-more">
           <a href="/2021/09/01/technology/hexo/Echarts/">
-            <i class="iconfont iconmore" pointer style="float: right;" title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="" title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -654,7 +718,7 @@
     </article>
     
     <article class="post" data-aos="fade-up"
-      style="">
+      style="flex-direction: row-reverse;">
       <div class="post-main">
         <div class="post-info">
           <div class="post-time">
@@ -675,6 +739,11 @@
             <div class="post-categories">
               <!-- 文章详情页的分类 -->
 
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+</div>
+
 
             </div>
           </div>
@@ -692,7 +761,7 @@
         </div>
         <div class="post-more">
           <a href="/2021/08/30/technology/hexo/chart/">
-            <i class="iconfont iconmore" pointer style="" title="阅读更多"></i>
+            <i class="iconfont iconmore" pointer style="float: right;" title="阅读更多"></i>
           </a>
         </div>
       </div>
@@ -724,8 +793,7 @@
       
     </div>
     <!-- 不蒜子统计 -->
-    
-      
+     
   <!-- 不蒜子统计 -->
   <span id="busuanzi_container_site_pv">
         <i class="fa fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
@@ -735,8 +803,61 @@
         <i class="fa fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
   </span>
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
+ 
+    <div>
+  <span id="htmer_time"></span>
+</div>
 
-    
+<script type="text/javascript">
+  function secondToDate(second) {
+    if (!second) {
+      return 0;
+    }
+    second = Math.ceil(second / 1000)
+    var time = new Array(0, 0, 0, 0, 0);
+    if (second >= 365 * 24 * 3600) {
+      time[0] = parseInt(second / (365 * 24 * 3600));
+      second %= 365 * 24 * 3600;
+    }
+    if (second >= 24 * 3600) {
+      time[1] = parseInt(second / (24 * 3600));
+      second %= 24 * 3600;
+    }
+    if (second >= 3600) {
+      time[2] = parseInt(second / 3600);
+      second %= 3600;
+    }
+    if (second >= 60) {
+      time[3] = parseInt(second / 60);
+      second %= 60;
+    }
+    if (second > 0) {
+      time[4] = second;
+    }
+    return time;
+  }
+
+  function setTime() {
+    var create_time = new Date('2021-8-16 14:11:30').getTime(); 
+    var timestamp = Date.now();
+    currentTime = secondToDate(timestamp - create_time);
+    currentTimeHtml =
+      "本站已勉强运行：" +
+      currentTime[0] +
+      "年" +
+      currentTime[1] +
+      "天" +
+      currentTime[2] +
+      "时" +
+      currentTime[3] +
+      "分" +
+      currentTime[4] +
+      "秒";
+    document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+  }
+  setInterval(setTime, 1000);
+</script>
+
   </div>
 </div>
 

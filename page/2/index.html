@@ -1179,6 +1179,65 @@
         <div class="post-info">
           <div class="post-time">
             <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span class="post-time">2021-08-18</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2021/08/18/technology/frontEnd/Webjs/personnel-selection/">人员选择器</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/ElementPlus/" rel="tag">ElementPlus</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Vue3/" rel="tag">Vue3</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/">web前端</a> <a class="article-category-link" href="/categories/web%E5%89%8D%E7%AB%AF/Element%E7%BB%84%E4%BB%B6/">Element组件</a>
+</div>
+
+
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            
+              
+              <a href="/2021/08/18/technology/frontEnd/Webjs/personnel-selection/" class="lazyload" data-original="/medias/background/12.jpg" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            
+          </div>
+          <div class="post-content">
+            
+使用 Element-plus 中的 Transfer 穿梭框 组件封装的一个人员选择器，使用的是 VUE3 中的 setup 语法糖写法
+选择器子组件的.vue 文件代码userMailList  为全部人员
+1234567891011
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2021/08/18/technology/frontEnd/Webjs/personnel-selection/">
+            <i class="iconfont iconmore" pointer style="  " title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        
+          <a href="/2021/08/18/technology/frontEnd/Webjs/personnel-selection/" class="lazyload" data-original="/medias/background/12.jpg" style="background-size: cover; 
+            background-position: center center;">
+          </a>
+        
+      </div>
+    </article>
+  
+    <article class="post" data-aos="fade-up" style="   ">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
             <span class="post-time">2021-08-16</span>
           </div>
           <div class="post-title">
@@ -1267,8 +1326,7 @@ Welcome to Hexo! This is your very first post. Check documentation for more info
       
     </div>
     <!-- 不蒜子统计 -->
-    
-      
+     
   <!-- 不蒜子统计 -->
   <span id="busuanzi_container_site_pv">
         <i class="fa fa-eye" aria-hidden="true"></i>本站总访问量：<span id="busuanzi_value_site_pv"></span> 次
@@ -1278,8 +1336,61 @@ Welcome to Hexo! This is your very first post. Check documentation for more info
         <i class="fa fa-users" aria-hidden="true"></i>本站访客数：<span id="busuanzi_value_site_uv"></span> 人
   </span>
   <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js" data-pjax></script>
+ 
+    <div>
+  <span id="htmer_time"></span>
+</div>
 
-    
+<script type="text/javascript">
+  function secondToDate(second) {
+    if (!second) {
+      return 0;
+    }
+    second = Math.ceil(second / 1000)
+    var time = new Array(0, 0, 0, 0, 0);
+    if (second >= 365 * 24 * 3600) {
+      time[0] = parseInt(second / (365 * 24 * 3600));
+      second %= 365 * 24 * 3600;
+    }
+    if (second >= 24 * 3600) {
+      time[1] = parseInt(second / (24 * 3600));
+      second %= 24 * 3600;
+    }
+    if (second >= 3600) {
+      time[2] = parseInt(second / 3600);
+      second %= 3600;
+    }
+    if (second >= 60) {
+      time[3] = parseInt(second / 60);
+      second %= 60;
+    }
+    if (second > 0) {
+      time[4] = second;
+    }
+    return time;
+  }
+
+  function setTime() {
+    var create_time = new Date('2021-8-16 14:11:30').getTime(); 
+    var timestamp = Date.now();
+    currentTime = secondToDate(timestamp - create_time);
+    currentTimeHtml =
+      "本站已勉强运行：" +
+      currentTime[0] +
+      "年" +
+      currentTime[1] +
+      "天" +
+      currentTime[2] +
+      "时" +
+      currentTime[3] +
+      "分" +
+      currentTime[4] +
+      "秒";
+    document.getElementById("htmer_time").innerHTML = currentTimeHtml;
+  }
+  setInterval(setTime, 1000);
+</script>
+
   </div>
 </div>
 
