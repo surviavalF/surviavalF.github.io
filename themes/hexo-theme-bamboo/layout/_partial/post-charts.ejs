@@ -60,7 +60,7 @@
       var monthValueArr = JSON.stringify([...monthMap.values()]);
       %>
 
-      let option1 = {
+      var option1 = {
           title: {
               text: '<%- __("postPublishChart")  %>',
               x: 'center'
@@ -79,14 +79,14 @@
               {
                   name: '<%- __("postsNumberName")  %>',
                   type: 'line',
-                  color: ['#6772e5'],
+                  color: ['#1E90FF'],
                   data: <%- monthValueArr %>,
                   markPoint: {
                       symbolSize: 45,
-                      color: ['#fa755a','#3ecf8e','#82d3f4'],
+                      color: ['#7042B9'],
                       data: [{
                           type: 'max',
-                          itemStyle: {color: ['#3ecf8e']},
+                          itemStyle: {color: ['#7042B9']},
                           name: '<%- __("maximum")  %>'
                       }]
                   },
@@ -105,7 +105,7 @@
       var categoryArrJson = JSON.stringify(categoryArr);
       %>
 
-      let option2 = {
+      var option2 = {
           title: {
               text: '<%- __("categoriesChart")  %>',
 
@@ -153,7 +153,7 @@
     var tagCountArrJson = JSON.stringify(tagCountArr);
     %>
 
-    let option3 = {
+    var option3 = {
         title: {
             text: '<%- __("top10TagsChart")  %>',
 
@@ -174,7 +174,7 @@
         series: [
             {
                 type: 'bar',
-                color: ['#82d3f4'],
+                color: ['#1E90FF'],
                 barWidth : 18,
                 data: <%- tagCountArrJson %>,
                 markPoint: {

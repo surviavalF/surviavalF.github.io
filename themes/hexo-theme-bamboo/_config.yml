@@ -415,7 +415,7 @@ archive:
   desc: 'Do what you love, Love what you do'
   full: false # 设置为true，则图片全屏显示
   video: '' # 如果有值，则在屏幕大于920px的时候，全屏显示视频，为空则显示图片(img)
-  background: '' # red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")
+  background: url("/medias/background/background.jpeg") # red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")
   yearColor: '' # 年份字体颜色
   monthColor: '' # 月份字体颜色
   titleColor: '' # 标题字体颜色
@@ -427,7 +427,7 @@ tag:
   desc: 'Do what you love, Love what you do'
   full: false # 标签页上面的图片是否全屏显示
   video: '' # 如果有值，则在屏幕大于920px的时候，全屏显示视频
-  background: '' # red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")
+  background: url("/medias/background/background.jpeg") # red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")
   titleColor: '' # 标题字体颜色
 
 # 标签详情页面，配置同上
@@ -446,7 +446,7 @@ categories:
   desc: 'Do what you love, Love what you do'
   full: false
   video: ''
-  background: '' # red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")
+  background: url("/medias/background/background.jpeg") # red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")
   titleColor: '' # 标题字体颜色
 
 #分类详情页面，配置同上
@@ -465,7 +465,7 @@ about:
   desc: 'Do what you love, Love what you do'
   full: false
   video: ''
-  background: '' # red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")
+  background: url("/medias/background/background.jpeg") # red or rgba(255,255,255,0.8) or other color or url("http:xxx.png")
   titleColor: '' # 标题字体颜色
 
 # 友情链接页面，配置同上

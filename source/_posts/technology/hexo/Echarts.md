@@ -53,10 +53,10 @@ date: 2021-09-01 09:55:43
 [MAKEAPIE](https://www.makeapie.com/explore.html)一个非常不错的Echarts示例网站
 ## 示例
 <div style="display:flex;flex-wrap: wrap;">
-    <div id="test1" style="width:50%;height:600px;"></div>
-    <div id="test2" style="width:50%;height:600px;"></div>
-    <div id="test3" style="width:50%;height:600px;"></div>
-    <div id="test4" style="width:50%;height:600px;"></div>
+    <div id="test1" style="width:580px;height:600px;"></div>
+    <div id="test2" style="width:580px;height:600px;"></div>
+    <div id="test3" style="width:580px;height:600px;"></div>
+    <div id="test4" style="width:580px;height:600px;"></div>
 </div>
 <script type="text/javascript"src="/js/echarts.min.js"></script>
 <script type="text/javascript"src="/js/jquery.js"></script>
