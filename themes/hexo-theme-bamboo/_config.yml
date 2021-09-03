@@ -18,12 +18,12 @@ menu:
   Friends:
     url: /friends
     icon: fa fa-film
-  # 更多: # 这是二级菜单的写法
-  #  icon: fa fa-link
-  #  children:
-  #   - name: 图库
-  #     url: /gallery
-  #     icon: fa fa-music
+  更多: # 这是二级菜单的写法
+   icon: fa fa-folder
+   children:
+    - name: 图库
+      url: /gallery
+      icon: fa fa-picture-o
   #   - name: 友情连接
   #     url: /huoban
   #     icon: fa fa-film
