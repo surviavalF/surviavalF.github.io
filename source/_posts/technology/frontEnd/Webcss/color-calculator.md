@@ -9,7 +9,8 @@ categories:
   - CSS
 author: zhangyifeng
 ---
-
+自动配色网站https://www.materialpalette.com/
+配置渐变色网站https://www.0to255.com/8335a3
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="content">
   <tr>
     <td valign="top" class="area">
@@ -29,24 +30,24 @@ author: zhangyifeng
               <table border="0" cellpadding="0" cellspacing="4">
                 <tbody>
                   <tr>
-                    <td width="200">
+                    <td width="180">
                       <input
                         name="r1e"
-                        value="255"
+                        value="66"
                         class="rle"
                         maxlength="3"
                         onKeyDown="getkey(event,0);"
                       />
                       <input
                         name="r1e"
-                        value="180"
+                        value="147"
                         class="rle"
                         maxlength="3"
                         onKeyDown="getkey(event,0);"
                       />
                       <input
                         name="r1e"
-                        value="0"
+                        value="185"
                         class="rle"
                         maxlength="3"
                         onKeyDown="getkey(event,0);"
@@ -71,10 +72,10 @@ author: zhangyifeng
               <table border="0" cellpadding="0" cellspacing="4">
                 <tbody>
                   <tr>
-                    <td width="200">
+                    <td width="180">
                       <input
                         name="rgb2"
-                        value="#CC00FF"
+                        value="#7042B9"
                         size="8"
                         maxlength="7"
                         onKeyDown="getkey(event,1);"
