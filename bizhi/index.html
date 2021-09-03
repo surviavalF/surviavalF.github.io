@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>hexo博客底部显示本站已运行xx年xx月xx日 | survival_F</title>
+  <title>壁纸 | survival_F</title>
 
   
     
@@ -621,7 +621,7 @@
 
 
 
-<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/background/11.jpg" style="background-repeat: no-repeat; background-size: cover; 
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/header/gallery/bizi.jpg" style="background-repeat: no-repeat; background-size: cover; 
   background-position: center center;position: relative;">
   <div class="post-detail-header-mask"></div>
   <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
@@ -629,45 +629,10 @@
   <div class="post-detail-header_info-box">
     <div class="title-box">
       <span class="title">
-        hexo博客底部显示本站已运行xx年xx月xx日
+        壁纸
       </span>
     </div>
     
-    
-      
-        <span class="post-detail-header_date">
-          <i class="fa fa-calendar"></i> 发表于：2021-09-02 |
-        </span>
-      
-
-      
-        <span class="post-detail-header_categories">
-          <i class="iconfont iconbookmark1"></i> 分类：
-          
-            <a href="/categories/Hexo/" class="post-detail-header_category">
-              Hexo
-            </a>
-          
-        </span>
-      
-
-      
-        <div class="post-detail-header_wordcount">
-          <span class="totalcount">
-            <i class="fa fa-file-text-o"></i> 字数统计: 297 |
-          </span>
-  
-          <span class="min2read">
-            <i class="fa fa-clock-o"></i> 阅读时长: 1分钟 |
-          </span>
-  
-          
-            <span class="reading">
-              <i class="fa fa-eye"></i> 阅读量：<span id="busuanzi_value_page_pv"></span>
-            </span>
-          
-        </div>
-      
     
   </div>
   
@@ -683,23 +648,35 @@
     <article class="post post-detail">
       
       <div class="post-content">
-        <h2 id="Hexo-中的-ejs"><a href="#Hexo-中的-ejs" class="headerlink" title="Hexo 中的 .ejs"></a>Hexo 中的 .ejs</h2><p>需要找到主题文件夹中的 footer.ejs (可能在<span class='p red'>Hexo\themes\< theme~name >\layout\ _partial\footer</span>，主题不同位置不同)</p>
-<p>在合适的位置写</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//不同主题配置的路径不同</span></span><br><span class="line">&lt;%- partial(<span class="string">&#x27;_partial/footer/runTime&#x27;</span>) %&gt;</span><br></pre></td></tr></table></figure>
-
-<p>然后在刚才的文件夹里新建 runTime.ejs 文件，文件中写如下代码，全部复制即可</p>
-<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line">&lt;div&gt;</span><br><span class="line">  <span class="xml"><span class="tag">&lt;<span class="name">span</span> <span class="attr">id</span>=<span class="string">&quot;htmer_time&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></span></span><br><span class="line">&lt;/div&gt;</span><br><span class="line"></span><br><span class="line"><span class="xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><span class="javascript"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">  <span class="function"><span class="keyword">function</span> <span class="title">secondToDate</span>(<span class="params">second</span>) </span>&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="keyword">if</span> (!second) &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="keyword">return</span> <span class="number">0</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    second = <span class="built_in">Math</span>.ceil(second / <span class="number">1000</span>)</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="keyword">var</span> time = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="keyword">if</span> (second &gt;= <span class="number">365</span> * <span class="number">24</span> * <span class="number">3600</span>) &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      time[<span class="number">0</span>] = <span class="built_in">parseInt</span>(second / (<span class="number">365</span> * <span class="number">24</span> * <span class="number">3600</span>));</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      second %= <span class="number">365</span> * <span class="number">24</span> * <span class="number">3600</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="keyword">if</span> (second &gt;= <span class="number">24</span> * <span class="number">3600</span>) &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      time[<span class="number">1</span>] = <span class="built_in">parseInt</span>(second / (<span class="number">24</span> * <span class="number">3600</span>));</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      second %= <span class="number">24</span> * <span class="number">3600</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="keyword">if</span> (second &gt;= <span class="number">3600</span>) &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      time[<span class="number">2</span>] = <span class="built_in">parseInt</span>(second / <span class="number">3600</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      second %= <span class="number">3600</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="keyword">if</span> (second &gt;= <span class="number">60</span>) &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      time[<span class="number">3</span>] = <span class="built_in">parseInt</span>(second / <span class="number">60</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      second %= <span class="number">60</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="keyword">if</span> (second &gt; <span class="number">0</span>) &#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      time[<span class="number">4</span>] = second;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="keyword">return</span> time;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span></span></span><br><span class="line"><span class="javascript"><span class="xml">  <span class="function"><span class="keyword">function</span> <span class="title">setTime</span>(<span class="params"></span>) </span>&#123;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="comment">//写自己博客创建的时间</span></span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="keyword">var</span> create_time = <span class="keyword">new</span> <span class="built_in">Date</span>(<span class="string">&#x27;2021-8-16 14:11:30&#x27;</span>).getTime();</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="keyword">var</span> timestamp = <span class="built_in">Date</span>.now();</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    currentTime = secondToDate(timestamp - create_time);</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    currentTimeHtml =</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="string">&quot;本站已勉强运行：&quot;</span> +</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      currentTime[<span class="number">0</span>] +</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="string">&quot;年&quot;</span> +</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      currentTime[<span class="number">1</span>] +</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="string">&quot;天&quot;</span> +</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      currentTime[<span class="number">2</span>] +</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="string">&quot;时&quot;</span> +</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      currentTime[<span class="number">3</span>] +</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="string">&quot;分&quot;</span> +</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      currentTime[<span class="number">4</span>] +</span></span></span><br><span class="line"><span class="javascript"><span class="xml">      <span class="string">&quot;秒&quot;</span>;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">    <span class="built_in">document</span>.getElementById(<span class="string">&quot;htmer_time&quot;</span>).innerHTML = currentTimeHtml;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  &#125;</span></span></span><br><span class="line"><span class="javascript"><span class="xml">  <span class="built_in">setInterval</span>(setTime, <span class="number">1000</span>);</span></span></span><br><span class="line"><span class="javascript"><span class="xml"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+        <div class="gallery ">
+              <p><img "" class="lazyload placeholder" data-original="/medias/background/7.jpg" src="/medias/Loading.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="/medias/background/8.jpg" src="/medias/Loading.gif" alt="图片描述"></p>
+            </div>
+<div class="gallery ">
+              <p><img "" class="lazyload placeholder" data-original="/medias/background/4.jpg" src="/medias/Loading.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="/medias/background/5.jpg" src="/medias/Loading.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="/medias/background/6.jpg" src="/medias/Loading.gif" alt="图片描述"></p>
+            </div>
+<div class="gallery ">
+              <p><img "" class="lazyload placeholder" data-original="/medias/background/background.jpeg" src="/medias/Loading.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="/medias/background/header-back.jpeg" src="/medias/Loading.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="/medias/header/gallery/bizi.jpg" src="/medias/Loading.gif" alt="图片描述"></p>
+            </div>
+<div class="gallery ">
+              <p><img "" class="lazyload placeholder" data-original="/medias/background/1.jpg" src="/medias/Loading.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="/medias/background/2.jpg" src="/medias/Loading.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="/medias/background/3.jpg" src="/medias/Loading.gif" alt="图片描述"></p>
+            </div>
+<div class="gallery ">
+              <p><img "" class="lazyload placeholder" data-original="/medias/background/9.jpg" src="/medias/Loading.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="/medias/background/10.jpg" src="/medias/Loading.gif" alt="图片描述"></p>
+            </div>
+<div class="gallery ">
+              <p><img "" class="lazyload placeholder" data-original="/medias/background/11.jpg" src="/medias/Loading.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="/medias/background/12.jpg" src="/medias/Loading.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="/medias/background/13.jpg" src="/medias/Loading.gif" alt="图片描述"></p>
+            </div>
+<div class="gallery ">
+              <p><img "" class="lazyload placeholder" data-original="/medias/background/14.jpg" src="/medias/Loading.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="/medias/background/15.jpg" src="/medias/Loading.gif" alt="图片描述"></p>
+            </div>
+<div class="gallery ">
+              <p><img "" class="lazyload placeholder" data-original="/medias/header/archive.jpg" src="/medias/Loading.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="/medias/header/categoryDetail.jpg" src="/medias/Loading.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="/medias/header/friends.jpg" src="/medias/Loading.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="/medias/header/gallery.jpg" src="/medias/Loading.gif" alt="图片描述"></p>
+            </div>
+<div class="gallery ">
+              <p><img "" class="lazyload placeholder" data-original="/medias/header/tag.jpg" src="/medias/Loading.gif" alt="图片描述"><br><img "" class="lazyload placeholder" data-original="/medias/header/about.jpeg" src="/medias/Loading.gif" alt="图片描述"></p>
+            </div>
       </div>
       <div class="post-tags-categories">
-        
-        <div class="tags">
-          
-            <a href="/tags/Hexo/" class="">
-              Hexo
-            </a>
-          
-        </div>
         
       </div>
       
@@ -710,7 +687,7 @@
     </li>
     <li class="post-copyright-link">
     <strong>文章链接:  </strong>
-    <a href="/2021/09/02/technology/hexo/footer-time/" target="_blank" title="hexo博客底部显示本站已运行xx年xx月xx日">https://surviavalf.github.io/2021/09/02/technology/hexo/footer-time/</a>
+    <a href="/bizhi/index.html" target="_blank" title="壁纸">https://surviavalf.github.io/bizhi/index.html</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明:   </strong>
@@ -728,47 +705,7 @@
 
 
 
-  
-  <div class="post-nav-prev post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/background/4.jpg" style="background-size: cover; 
-      background-position: center center;">
-    </div>
-    <a href="/2021/09/03/technology/frontEnd/Webcss/color-calculator/" class="post-nav-link">
-      <div class="title">
-        <i class="fa fa-angle-left"></i> 上一篇:
-        <div class="title-text">css颜色计算器</div>
-      </div>
-      
-      <!-- <div class="content">
-        
-  
-    
-      
-        
-          
-            
-           
-      </div> -->
-    </a>
-  </div>
 
-
-
-  
-  <div class="post-nav-next post-nav-item">
-    <div class="post-nav-img lazyload" data-original="/medias/background/3.jpg" style="background-size: cover; 
-      background-position: center center;">
-    </div>
-    <a href="/2021/09/01/technology/hexo/Echarts/" class="post-nav-link">
-      <div class="title">
-        下一篇: <i class="fa fa-angle-right"></i>
-        <div class="title-text">hexo博客引入Echarts</div>
-      </div>
-      <!-- <div class="content">
-        Hexo 中的 EchartsECharts 是一个使用 JavaScript 实现的开源可视化库，涵盖各行业图表，满足
-      </div> -->
-    </a>
-  </div>
 
 </div>
 
@@ -811,47 +748,22 @@
   <!-- 目录 -->
   <!-- 文章详情页右侧目录 -->
 
-  <div class="toc-aside">
-    <div class="toc-main">
-      <div class="toc-aside-title">
-        <i class="fa fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
-        
-          <div class="toc-open-close">本文目录</div>
-        
-      </div>
-      <div class="toc-content">
-        <div class="toc"></div>
-      </div>
-    </div>
-  </div>
-  <!-- js在scripts目录下的的toc.ejs里面 -->
-  
-
-  <script>
-    function openBtnClickFn () {
-      let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
-      let open = eval('' || 'true');
-      openOrCloseBtn.click(function() {
-        if (open === true) {
-          $(".toc-aside").css({'width': 0, 'padding': 0});
-          $(".toc-content").css({'width': 0});
-          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
-          $(".main-content").css({'width': '75%', 'margin': '10px auto'});
-          open = false;
-        } else {
-          $(".toc-aside").css({'width': '300px', 'padding': '0 10px'});
-          $(".toc-content").css({'width': '300px'});
-          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
-          $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
-          open = true;
-        }
-      });
-    };
-    openBtnClickFn();
-    document.addEventListener('pjax:complete', function () {
-      openBtnClickFn();
-    })
-  </script>
+  <style>
+    .toc-aside {
+      width: 0;
+      padding: 0;
+    }
+    .toc-aside .toc-content {
+      width: 0;
+    }
+    .toc-aside-title span, .toc-aside-title i {
+      display: none;
+    }
+    .main-content {
+      width: 75%;
+      margin: 10px auto;
+    }
+  </style>
 
 
   
@@ -932,7 +844,7 @@
             clearInterval(this.time);
         },
         mounted() {
-            let prop = ''|| '';
+            let prop = '/medias/background/background.jpeg'|| '';
             let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
             if (isImg) {
                 let img = prop.split(',');

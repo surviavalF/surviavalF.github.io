@@ -217,6 +217,32 @@
               
             </li>
           
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                  <span>
+                    
+                      <i class="fa fa-folder"></i>
+                    
+                    <span class="name">更多</span>
+                  </span>
+                  <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+                </a>
+                <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                  
+                  <li>
+                    <a href="/gallery">
+                      
+                      <i class="fa fa-picture-o" style="margin-top: -20px;"></i>
+                      
+                      <span>图库</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
         
         
       </ul>
@@ -345,6 +371,30 @@
                   
                   <span class="name">友情链接</span>
                 </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="javascript:;" class="menu-item-link" title="更多">
+                  
+                    <i class="fa fa-folder"></i>
+                  
+                  <span class="name">更多</span>
+                  <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-menu">
+                  
+                  <li>
+                    <a href="/gallery">
+                      
+                      <i class="fa fa-picture-o" style="margin-top: -20px;"></i>
+                      
+                      <span>图库</span>
+                    </a>
+                  </li>
+                  
+                </ul>
               
             </li>
           
@@ -652,7 +702,7 @@
                   name: '文章篇数',
                   type: 'line',
                   color: ['#1E90FF'],
-                  data: [0,0,0,0,0,0,0,0,0,0,0,10,2],
+                  data: [0,0,0,0,0,0,0,0,0,0,0,10,3],
                   markPoint: {
                       symbolSize: 45,
                       color: ['#7042B9'],
@@ -685,7 +735,7 @@
                   type: 'pie',
                   radius: ['25%','50%'],
                   color: ['rgba(30,144,255,0.5)', 'rgba(255,255,0,0.5)', 'rgba(178,34,34,0.5)', 'rgba(50,205,50,0.5)', 'rgba(255,0,0,0.5)', 'rgba(218,112,214,0.5)', 'rgba(147,112,219,0.5)', 'rgba(30,144,255,0.5)', 'rgba(34,139,34,0.5)'],
-                  data: [{"name":"Hexo","value":3},{"name":"web前端","value":7},{"name":"Element组件","value":4},{"name":"CSS","value":1},{"name":"js","value":2}],
+                  data: [{"name":"Hexo","value":3},{"name":"web前端","value":8},{"name":"Element组件","value":4},{"name":"CSS","value":2},{"name":"js","value":2}],
                   itemStyle: {
                       emphasis: {
                           shadowBlur: 10,
@@ -712,7 +762,7 @@
         xAxis: [
             {
                 type: 'category',
-                data: ["Vue","Hexo","soft-wear","CSS","Vue3","ElementPlus"]
+                data: ["Vue","Hexo","CSS","soft-wear","Vue3","ElementPlus"]
             }
         ],
         yAxis: [
@@ -725,7 +775,7 @@
                 type: 'bar',
                 color: ['#1E90FF'],
                 barWidth : 18,
-                data: [6,3,1,1,1,1],
+                data: [7,3,2,1,1,1],
                 markPoint: {
                     symbolSize: 45,
                     data: [],

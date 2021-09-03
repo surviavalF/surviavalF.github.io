@@ -217,6 +217,32 @@
               
             </li>
           
+            <li class="drawer-box-content_item" style="position: relative;">
+              
+                <a href="javascript:;" class="drawer-menu-item-link has-children" @click="openOrCloseMenu(6)">
+                  <span>
+                    
+                      <i class="fa fa-folder"></i>
+                    
+                    <span class="name">更多</span>
+                  </span>
+                  <i class="fa fa-chevron-left arrow " :class="{'icon-rotate': isOpen(6)}" aria-hidden="true"></i>
+                </a>
+                <ul class="drawer-sub-menu" v-if="isOpen(6)">
+                  
+                  <li>
+                    <a href="/gallery">
+                      
+                      <i class="fa fa-picture-o" style="margin-top: -20px;"></i>
+                      
+                      <span>图库</span>
+                    </a>
+                  </li>
+                  
+                </ul>
+              
+            </li>
+          
         
         
       </ul>
@@ -345,6 +371,30 @@
                   
                   <span class="name">友情链接</span>
                 </a>
+              
+            </li>
+          
+            <li class="menu-item" style="position: relative;">
+              
+                <a href="javascript:;" class="menu-item-link" title="更多">
+                  
+                    <i class="fa fa-folder"></i>
+                  
+                  <span class="name">更多</span>
+                  <i class="fa fa-chevron-down arrow" aria-hidden="true"></i>
+                </a>
+                <ul class="sub-menu">
+                  
+                  <li>
+                    <a href="/gallery">
+                      
+                      <i class="fa fa-picture-o" style="margin-top: -20px;"></i>
+                      
+                      <span>图库</span>
+                    </a>
+                  </li>
+                  
+                </ul>
               
             </li>
           
@@ -639,6 +689,22 @@
           <li class="post-item" data-aos="fade-left">
             
             <div class="post-img-box">
+              <a href="/2021/09/03/technology/frontEnd/Webcss/color-calculator/" class="post-img lazyload" data-original="/medias/background/4.jpg" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            </div>
+            <div class="post-date-title">
+              <div>
+                <span class="post-date">09-03</span>
+              </div>
+              <a class="post-title" href="/2021/09/03/technology/frontEnd/Webcss/color-calculator/">css颜色计算器</a>
+            </div>
+          </li>
+        
+          
+          <li class="post-item" data-aos="fade-left">
+            
+            <div class="post-img-box">
               <a href="/2021/09/02/technology/hexo/footer-time/" class="post-img lazyload" data-original="/medias/background/11.jpg" style="background-size: cover; 
                 background-position: center center;">
               </a>
@@ -776,22 +842,6 @@
                 <span class="post-date">08-24</span>
               </div>
               <a class="post-title" href="/2021/08/24/technology/frontEnd/Webjs/recursion/">递归</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2021/08/24/technology/frontEnd/Webjs/js-%20dispose/" class="post-img lazyload" data-original="/medias/background/6.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">08-24</span>
-              </div>
-              <a class="post-title" href="/2021/08/24/technology/frontEnd/Webjs/js-%20dispose/">部分数据处理方式</a>
             </div>
           </li>
         
