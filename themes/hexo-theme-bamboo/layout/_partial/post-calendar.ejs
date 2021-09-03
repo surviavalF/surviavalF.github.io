@@ -1,5 +1,3 @@
-
-
 <div class="cardEchar">
   <div id="test1" class="card-contentEchar"></div>
 </div>
@@ -9,6 +7,31 @@
   src="<%- url_for('/js/echarts.min.js') %>"
 ></script>
 <script type="text/javascript">
+    var visualMapOrients = "horizontal"
+    var visualMapLeft = "center"
+    var visualMapBottom = 0
+    // 定义事件侦听器函数
+    function watchWindowSize() {
+    // 获取窗口的宽度和高度，不包括滚动条
+    var w = document.body.clientWidth;
+    // var h = document.body.clientHeight;
+        if (w < 992) {
+            visualMapOrients = "vertical"
+            visualMapLeft = '80%'
+            visualMapBottom = '50%'
+        }else{
+            visualMapOrients = "horizontal"
+            visualMapLeft = "center"
+            visualMapBottom = 0
+        }
+    // 打印结果
+    // console.log("result",w,h)
+    }
+    // 将事件侦听器函数附加到窗口的resize事件
+    window.addEventListener("resize", watchWindowSize);
+    // 第一次调用该函数
+    watchWindowSize();
+
   var myChart = echarts.init(document.getElementById('test1'));
 
   <%
@@ -40,7 +63,6 @@
   }
   datePosts += ']';
   %>
-
   var option = {
       title: {
           top: 0,
@@ -71,11 +93,12 @@
           },
           itemWidth: 12,
           itemHeight: 12,
-          orient: 'horizontal',
-          left: 'center',
-          bottom: 0
+          orient: visualMapOrients,
+          left: visualMapLeft,
+          bottom: visualMapBottom
       },
       calendar: [{
+          orient: visualMapOrients,
           left: 'center',
           range: <%- rangeArr %>,
           cellSize: [13, 13],
@@ -108,7 +131,6 @@
       }]
 
   };
-
   setTimeout(() => {
       myChart.setOption(option);
   }, 500);
