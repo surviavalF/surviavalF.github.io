@@ -1988,6 +1988,7 @@ pre:hover::-webkit-scrollbar-thumb:hover,
 }
 .card-contentEchar {
   width: 45%;
+  min-width: 800px;
   height: 100%;
   margin: 5px;
   border-radius: 25px;
