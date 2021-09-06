@@ -41,7 +41,7 @@ date: 2021-09-06 16:07:50
     Height:<input type="text" id="txt10" disabled="disabled" value="1"/>
 </div>
 {% endnoteblock %}
-{% noteblock info, 获取浏览器窗口顶部/左端距离屏幕大小的 %}
+{% noteblock info, 获取浏览器窗口顶部/左端距离屏幕大小的(需要刷新，如果你是多屏此数值是根据一号屏定位) %}
 <div>
     Top:<input type="text" id="txt11" disabled="disabled" value="1"/>
     Left:<input type="text" id="txt12" disabled="disabled" value="1"/>
@@ -76,11 +76,11 @@ date: 2021-09-06 16:07:50
         var txt10=document.getElementById("txt10")
         txt9.value = window.screen.width;
         txt10.value = window.screen.height;
-        //浏览器窗口顶部/左端距离屏幕大小的
+        //浏览器窗口顶部/左端距离屏幕大小的(需要刷新，如果你是多屏此数值是根据一号屏定位)
         var txt11=document.getElementById("txt11")
         var txt12=document.getElementById("txt12")
         txt11.value = window.screenTop;
-        txt12.value = window.screenLeft - txt9.value;
+        txt12.value = window.screenLeft;
 
       }
       // 将事件侦听器函数附加到窗口的resize事件
@@ -115,9 +115,9 @@ var txt9 = document.getElementById("txt9");
 var txt10 = document.getElementById("txt10");
 txt9.value = window.screen.width;
 txt10.value = window.screen.height;
-//浏览器窗口顶部/左端距离屏幕大小的
+//浏览器窗口顶部/左端距离屏幕大小的(需要刷新，如果你是多屏此数值是根据一号屏定位)
 var txt11 = document.getElementById("txt11");
 var txt12 = document.getElementById("txt12");
 txt11.value = window.screenTop;
-txt12.value = window.screenLeft - txt9.value;
+txt12.value = window.screenLeft;
 ```
