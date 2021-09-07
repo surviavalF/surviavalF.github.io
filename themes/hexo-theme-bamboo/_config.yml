@@ -588,6 +588,7 @@ tag_plugins:
   green: '#16a951'
   blue: '#177cb0'
   cyan: '#00e09e'
+  code: '#e0e0e0'
   # link标签的左侧默认图片
   linkImg: '/medias/else/link.png'
   # getFile标签的左侧默认图片
