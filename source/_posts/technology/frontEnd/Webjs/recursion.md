@@ -7,7 +7,6 @@ categories:
   - js
 author: zhangyifeng
 date: 2021-08-24 10:27:50
-top: true
 ---
 
 ## vue 递归代码

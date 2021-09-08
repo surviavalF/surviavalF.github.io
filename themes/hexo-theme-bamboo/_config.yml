@@ -316,8 +316,11 @@ notice:
   title: '公告'
   background: 'url("https://img10.360buyimg.com/ddimg/jfs/t1/166587/8/21344/72069/6088c24fEda5fdeb6/f9730ab637b7ca47.png")' # url("xxx") or red or #000 or rgba() ..
   list: # list相当于数组对象，[{title:'xx',date: 'xx', url: 'xxx', color: 'red'}]根据自己实际情况，增加或者删除
-    - title: '#2021年8月30日 新增友链功能 ~'
+    - title: '#2021年8月30日 hexo博客的搭建的文章完成'
       date: '2021-08-30'
+      url: 'https://surviavalf.github.io/2021/09/07/technology/hexo/create-hexo/'
+    - title: '#2021年9月07日 新增友链功能 ~'
+      date: '2021-09-07'
       url: ''
     - title: '#博客更换为Bamboo主题 作者：yuang01'
       date: '2021-08-20'
