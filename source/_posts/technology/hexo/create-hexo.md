@@ -201,10 +201,12 @@ ssh -T git@github.com
 {% timenode %}
 用编辑器打开你的 blog 项目，修改\_config.yml 文件的一些配置(冒号之后都是有一个半角空格的)
 
-```js
-deploy: type: git;
-//github.com/YourgithubName/YourgithubName.github.io.git
-repo: https: branch: master;
+```text
+deploy: 
+  type: git;
+  repo: https://github.com/YourgithubName/YourgithubName.github.io.git
+  branch: master;
+
 ```
 
 ![](/medias/createHexo/vue1.png)
@@ -246,9 +248,9 @@ TortoiseGit，我认为小乌龟（俗称）还是挺好用的，至少某些情
 {% endtimenode %}
 
 {% timenode %}
-第一次拉取代码时进入到github仓库，找到如图url
+第一次拉取代码时进入到 github 仓库，找到如图 url
 ![](/medias/createHexo/wugui1.png)
-复制后在你可以随便选一个文件夹,右键选Git克隆,他会自动填充
+复制后在你可以随便选一个文件夹,右键选 Git 克隆,他会自动填充
 ![](/medias/createHexo/wugui2.png)
 ![](/medias/createHexo/wugui3.png)
 {% endtimenode %}
@@ -260,7 +262,7 @@ TortoiseGit，我认为小乌龟（俗称）还是挺好用的，至少某些情
 
 {% timenode %}
 推送代码时需要两步操作如图
-点击Git提交
+点击 Git 提交
 ![](/medias/createHexo/wugui5.png)
 点击提交
 ![](/medias/createHexo/wugui6.png)
@@ -270,13 +272,12 @@ TortoiseGit，我认为小乌龟（俗称）还是挺好用的，至少某些情
 
 {% endtimeline %}
 
-
 {% title h2, 结语 %}
 有很东西本文是没有涉及到的，我认为在看这篇文章的你需要一“内内”（neinei）的探索精神，自己摸索一下写出来的东西才会带给你成就感，所以加油吧。
 下面有几个比较好的博主写的可以去看，本人使用的主题是[Bamboo](https://yuang01.github.io/),喜欢的可以点链接进去看。
-[hexo从零开始到搭建完整](https://www.cnblogs.com/visugar/p/6821777.html)
-[hexo史上最全搭建教程](https://blog.csdn.net/sinat_37781304/article/details/82729029)(此文章的“3. git分支进行多终端工作”是本人正在使用但是此篇文章没有介绍的，建议去读一下)
-[教你半小时搭建Hexo-hueman主题博客](https://blog.csdn.net/weixin_44105459/article/details/103500535)
+[hexo 从零开始到搭建完整](https://www.cnblogs.com/visugar/p/6821777.html)
+[hexo 史上最全搭建教程](https://blog.csdn.net/sinat_37781304/article/details/82729029)(此文章的“3. git 分支进行多终端工作”是本人正在使用但是此篇文章没有介绍的，建议去读一下)
+[教你半小时搭建 Hexo-hueman 主题博客](https://blog.csdn.net/weixin_44105459/article/details/103500535)
 [hexo,史上最全搭建个人博客](https://blog.csdn.net/Wanguyunxiaodaniu/article/details/104716776?utm_medium=distribute.pc_relevant.none-task-blog-2~default~baidujs_baidulandingword~default-0.control&spm=1001.2101.3001.4242)
 
 {% note info,
