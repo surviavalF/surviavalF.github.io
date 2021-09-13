@@ -18,6 +18,9 @@ menu:
   Friends:
     url: /friends
     icon: fa fa-film
+  Aaaac:
+    url: /aaaac
+    icon: fa fa-film
   更多: # 这是二级菜单的写法
    icon: fa fa-folder
    children:
