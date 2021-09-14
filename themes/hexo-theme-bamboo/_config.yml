@@ -18,15 +18,16 @@ menu:
   Friends:
     url: /friends
     icon: fa fa-film
-  Aaaac:
-    url: /aaaac
-    icon: fa fa-film
+
   更多: # 这是二级菜单的写法
    icon: fa fa-folder
    children:
     - name: 图库
       url: /gallery
       icon: fa fa-picture-o
+    - name: 摘抄
+      url: /jottings
+      icon: fa fa-book
   #   - name: 友情连接
   #     url: /huoban
   #     icon: fa fa-film
@@ -71,7 +72,7 @@ swiper:
   defaultImg: '/medias/background/header-back.jpeg' # 图片，没有则随机选取
   defaultVideo: '' # video，min-width:992px show
   defaultVideoLoadingImg: 'https://img14.360buyimg.com/ddimg/jfs/t1/175057/18/19582/882056/60ee7ac8Ef0045710/202d2ad878684a3b.gif' # video loading img -- use .gif img, 视频预加载动画，使用gif图片作为loading，为空则视频没有预加载动画
-  defaultTile: 'Z Y F Blogs' # 标题
+  defaultTile: '糖醋灬里脊 Blogs' # 标题
   defaultDesc: ['Do what you love, Love what you do'] #描 述，例如 ['煮酒洗净尘嚣，论知交', '万般付之一笑，共偕老']
   # defaultLeftBtnText: '阅读文档' # 左边按钮文字, 空字符串则不显示
   # defaultLeftBtnLink: '' # 左边按钮链接 
@@ -319,11 +320,11 @@ notice:
   title: '公告'
   background: 'url("https://img10.360buyimg.com/ddimg/jfs/t1/166587/8/21344/72069/6088c24fEda5fdeb6/f9730ab637b7ca47.png")' # url("xxx") or red or #000 or rgba() ..
   list: # list相当于数组对象，[{title:'xx',date: 'xx', url: 'xxx', color: 'red'}]根据自己实际情况，增加或者删除
-    - title: '#2021年8月30日 hexo博客的搭建的文章完成'
-      date: '2021-08-30'
-      url: 'https://surviavalf.github.io/2021/09/07/technology/hexo/create-hexo/'
-    - title: '#2021年9月07日 新增友链功能 ~'
+    - title: '#2021年9月07日 hexo博客的搭建的文章完成'
       date: '2021-09-07'
+      url: 'https://surviavalf.github.io/2021/09/07/technology/hexo/create-hexo/'
+    - title: '#2021年8月30日 新增友链功能 ~'
+      date: '2021-08-30'
       url: ''
     - title: '#博客更换为Bamboo主题 作者：yuang01'
       date: '2021-08-20'

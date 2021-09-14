@@ -7,7 +7,7 @@ tags:
 categories:
   - web前端
   - CSS
-author: zhangyifeng
+author: 糖醋灬里脊
 ---
 自动配色网站https://www.materialpalette.com/
 配置渐变色网站https://www.0to255.com/8335a3

@@ -3,7 +3,7 @@ title: hexo博客引入动态图表chart
 tags:
   - Hexo
 categories: Hexo
-author: zhangyifeng
+author: 糖醋灬里脊
 date: 2021-08-30 10:55:43
 ---
 

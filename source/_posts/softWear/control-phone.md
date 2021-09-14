@@ -1,6 +1,6 @@
 ---
 title: 电脑控制手机的小软件
-author: zhangyifeng
+author: 糖醋灬里脊
 tags:
   - soft-wear
 date: 2021-08-27 14:13:50
