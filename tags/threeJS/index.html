@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>关于 | 糖醋灬里脊</title>
+  <title>标签: threeJS | 糖醋灬里脊</title>
 
   
     
@@ -628,20 +628,21 @@
     <!-- 内容区域 -->
     <main class="main" id="pjax-container" style="margin-top: 0;">
       
-<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="bg-light-floor-about" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
 
-<div class="lazyload about-header" data-original="/medias/header/about.jpeg">
-	<div class="about-header-title">
-		关于
-	</div>
-	<div class="about-header-desc">
-	
-	<span class="title" id="about-header-desc"></span>
-	<script>
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
+<div class="bg-light-floor-tagDetail" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
+
+<div class="lazyload tag-header" data-original="https://pic1.zhimg.com/80/v2-604a15cef201cf177943af2d915eb2e7_1440w.jpg?source=1940ef5c">
+  <div class="tag-header-title">
+    tag
+  </div>
+  <div class="tag-header-desc">
+  
+    <span class="title" id="tag-header-desc"></span>
+    <script>
   function typedFn() {
-    const el = '#about-header-desc';
-    const type = 'about';
+    const el = '#tag-header-desc';
+    const type = 'tagDetail';
     let desc = 'Do what you love, Love what you do'
     var typed = new Typed(el, {
       strings: [desc],
@@ -654,286 +655,82 @@
   }
   typedFn();
 </script>
-	
-	</div>
-	<div class="mask-box"></div>
+    
+  </div>
+  <div class="mask-box"></div>
 </div>
 
 
-<div id="about" class="container">
-	<div class="title">
-		<i class="fa fa-user" aria-hidden="true"></i>&nbsp;&nbsp;关于
-	</div>
-	<style type="text/css">
-  .borders {
-    width: 280px;
-    height: 280px;
-    margin: 5px;
-  }
-  .itemsC {
-    margin-top: 30px;
-    display: flex !important;
-    flex-direction: row !important;
-    flex-wrap: wrap !important;
-    justify-content: center !important;
-  }
-</style>
-<div class="basic-info" data-aos="fade-up">
-  <div class="subtitle">
-    <i class="fa fa-bar-chart" aria-hidden="true"></i>&nbsp;&nbsp;图表
+
+<div class="tag">
+  <div class="tag-name">
+    <div class="name" style="background-color: #E8F8F5;">threeJS 分类</div>
   </div>
-  <div class="items itemsC">
-    <div id="test1" class="borders"></div>
-    <div id="test2" class="borders"></div>
-    <div id="test3" class="borders"></div>
-  </div>
+  <section class="posts">
+    
+    <article class="post" data-aos="fade-up"
+      style="">
+      <div class="post-main">
+        <div class="post-info">
+          <div class="post-time">
+            <i class="fa fa-clock-o" aria-hidden="true"></i>
+            <span class="post-time">2021-10-09</span>
+          </div>
+          <div class="post-title">
+            <a class="post-title-link" href="/2021/10/09/threejs/">threeJS</a>
+          </div>
+          <div class="post-meta">
+            <div class="post-tags">
+              <!-- 文章详情页的标签 -->
+
+    <i class="iconfont icontag"></i>
+    <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/threeJS/" rel="tag">threeJS</a></li></ul>
+
+            </div>
+            <div class="post-categories">
+              <!-- 文章详情页的分类 -->
+
+<div class="article-category">
+  <i class="iconfont iconbookmark1"></i>
+  <a class="article-category-link" href="/categories/threeJS/">threeJS</a>
 </div>
 
-<script
-  src="/js/echarts.min.js"
-  type="text/javascript"
-></script>
-<script type="text/javascript">
-      var myChart1 = echarts.init(document.getElementById("test1"));
-      var myChart2 = echarts.init(document.getElementById("test2"));
-      var myChart3 = echarts.init(document.getElementById("test3"));
 
-      
-
-      var option1 = {
-          title: {
-              text: '文章发布统计图',
-              x: 'center'
-          },
-          tooltip: {
-              trigger: 'axis'
-          },
-          xAxis: {
-              type: 'category',
-              data: ["2020-10","2020-11","2020-12","2021-01","2021-02","2021-03","2021-04","2021-05","2021-06","2021-07","2021-08","2021-09","2021-10"]
-          },
-          yAxis: {
-              type: 'value',
-          },
-          series: [
-              {
-                  name: '文章篇数',
-                  type: 'line',
-                  color: ['#1E90FF'],
-                  data: [0,0,0,0,0,0,0,0,0,0,10,5,1],
-                  markPoint: {
-                      symbolSize: 45,
-                      color: ['#7042B9'],
-                      data: [{
-                          type: 'max',
-                          itemStyle: {color: ['#7042B9']},
-                          name: 'maximum'
-                      }]
-                  },
-              }
-          ]
-      };
-
-
-      
-
-      var option2 = {
-          title: {
-              text: '文章分类统计图',
-
-              x: 'center'
-          },
-          tooltip: {
-              trigger: 'item',
-              formatter: "{a} <br/>{b} : {c} ({d}%)"
-          },
-          series: [
-              {
-                  name: '分类',
-                  type: 'pie',
-                  radius: ['25%','50%'],
-                  color: ['rgba(30,144,255,0.5)', 'rgba(255,255,0,0.5)', 'rgba(178,34,34,0.5)', 'rgba(50,205,50,0.5)', 'rgba(255,0,0,0.5)', 'rgba(218,112,214,0.5)', 'rgba(147,112,219,0.5)', 'rgba(30,144,255,0.5)', 'rgba(34,139,34,0.5)'],
-                  data: [{"name":"threeJS","value":1},{"name":"Hexo","value":4},{"name":"web前端","value":9},{"name":"Element组件","value":4},{"name":"CSS","value":2},{"name":"js","value":3}],
-                  itemStyle: {
-                      emphasis: {
-                          shadowBlur: 10,
-                          shadowOffsetX: 0,
-                          shadowColor: 'rgba(0, 0, 0, 0.5)'
-                      }
-                  }
-              }
-          ]
-      };
-      
-
-    var option3 = {
-        title: {
-            text: 'TOP10 标签统计图',
-            x: 'center'
-        },
-        tooltip: {
-            trigger: 'axis',
-            axisPointer: {
-                type: 'shadow'
-            }
-        },
-        xAxis: [
-            {
-                type: 'category',
-                data: ["Vue","Hexo","CSS","threeJS","soft-wear","Vue3","ElementPlus"]
-            }
-        ],
-        yAxis: [
-            {
-                type: 'value'
-            }
-        ],
-        series: [
-            {
-                type: 'bar',
-                color: ['#1E90FF'],
-                barWidth : 18,
-                data: [7,4,2,1,1,1,1],
-                markPoint: {
-                    symbolSize: 45,
-                    data: [],
-                },
-                itemStyle: {
-                    normal: {
-                        color: new echarts.graphic.LinearGradient(0, 0, 0, 1, [{
-                            offset: 0,
-                            color: 'rgba(0,244,255,1)' // 0% 处的颜色
-                        }, {
-                            offset: 1,
-                            color: 'rgba(0,77,167,1)' // 100% 处的颜色
-                        }], false),
-                        shadowColor: 'rgba(0,160,221,1)',
-                        shadowBlur: 4,
-                    }
-                },
-                label: {
-                    normal: {
-                        show: true,
-                        lineHeight: 30,
-                        formatter: '{c}',
-                        position: 'top',
-                        textStyle: {
-                            color: '#00D6F9',
-                            fontSize: 20
-                        }
-
-                    }
-                }
-            }
-        ]
-    };
-
-  setTimeout(() => {
-      myChart1.setOption(option1);
-      myChart2.setOption(option2);
-      myChart3.setOption(option3);
-      window.οnresize = function () {
-        myChart1.resize();
-        myChart2.resize();
-        myChart3.resize();
-      };
-  }, 500);
-</script>
-
-	
-	<div class="basic-info" data-aos="fade-up">
-		<div class="subtitle">
-			<i class="fa fa-address-card-o" aria-hidden="true"></i>&nbsp;&nbsp;基本信息
-		</div>
-		<div class="items">
-			<div class="item">
-				<div class="border">
-					<i class="fa fa-heart" aria-hidden="true"></i>
-				</div>
-				<div class="text">
-					
-					年龄：22
-				</div>
-			</div>
-
-			<div class="item">
-				<div class="border">
-					<i class="fa fa-transgender" aria-hidden="true"></i>
-				</div>
-				<div class="text">
-					性别：男
-				</div>
-			</div>
-
-			<div class="item">
-				<div class="border">
-					<i class="fa fa-map-marker" aria-hidden="true"></i>
-				</div>
-				<div class="text">
-					坐标：火星
-				</div>
-			</div>
-
-			<div class="item">
-				<div class="border">
-					<i class="fa fa-external-link-square" aria-hidden="true"></i>
-				</div>
-				<div class="text">
-					状态：改BUG中
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	
-	<div class="basic-info" data-aos="fade-up">
-		<div class="subtitle">
-			<i class="fa fa-bicycle" aria-hidden="true"></i>&nbsp;&nbsp;技能
-		</div>
-		<div class="skill">
-			
-			<div class="bar-box">
-				<span class="bar-name">HTML5</span>
-				<div class="bar" style="background: linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%); width: 60%"></div>
-				<span class="bar-number">60%</span>
-			</div>
-			
-			<div class="bar-box">
-				<span class="bar-name">JavaScript</span>
-				<div class="bar" style="background: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%); width: 75%"></div>
-				<span class="bar-number">75%</span>
-			</div>
-			
-			<div class="bar-box">
-				<span class="bar-name">CSS</span>
-				<div class="bar" style="background: linear-gradient(to right, #eea2a2 0%, #bbc1bf 19%, #57c6e1 42%, #b49fda 79%, #7ac5d8 100%); width: 60%"></div>
-				<span class="bar-number">60%</span>
-			</div>
-			
-			<div class="bar-box">
-				<span class="bar-name">Vue</span>
-				<div class="bar" style="background: linear-gradient(to right, #0029FF 0%, #8FFF00 100%); width: 80%"></div>
-				<span class="bar-number">80%</span>
-			</div>
-			
-			<div class="bar-box">
-				<span class="bar-name">写BUG</span>
-				<div class="bar" style="background: linear-gradient(to right, #43e97b 0%, #38f9d7 100%); width: 100%"></div>
-				<span class="bar-number">100%</span>
-			</div>
-			
-			<div class="bar-box">
-				<span class="bar-name">摸鱼</span>
-				<div class="bar" style="background: linear-gradient(140.54deg, #608D00 0%, #D30000 72.37%); width: 100%"></div>
-				<span class="bar-number">100%</span>
-			</div>
-			
-		</div>
-	</div>
-	
-	
-	
-	
+            </div>
+          </div>
+          <div class="post-img-mobile">
+            
+              
+              <a href="/2021/10/09/threejs/" class="lazyload" data-original="/medias/background/8.jpg" style="background-size: cover; 
+                background-position: center center;">
+              </a>
+            
+          </div>
+          <div class="post-content">
+            示例
+    
+        My first three.js app
+        
+            body { margin: 0; }
+            canvas { width: 100%; height:
+          </div>
+        </div>
+        <div class="post-more">
+          <a href="/2021/10/09/threejs/">
+            <i class="iconfont iconmore" pointer style="float: right;" title="阅读更多"></i>
+          </a>
+        </div>
+      </div>
+      <div class="post-img">
+        
+          <a href="/2021/10/09/threejs/" class="lazyload" data-original="/medias/background/8.jpg" style="background-size: cover; 
+            background-position: center center;">
+          </a>
+        
+      </div>
+    </article>
+    
+  </section>
 </div>
 
     </main>
