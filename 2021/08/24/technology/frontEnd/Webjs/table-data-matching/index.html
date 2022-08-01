@@ -676,7 +676,7 @@
       
         <div class="post-detail-header_wordcount">
           <span class="totalcount">
-            <i class="fa fa-file-text-o"></i> 字数统计: 69 |
+            <i class="fa fa-file-text-o"></i> 字数统计: 68 |
           </span>
   
           <span class="min2read">
@@ -705,7 +705,9 @@
     <article class="post post-detail">
       
       <div class="post-content">
-        <h2 id="table-列表数据匹配"><a href="#table-列表数据匹配" class="headerlink" title="table 列表数据匹配"></a>table 列表数据匹配</h2><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Html</span></span><br><span class="line">&lt;el-table-column</span><br><span class="line">    prop=<span class="string">&quot;rcCreatePerson&quot;</span></span><br><span class="line">    align=<span class="string">&quot;center&quot;</span></span><br><span class="line">    label=<span class="string">&quot;创建人&quot;</span></span><br><span class="line">    :formatter=<span class="string">&quot;rcCreatePersonFormatter&quot;</span></span><br><span class="line">    show-overflow-tooltip</span><br><span class="line">&gt;&lt;/el-table-column&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//js</span></span><br><span class="line"><span class="comment">// 创建人</span></span><br><span class="line"><span class="function"><span class="title">rcCreatePersonFormatter</span>(<span class="params">row, column, cellValue</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.userList.find(<span class="function">(<span class="params">item</span>) =&gt;</span> item.userId === cellValue).   userName;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">        <span class="keyword">return</span> cellValue;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
+        <h2 class="bamboo-h " id="列表数据匹配">列表数据匹配</h2><br/>
+
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//Html</span></span><br><span class="line">&lt;el-table-column</span><br><span class="line">    prop=<span class="string">&quot;rcCreatePerson&quot;</span></span><br><span class="line">    align=<span class="string">&quot;center&quot;</span></span><br><span class="line">    label=<span class="string">&quot;创建人&quot;</span></span><br><span class="line">    :formatter=<span class="string">&quot;rcCreatePersonFormatter&quot;</span></span><br><span class="line">    show-overflow-tooltip</span><br><span class="line">&gt;&lt;/el-table-column&gt;</span><br><span class="line"></span><br><span class="line"><span class="comment">//js</span></span><br><span class="line"><span class="comment">// 创建人</span></span><br><span class="line"><span class="function"><span class="title">rcCreatePersonFormatter</span>(<span class="params">row, column, cellValue</span>)</span> &#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="built_in">this</span>.userList.find(<span class="function">(<span class="params">item</span>) =&gt;</span> item.userId === cellValue).   userName;</span><br><span class="line">    &#125; <span class="keyword">catch</span> (e) &#123;</span><br><span class="line">        <span class="keyword">return</span> cellValue;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;,</span><br></pre></td></tr></table></figure>
 
       </div>
       <div class="post-tags-categories">
@@ -757,8 +759,10 @@
       </div>
       
       <!-- <div class="content">
-        1.箭头↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
-2.el-
+        箭头
+
+↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+el-in
       </div> -->
     </a>
   </div>
@@ -776,8 +780,10 @@
         <div class="title-text">动态表头</div>
       </div>
       <!-- <div class="content">
-        动态表头Html表内数据的字段名需要对应表头中的 prop
-123456789101112131415161718192
+        vue 动态表头
+
+1.Html表内数据的字段名需要对应表头中的 prop
+1234567891011121314151
       </div> -->
     </a>
   </div>
