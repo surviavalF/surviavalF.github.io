@@ -9,11 +9,9 @@ categories:
 author: 糖醋灬里脊
 ---
 
-# El-tree 设置
+{% title h2, El-tree 横向显示%}
 
-## El-tree 横向显示
-
-{% title h3, html %}
+### 1.html
 
 ```html
 <el-tree
@@ -27,8 +25,8 @@ author: 糖醋灬里脊
   :render-content="renderContent"
 ></el-tree>
 ```
-{% title h3, data %}
 
+### 2.data
 
 ```js
 let routeList = ref([]); //树节点let defaultProps = ref({
@@ -37,7 +35,7 @@ let routeList = ref([]); //树节点let defaultProps = ref({
 }); //树节点
 ```
 
-{% title h3, js %}
+### 3.js
 
 ```js
 //树节点的内容区的渲染 Function
@@ -81,7 +79,7 @@ const changeCss = () => {
 };
 ```
 
-## El-tree 选择的节点获取
+{% title h2, El-tree 选择的节点获取%}
 
 ```js
 let Nodes = [
@@ -91,7 +89,6 @@ let Nodes = [
 ```
 
 当父节点中的子节点未完全选择，父组件是半选择状态时，想要获取全部节点（包括半选择的父节点）使用此方法
-
 
 {% title h2, 以下为引用 %}
 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓

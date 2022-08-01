@@ -12,12 +12,12 @@ img: "/medias/background/3.jpg"
 top: true
 ---
 
-## 1.箭头
+{% title h2, 箭头%}
 
 ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓  
 ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
-## 2.el-input 属性 type="number"时去掉右侧箭头
+{% title h2, el-input 属性 type="number"时去掉右侧箭头%}
 
 {% tabs tab-id %}
 
@@ -60,7 +60,7 @@ input[type="number"]  {
 
 {% endtabs %}
 
-## 3.选中改变样式
+{% title h2, 选中改变样式%}
 
 data 里
 isActive:-1,
@@ -79,7 +79,7 @@ checkedItem(index){
 <div v-for="(item,index) in nameoptions" class="class名" :class="{新加的class样式:index==isActive}" @click="checkItem(index)>{{item.name}}</div>
 ```
 
-## 4.Element 滚动条样式
+{% title h2, Element 滚动条样式%}
 
 ```css
  .el-table__body-wrapper::-webkit-scrollbar {
@@ -93,7 +93,7 @@ checkedItem(index){
 }
 ```
 
-## 5.鼠标悬停样式
+{% title h2, 鼠标悬停样式%}
 
 用 css 添加手状样式,鼠标移上去变小手,变小手
 
@@ -123,7 +123,7 @@ sw-resize
 用 JS 使鼠标变小手 onmouseover(鼠标越过的时候)
 onmouseover="this.style.cursor='hand'"
 
-## 6.纯英文，数字不换行问题处理
+{% title h2, 纯英文，数字不换行问题处理%}
 
 1.问题描述：
 
@@ -143,9 +143,10 @@ onmouseover="this.style.cursor='hand'"
 }
 ```
 
-## 7.Css :nth-child() 选择器
+{% title h2, Css :nth-child() 选择器%}
 
-1、first-child
+### 1、first-child
+
 first-child 表示选择列表中的第一个标签。例如：
 
 ```css
@@ -154,7 +155,8 @@ li:first-child {
 }
 ```
 
-2、last-child
+### 2、last-child
+
 last-child 表示选择列表中的最后一个标签，例如：
 
 ```css
@@ -163,7 +165,8 @@ li:last-child {
 }
 ```
 
-3、nth-child(3)
+### 3、nth-child(3)
+
 表示选择列表中的第 3 个标签，例如：
 
 ```css
@@ -174,7 +177,8 @@ li:nth-child(3) {
 
 代码中的 3 也可以改成其它数字，如 4、5 等。想选择第几个标签，就填写几。
 
-4、nth-child(2n)
+### 4、nth-child(2n)
+
 这个表示选择列表中的偶数标签，即选择 第 2、第 4、第 6…… 标签，例如：
 
 ```css
@@ -183,7 +187,8 @@ li:nth-child(2n) {
 }
 ```
 
-5、nth-child(2n-1)
+### 5、nth-child(2n-1)
+
 这个表示选择列表中的奇数标签，即选择 第 1、第 3、第 5、第 7……标签，例如：
 
 ```css
@@ -192,14 +197,19 @@ li:nth-child(2n-1) {
 }
 ```
 
-6、nth-child(n+3)
+### 6、nth-child(n+3)
+
 这个表示选择列表中的标签从第 3 个开始到最后。
-7、nth-child(-n+3)
+
+### 7、nth-child(-n+3)
+
 这个表示选择列表中的标签从 0 到 3，即小于 3 的标签。
-8、nth-last-child(3)
+
+### 8、nth-last-child(3)
+
 这个表示选择列表中的倒数第 3 个标签。
 
-## 8.头像堆叠样式
+{% title h2, 头像堆叠样式%}
 
 html
 

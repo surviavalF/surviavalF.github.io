@@ -9,8 +9,14 @@ categories:
   - CSS
 author: 糖醋灬里脊
 ---
+
+{% title h2, 配色网站%}
+
 自动配色网站https://www.materialpalette.com/
 配置渐变色网站https://www.0to255.com/8335a3
+
+{% title h2, css颜色计算器%}
+
 <table width="100%" border="0" cellspacing="0" cellpadding="0" class="content">
   <tr>
     <td valign="top" class="area">
@@ -145,6 +151,8 @@ author: 糖醋灬里脊
     }
   }
 </script>
+
+{% title h2, css颜色示例%}
 
 <table bordercolor="#cccccc" cellspacing="0" cellpadding="0" width="100%" border="1" style="font-size:14px;border-collapse:collapse">
     <tbody id="color">

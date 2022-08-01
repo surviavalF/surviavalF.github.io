@@ -9,9 +9,9 @@ categories:
 author: 糖醋灬里脊
 ---
 
-## 动态表头
+{% title h2, vue 动态表头%}
 
-### Html
+### 1.Html
 
 表内数据的字段名需要对应表头中的 prop
 
@@ -51,7 +51,7 @@ author: 糖醋灬里脊
 </el-table>
 ```
 
-### Data
+### 2.Data
 
 ```javascript
 //表头信息
@@ -89,7 +89,7 @@ peopleDataList:[
 ]
 ```
 
-## 表头过长隐藏
+{% title h2, 表头过长隐藏%}
 
 ```html
 <template v-slot:header>

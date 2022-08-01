@@ -6,13 +6,13 @@ tags:
 date: 2021-08-27 14:13:50
 ---
 
-## QtScrcpy 软件
+{% title h2, QtScrcpy 软件%}
 
 ![](https://s2.loli.net/2022/08/01/qF2Gb1WKSdmzxnX.png)
 
 实时显示 Android 设备屏幕,实时键鼠控制 Android 设备。支持 GNU/Linux，Windows 和 MacOS
 
-## 使用方法
+{% title h2, 使用方法%}
 
 在你的电脑上接入 Android 设备，然后运行程序，按顺序点击如下按钮即可连接到 Android 设备
 
@@ -24,7 +24,7 @@ date: 2021-08-27 14:13:50
 
 点击刷新设备，会看到有设备号更新出来
 
-点击获取设备 IP(可能需要开启wifi)
+点击获取设备 IP(可能需要开启 wifi)
 
 点击启动 adbd
 

@@ -13,7 +13,7 @@ date: 2021-08-18 11:14:07
 
 使用 [Element-plus](https://element-plus.gitee.io/#/zh-CN) 中的 [Transfer 穿梭框](https://element-plus.gitee.io/#/zh-CN/component/transfer) 组件封装的一个人员选择器，使用的是 VUE3 中的 setup 语法糖写法
 
-## 选择器子组件的.vue 文件代码
+{% title h2, 选择器子组件的.vue 文件代码%}
 
 userMailList  为全部人员
 
@@ -153,9 +153,9 @@ onMounted(() => {
 </style>
 ```
 
-## 父组件的部分代码
+{% title h2, 父组件的部分代码%}
 
-### template 内引入子组件
+### 1.template 内引入子组件
 
 ```javascript
 <PeopleCheck
@@ -169,7 +169,7 @@ onMounted(() => {
 
 ```
 
-### js
+### 2.js
 
 ```javascript
 //↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓成员选择组件↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓//

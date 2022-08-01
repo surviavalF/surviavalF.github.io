@@ -7,7 +7,7 @@ author: 糖醋灬里脊
 date: 2021-09-02 17:17:43
 ---
 
-## Hexo 中的 .ejs
+{% title h2, Hexo 中的 .ejs%}
 
 需要找到主题文件夹中的 footer.ejs (可能在{% span red, Hexo\themes\< theme~name >\layout\ _partial\footer %}，主题不同位置不同)
 

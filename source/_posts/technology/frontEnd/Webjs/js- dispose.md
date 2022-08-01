@@ -10,7 +10,7 @@ date: 2021-08-24 10:25:43
 top: true
 ---
 
-## 1.计算时间差代码
+{% title h2, 计算时间差代码%}
 
 ```javascript
  timeChange(data1, data2) {
@@ -40,12 +40,12 @@ top: true
     },
 
 ```
-## 2.刷新数组
+
+{% title h2, 刷新数组%}
 
 this.$forceUpdate()
 
-## 3.小数取整
-
+{% title h2, 小数取整%}
 
 1，Math.ceil()方法向上取整，整数部分值+1：
 
@@ -63,47 +63,47 @@ eg：Math.round(3/2) 输出：2
 
 eg：parseInt(3/2) 输出：1
 
-## 4.手机号/身份证
+{% title h2, 手机号/身份证%}
 
 ```js
 //reg.js页面
 //判断是否是手机号
-export const isPhoneNumber = (mobile) => {
-  let reg =
-    /^1(3[0-9]|4[5,7]|5[0,1,2,3,5,6,7,8,9]|6[2,5,6,7]|7[0,1,7,8]|8[0-9]|9[1,8,9])\d{8}$/;
-  return reg.test(mobile);
+export const isPhoneNumber = (mobile) => {
+  let reg =
+    /^1(3[0-9]|4[5,7]|5[0,1,2,3,5,6,7,8,9]|6[2,5,6,7]|7[0,1,7,8]|8[0-9]|9[1,8,9])\d{8}$/;
+  return reg.test(mobile);
 };
 //判断是否是身份证
-export const isCardNo = (card) => {
-  let reg =
-    /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
-  return reg.test(card);
+export const isCardNo = (card) => {
+  let reg =
+    /^[1-9]\d{5}[1-9]\d{3}((0\d)|(1[0-2]))(([0|1|2]\d)|3[0-1])\d{3}([0-9]|X)$/;
+  return reg.test(card);
 };
 //手机号中间隐藏
-export const mobileEncrypt = (mobile) => {
-  mobile = mobile + "";
-  return `+86${mobile.replace(/(\d{3})\d*(\d{4})/, `$1 **** $2`)}`;
+export const mobileEncrypt = (mobile) => {
+  mobile = mobile + "";
+  return `+86${mobile.replace(/(\d{3})\d*(\d{4})/, `$1 **** $2`)}`;
 };
 
 //Vue
-import { mobileEncrypt } from "@/utils/reg.js";
-userMobilePhone = mobileEncrypt(userMobilePhone);
-
+import { mobileEncrypt } from "@/utils/reg.js";
+userMobilePhone = mobileEncrypt(userMobilePhone);
 ```
 
-## 5.字符长度计算（中文算两个字符）
+{% title h2, 字符长度计算（中文算两个字符）%}
+
 ```js
-export const getStringLength = (e) => {
-  let [length, cn, en] = [0, 0, 0];
-  Array.from(e).map((item) => {
-    if (e.charAt(item).match(/[\u4e00-\u9fa5]/g)) {
-      length += 2;
-      cn++;
-    } else {
-      length += 1;
-      en++;
-    }
-  });
-  return length;
+export const getStringLength = (e) => {
+  let [length, cn, en] = [0, 0, 0];
+  Array.from(e).map((item) => {
+    if (e.charAt(item).match(/[\u4e00-\u9fa5]/g)) {
+      length += 2;
+      cn++;
+    } else {
+      length += 1;
+      en++;
+    }
+  });
+  return length;
 };
 ```

@@ -11,7 +11,7 @@ img: "/medias/background/10.jpg"
 top: false
 ---
 
-## 快速排序
+{% title h2, 快速排序%}
 
 ```javascript
     sortArray(nums) {

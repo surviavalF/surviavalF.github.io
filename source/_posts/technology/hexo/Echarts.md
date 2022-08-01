@@ -7,11 +7,11 @@ author: 糖醋灬里脊
 date: 2021-09-01 09:55:43
 ---
 
-## Hexo 中的 Echarts
+{% title h2, Hexo 中的 Echarts%}
 
 [ECharts](https://echarts.apache.org/zh/index.html) 是一个使用 JavaScript 实现的开源可视化库，涵盖各行业图表，满足各种需求。功能非常强大，想要用好建议多翻看几遍官网的 API
 
-## 步骤
+{% title h2, 步骤%}
 
 ### 1.下载
 
@@ -51,7 +51,10 @@ date: 2021-09-01 09:55:43
     </script>
 ```
 [MAKEAPIE](https://www.makeapie.com/explore.html)一个非常不错的Echarts示例网站
-## 示例
+
+
+{% title h2, 示例%}
+
 <div style="display:flex;flex-wrap: wrap;">
     <div id="test1" style="width:580px;height:600px;"></div>
     <div id="test2" style="width:580px;height:600px;"></div>
