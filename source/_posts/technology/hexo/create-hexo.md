@@ -18,7 +18,7 @@ top: true
 {% timeline %}
 {% timenode %}
 [官网下载地址](https://gitforwindows.org/)
-[我使用的 Git Bash](/package/Git-2.17.0-64-bit.exe)
+[我使用的 Git Bash](https://www.aliyundrive.com/s/xGGpJoYbdLe) 提取码：74rj
 {% endtimenode %}
 {% timenode %}
 安装步骤：双击下载好的 exe 文件，一直 next
@@ -42,7 +42,7 @@ nvm 是为了管理不同版本的 node 与 npm 而产生的，安装 nvm 是为
 {% timeline %}
 {% timenode %}
 [下载地址](https://github.com/coreybutler/nvm-windows/releases)
-[我使用的 nvm](/package/nvm-setup.exe)
+[我使用的 nvm](https://www.aliyundrive.com/s/eTwDdo9Wiz3) 提取码：y1q5
 {% note warning, 不要安装到C盘，C盘貌似会有一个虚拟空间，导致node安装失败
  %}
 {% endtimenode %}
@@ -75,7 +75,7 @@ npm_mirror: https://npm.taobao.org/mirrors/npm/
 {% endtimenode %}
 {% timenode %}
 nvm 指令的[链接](https://www.runoob.com/w3cnote/nvm-manager-node-versions.html)
-你也可以直接下载我用的 node 版本[下载链接](/package/v14.16.1.zip)
+<!-- 你也可以直接下载我用的 node 版本[下载链接](/package/v14.16.1.zip) -->
 下载后放到刚才的文件夹（记得解压）
 {% endtimenode %}
 
@@ -139,7 +139,7 @@ hexo init
 {% endtimenode %}
 
 {% timenode %}
-我使用的是 VScode 编译器 [我使用的版本](/package/VSCodeUserSetup-x64-1.42.0.exe)
+我使用的是 VScode 编译器 [我使用的版本](https://www.aliyundrive.com/s/cru26GuCMvH) 提取码：58ue
 在终端里按顺序输入下面代码，就可以访问 http://localhost:4000，这就是你的博客啦
 
 ```js
@@ -242,8 +242,8 @@ TortoiseGit，我认为小乌龟（俗称）还是挺好用的，至少某些情
 {% timeline %}
 
 {% timenode %}
-[我使用的版本](/package/TortoiseGit-2.10.0.2-64bit.msi)
-[我使用的汉化](/package/TortoiseGit-LanguagePack-2.10.0.0-64bit-zh_CN.msi)
+[我使用的版本](https://www.aliyundrive.com/s/XsMLsxo8UCr) 提取码：9y9p
+[我使用的汉化](https://www.aliyundrive.com/s/aohmjjoV8u8) 提取码：9ve2
 安装步骤：[Git 的安装与 TortoiseGit 的安装和汉化](https://www.cnblogs.com/nicaicai/p/12383735.html)
 {% endtimenode %}
 
