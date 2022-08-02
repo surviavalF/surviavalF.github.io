@@ -6,6 +6,7 @@ categories: Hexo
 author: 糖醋灬里脊
 date: 2021-09-07 11:05:43
 top: false
+img: "/medias/background/hexo-background.png"
 ---
 
 {% title h2, 前言 %}

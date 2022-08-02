@@ -7,7 +7,7 @@ categories:
   - web前端
   - js
 author: 糖醋灬里脊
-img: "/medias/background/10.jpg"
+img: "/medias/background/js-background.png"
 top: false
 ---
 

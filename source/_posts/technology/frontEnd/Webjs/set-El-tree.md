@@ -7,6 +7,7 @@ categories:
   - web前端
   - Element组件
 author: 糖醋灬里脊
+img: "/medias/background/js-background.png"
 ---
 
 {% title h2, El-tree 横向显示%}

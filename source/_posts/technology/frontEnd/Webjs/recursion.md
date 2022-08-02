@@ -7,6 +7,7 @@ categories:
   - js
 author: 糖醋灬里脊
 date: 2021-08-24 10:27:50
+img: "/medias/background/js-background.png"
 ---
 
 {% title h2, vue 递归代码%}

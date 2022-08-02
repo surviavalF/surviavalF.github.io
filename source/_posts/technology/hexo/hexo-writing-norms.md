@@ -6,6 +6,7 @@ tags:
 categories:
   - Hexo
 author: 糖醋灬里脊
+img: "/medias/background/hexo-background.png"
 top: true
 ---
 

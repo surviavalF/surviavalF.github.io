@@ -5,6 +5,7 @@ tags:
 categories: Hexo
 author: 糖醋灬里脊
 date: 2021-08-30 10:55:43
+img: "/medias/background/hexo-background.png"
 ---
 
 {% title h2, Hexo 中的 Chartjs%}

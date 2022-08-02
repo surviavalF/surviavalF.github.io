@@ -8,6 +8,7 @@ categories:
   - Element组件
 author: 糖醋灬里脊
 date: 2021-08-18 11:14:07
+img: "/medias/background/js-background.png"
 ---
 ![](https://s2.loli.net/2022/08/01/H5bcjKsx74DpV3z.png)
 

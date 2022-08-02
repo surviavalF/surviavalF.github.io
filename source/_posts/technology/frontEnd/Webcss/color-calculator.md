@@ -8,6 +8,7 @@ categories:
   - web前端
   - CSS
 author: 糖醋灬里脊
+img: "/medias/background/css-background.png"
 ---
 
 {% title h2, 配色网站%}

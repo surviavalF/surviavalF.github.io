@@ -6,6 +6,7 @@ categories:
   - js
 author: 糖醋灬里脊
 date: 2021-09-06 16:07:50
+img: "/medias/background/js-background.png"
 ---
 
 {% title h2, js 常用的浏览器窗体可视区域大小位置的方法%}

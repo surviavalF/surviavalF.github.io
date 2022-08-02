@@ -6,6 +6,7 @@ tags:
 categories:
   - web前端
 author: 糖醋灬里脊
+img: "/medias/background/css-background.png"
 ---
 
 {% title h2, 参数输入%}
