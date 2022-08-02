@@ -48,8 +48,7 @@ author: 糖醋灬里脊
                         />
                         图片背景色：<input
                           name="imgBackground"
-                          value="64b5ff"
-                          maxlength="6"
+                          value="#64b5ff"
                           onKeyDown="getkey(event,'imgBackground');"
                         />
                       </td>
@@ -63,8 +62,7 @@ author: 糖醋灬里脊
                         />
                         文字颜色：<input
                           name="textColor"
-                          value="3897f9"
-                          maxlength="6"
+                          value="#3897f9"
                           onKeyDown="getkey(event,'textColor');"
                         />
                         文字大小：<input
@@ -79,7 +77,7 @@ author: 糖醋灬里脊
                         />
                         文字距顶部距离：<input
                           name="textTop"
-                          value="360"
+                          value="350"
                           onKeyDown="getkey(event,'textTop');"
                         />
                       </td>
@@ -88,8 +86,7 @@ author: 糖醋灬里脊
                       <td width="180">
                         阴影颜色：<input
                           name="shadowColor"
-                          value="383dff"
-                          maxlength="6"
+                          value="#383dff"
                           onKeyDown="getkey(event,'shadowColor');"
                         />
                         阴影偏移量：<input
@@ -124,27 +121,37 @@ author: 糖醋灬里脊
   }
   function changeImage(val) {
     var timer = setTimeout(() => {
+      // 图片宽：
       if (val == "imgWidth" || val == "all") {
         document.getElementsByClassName("canvasImg")[0].style.width = `${
           document.getElementsByName("imgWidth")[0].value
         }px`;
-        document.getElementsByClassName("centerLine")[0].style.left = `${
+        document.getElementsByClassName("centerVerticalLine")[0].style.left = `${
           Number(document.getElementsByName("imgWidth")[0].value / 2)
         }px`;
+        document.getElementsByClassName("centerAcrossLine")[0].style.width = `${
+         document.getElementsByName("imgWidth")[0].value
+        }px`;
       }
+      // 图片高：
       if (val == "imgHeight" || val == "all") {
         document.getElementsByClassName("canvasImg")[0].style.height = `${
           document.getElementsByName("imgHeight")[0].value
         }px`;
-        document.getElementsByClassName("centerLine")[0].style.height = `${
-          Number(document.getElementsByName("imgHeight")[0].value)
+        document.getElementsByClassName("centerVerticalLine")[0].style.height = `${
+           Number(document.getElementsByName("imgHeight")[0].value)
+        }px`;
+        document.getElementsByClassName("centerAcrossLine")[0].style.top = `${
+          Number(document.getElementsByName("imgHeight")[0].value / 2)
         }px`;
       }
+      // 图片背景色：
       if (val == "imgBackground" || val == "all") {
-        document.getElementsByClassName("canvasImg")[0].style.background = `#${
+        document.getElementsByClassName("canvasImg")[0].style.background = `${
           document.getElementsByName("imgBackground")[0].value
         }`;
       }
+      // 文字内容：
       if (val == "textData" || val == "all") {
         inputText1.innerHTML = `${
           document.getElementsByName("textData")[0].value
@@ -153,11 +160,13 @@ author: 糖醋灬里脊
           document.getElementsByName("textData")[0].value
         }`;
       }
+      // 文字颜色：
       if (val == "textColor" || val == "all") {
-        document.getElementsByClassName("inputTextClass1")[0].style.color = `#${
+        document.getElementsByClassName("inputTextClass1")[0].style.color = `${
           document.getElementsByName("textColor")[0].value
         }`;
       }
+      // 文字大小：
       if (val == "textFont" || val == "all") {
         document.getElementsByClassName("inputTextClass1")[0].style.fontSize = `${
           document.getElementsByName("textFont")[0].value
@@ -166,6 +175,7 @@ author: 糖醋灬里脊
           document.getElementsByName("textFont")[0].value
         }px`;
       }
+      // 文字距左侧距离：
       if (val == "textLeft" || val == "all") {
         document.getElementsByClassName("inputTextClass1")[0].style.left = `${
           document.getElementsByName("textLeft")[0].value
@@ -175,6 +185,7 @@ author: 糖醋灬里脊
           Number(document.getElementsByName("shadowLeft")[0].value)
         }px`;
       }
+      // 文字距顶部距离：
       if (val == "textTop" || val == "all") {
         document.getElementsByClassName("inputTextClass1")[0].style.top = `${
           document.getElementsByName("textTop")[0].value
@@ -183,11 +194,13 @@ author: 糖醋灬里脊
           document.getElementsByName("textTop")[0].value
         }px`;
       }
+      // 阴影颜色：
       if (val == "shadowColor" || val == "all") {
-        document.getElementsByClassName("inputTextClass2")[0].style.color = `#${
+        document.getElementsByClassName("inputTextClass2")[0].style.color = `${
           document.getElementsByName("shadowColor")[0].value
         }`;
       }
+      // 阴影偏移量：
       if (val == "shadowLeft" || val == "all") {
         document.getElementsByClassName("inputTextClass2")[0].style.left = `${
           Number(document.getElementsByName("textLeft")[0].value) +
@@ -201,7 +214,8 @@ author: 糖醋灬里脊
     changeImage(n);
   }
   function downLoadImage(){
-    document.getElementsByClassName("centerLine")[0].style.display = 'none'
+    document.getElementsByClassName("centerVerticalLine")[0].style.display = 'none'
+    document.getElementsByClassName("centerAcrossLine")[0].style.display = 'none'
     var timer2 = setTimeout(() => {
       html2canvas(document.querySelector("#myImg")).then(canvas => {
           var imgName = new Date().toISOString() + '.png'
@@ -212,7 +226,8 @@ author: 糖醋灬里脊
           a.href = canvas.toDataURL("image/png");    //canvas转base64图片
           a.download = imgName;
           a.click();
-          document.getElementsByClassName("centerLine")[0].style.display = 'unset'
+          document.getElementsByClassName("centerVerticalLine")[0].style.display = 'unset'
+          document.getElementsByClassName("centerAcrossLine")[0].style.display = 'unset'
       });
       clearTimeout(timer2);
     }, 100);
@@ -229,7 +244,8 @@ author: 糖醋灬里脊
       id='myImg'
       class="canvasImg"
     >
-      <div class='centerLine'></div>
+      <div class='centerVerticalLine'></div>
+      <div class='centerAcrossLine'></div>
       <div
         id="inputText1" class='inputTextClass1'
       >
@@ -246,10 +262,15 @@ author: 糖醋灬里脊
       position: relative;
       font-family: SimHei;
     }
-    .centerLine{
+    .centerVerticalLine{
       position: absolute;
-      z-index: 9;
+      z-index: 10;
       border-right: 1px dashed #eeeeee;
+    }
+    .centerAcrossLine{
+      position: absolute;
+      z-index: 10;
+      border-top: 1px dashed #eeeeee;
     }
     .inputTextClass1{
       position: absolute;
