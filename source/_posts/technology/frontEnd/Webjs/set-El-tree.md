@@ -30,10 +30,11 @@ img: "/medias/background/js-background.png"
 ### 2.data
 
 ```js
-let routeList = ref([]); //树节点let defaultProps = ref({
-  children: "children",
-  label: "label",
-}); //树节点
+let routeList = ref([]); //树节点
+let defaultProps = ref({
+  children: "children",
+  label: "label"
+}); //树节点
 ```
 
 ### 3.js
