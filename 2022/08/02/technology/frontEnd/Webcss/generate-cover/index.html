@@ -11,7 +11,7 @@
   <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-  <title>归档: 2022 | 糖醋灬里脊</title>
+  <title>简易封面生成器 | 糖醋灬里脊</title>
 
   
     
@@ -629,278 +629,646 @@
 
     <!-- 内容区域 -->
     <main class="main" id="pjax-container" style="margin-top: 0;">
-      <div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;"></div>
-<div class="bg-light-floor-archive" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -3;"></div>
-<div class="lazyload archive-header" data-original="/medias/header/archive.jpg" >
-  <div class="archive-header-title">
-    归档
-  </div>
-  <div class="archive-header-desc">
-  
-  <span class="title" id="archive-header-desc"></span>
-  <script>
-  function typedFn() {
-    const el = '#archive-header-desc';
-    const type = 'archive';
-    let desc = 'Do what you love, Love what you do'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
-</script>
-  
-  </div>
-  <div class="mask-box"></div>
-</div>
-
-<div class="archive-video">
-  <video class="full-video" autoplay loop muted>
-      <source style="width: 100%;height: 100vh;" src="/">
-  </video>
-  <div class="video-header-title">
-    归档
-  </div>
-  <div class="video-header-desc">
-  
-      <span class="title" id="archive-video-header-desc"></span>
-      <script>
-  function typedFn() {
-    const el = '#archive-video-header-desc';
-    const type = 'archive';
-    let desc = 'Do what you love, Love what you do'
-    var typed = new Typed(el, {
-      strings: [desc],
-      startDelay: 100,
-      typeSpeed: 100,
-      loop: true,
-      backSpeed: 50,
-      showCursor: true
-    });
-  }
-  typedFn();
-</script>
       
+ <!-- prismjs 代码高亮 -->
+ 
+
+
+<div class="bg-dark-floor" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -1;"></div>
+
+<!-- 文章详情页顶部图片和标题 -->
+
+
+
+
+<div class="post-detail-header lazyload" id="thumbnail_canvas" data-original="/medias/background/css-background.png" style="background-repeat: no-repeat; background-size: cover; 
+  background-position: center center;position: relative;">
+  <div class="post-detail-header-mask"></div>
+  <canvas id="header_canvas"style="position:absolute;bottom:0;pointer-events:none;"></canvas>
+  
+  <div class="post-detail-header_info-box">
+    <div class="title-box">
+      <span class="title">
+        简易封面生成器
+      </span>
+    </div>
+    
+    
+      
+        <span class="post-detail-header_date">
+          <i class="fa fa-calendar"></i> 发表于：2022-08-02 |
+        </span>
+      
+
+      
+        <span class="post-detail-header_categories">
+          <i class="iconfont iconbookmark1"></i> 分类：
+          
+            <a href="/categories/web%E5%89%8D%E7%AB%AF/" class="post-detail-header_category">
+              web前端
+            </a>
+          
+        </span>
+      
+
+      
+        <div class="post-detail-header_wordcount">
+          <span class="totalcount">
+            <i class="fa fa-file-text-o"></i> 字数统计: 538 |
+          </span>
+  
+          <span class="min2read">
+            <i class="fa fa-clock-o"></i> 阅读时长: 3分钟 |
+          </span>
+  
+          
+            <span class="reading">
+              <i class="fa fa-eye"></i> 阅读量：<span id="busuanzi_value_page_pv"></span>
+            </span>
+          
+        </div>
+      
+    
   </div>
-  <div class="mask-box"></div>
+  
+  
+    <script src="/js/bubble/bubble.js"></script>
+  
 </div>
 
-<!-- hash算法 -->
 
-<div class="cardEchar">
-  <div id="test1" class="card-contentEchar"></div>
-</div>
 
-<script
-  type="text/javascript"
-  src="/js/echarts.min.js"
-></script>
-<script type="text/javascript">
-      var visualMapOrients = "horizontal"
-      var visualMapLeft = "center"
-      var visualMapBottom = 0
-      // 定义事件侦听器函数
-      function watchWindowSize() {
-      // 获取窗口的宽度和高度，不包括滚动条
-      var w = document.body.clientWidth;
-      // var h = document.body.clientHeight;
-          if (w < 992) {
-              visualMapOrients = "vertical"
-              visualMapLeft = '80%'
-              visualMapBottom = '50%'
-          }else{
-              visualMapOrients = "horizontal"
-              visualMapLeft = "center"
-              visualMapBottom = 0
-          }
-      // 打印结果
-      // console.log("result",w,h)
+<div class="row justify-position">
+  <div class="main-content">
+    <article class="post post-detail">
+      
+      <div class="post-content">
+        <h2 class="bamboo-h " id="参数输入">参数输入</h2><br/>
+
+  <table width="100%" border="0" cellspacing="0" cellpadding="0" class="content">
+    <tr>
+      <td valign="top" class="area">
+        <table
+          style="border-collapse: collapse"
+          bordercolor="#d9d9d9"
+          cellspacing="0"
+          cellpadding="8"
+          width="100%"
+          bgcolor="#fcfcfc"
+          border="1"
+        >
+          <tbody>
+            <tr>
+              <td>
+                <div style="display:flex;justify-content: space-between;">
+                  <div>基础参数传入 </div>
+                  <div>
+                  <button onclick="showImg()" type="button">刷新</button>
+                  <button onclick="downLoadImage()" type="button">保存</button>
+                  </div>
+                </div>
+                <table border="0" cellpadding="0" cellspacing="4">
+                  <tbody>
+                    <tr>
+                      <td width="240">
+                        图片宽：<input
+                          name="imgWidth"
+                          value="1280"
+                          onKeyDown="getkey(event,'imgWidth');"
+                        />
+                        图片高：<input
+                          name="imgHeight"
+                          value="720"
+                          onKeyDown="getkey(event,'imgHeight');"
+                        />
+                        图片背景色：<input
+                          name="imgBackground"
+                          value="#64b5ff"
+                          onKeyDown="getkey(event,'imgBackground');"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                    <td width="180">
+                        文字内容：<input
+                          name="textData"
+                          value="JS"
+                          onKeyDown="getkey(event,'textData');"
+                        />
+                        文字颜色：<input
+                          name="textColor"
+                          value="#3897f9"
+                          onKeyDown="getkey(event,'textColor');"
+                        />
+                        文字大小：<input
+                          name="textFont"
+                          value="300"
+                          onKeyDown="getkey(event,'textFont');"
+                        />
+                        文字距左侧距离：<input
+                          name="textLeft"
+                          value="490"
+                          onKeyDown="getkey(event,'textLeft');"
+                        />
+                        文字距顶部距离：<input
+                          name="textTop"
+                          value="350"
+                          onKeyDown="getkey(event,'textTop');"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="180">
+                        阴影颜色：<input
+                          name="shadowColor"
+                          value="#383dff"
+                          onKeyDown="getkey(event,'shadowColor');"
+                        />
+                        阴影偏移量：<input
+                          name="shadowLeft"
+                          value="15"
+                          onKeyDown="getkey(event,'shadowLeft');"
+                        />
+                      </td>
+                    </tr>
+                    <tr>
+                      <td width="180">
+                        导出文件名：<input
+                          name="imgName"
+                          value=""
+                          onKeyDown="getkey(event,'imgName');"
+                        />
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </td>
+    </tr>
+  </table>
+  <script type="text/javascript" src="/js/html2canvas.js"></script>
+  <script>
+  function showImg() {
+    changeImage("all");
+  }
+  function changeImage(val) {
+    var timer = setTimeout(() => {
+      // 图片宽：
+      if (val == "imgWidth" || val == "all") {
+        document.getElementsByClassName("canvasImg")[0].style.width = `${
+          document.getElementsByName("imgWidth")[0].value
+        }px`;
+        document.getElementsByClassName("centerVerticalLine")[0].style.left = `${
+          Number(document.getElementsByName("imgWidth")[0].value / 2)
+        }px`;
+        document.getElementsByClassName("centerAcrossLine")[0].style.width = `${
+         document.getElementsByName("imgWidth")[0].value
+        }px`;
       }
-      // 将事件侦听器函数附加到窗口的resize事件
-      window.addEventListener("resize", watchWindowSize);
-      // 第一次调用该函数
-      watchWindowSize();
+      // 图片高：
+      if (val == "imgHeight" || val == "all") {
+        document.getElementsByClassName("canvasImg")[0].style.height = `${
+          document.getElementsByName("imgHeight")[0].value
+        }px`;
+        document.getElementsByClassName("centerVerticalLine")[0].style.height = `${
+           Number(document.getElementsByName("imgHeight")[0].value)
+        }px`;
+        document.getElementsByClassName("centerAcrossLine")[0].style.top = `${
+          Number(document.getElementsByName("imgHeight")[0].value / 2)
+        }px`;
+      }
+      // 图片背景色：
+      if (val == "imgBackground" || val == "all") {
+        document.getElementsByClassName("canvasImg")[0].style.background = `${
+          document.getElementsByName("imgBackground")[0].value
+        }`;
+      }
+      // 文字内容：
+      if (val == "textData" || val == "all") {
+        inputText1.innerHTML = `${
+          document.getElementsByName("textData")[0].value
+        }`;
+        inputText2.innerHTML = `${
+          document.getElementsByName("textData")[0].value
+        }`;
+      }
+      // 文字颜色：
+      if (val == "textColor" || val == "all") {
+        document.getElementsByClassName("inputTextClass1")[0].style.color = `${
+          document.getElementsByName("textColor")[0].value
+        }`;
+      }
+      // 文字大小：
+      if (val == "textFont" || val == "all") {
+        document.getElementsByClassName("inputTextClass1")[0].style.fontSize = `${
+          document.getElementsByName("textFont")[0].value
+        }px`;
+        document.getElementsByClassName("inputTextClass2")[0].style.fontSize = `${
+          document.getElementsByName("textFont")[0].value
+        }px`;
+      }
+      // 文字距左侧距离：
+      if (val == "textLeft" || val == "all") {
+        document.getElementsByClassName("inputTextClass1")[0].style.left = `${
+          document.getElementsByName("textLeft")[0].value
+        }px`;
+        document.getElementsByClassName("inputTextClass2")[0].style.left = `${
+          Number(document.getElementsByName("textLeft")[0].value) +
+          Number(document.getElementsByName("shadowLeft")[0].value)
+        }px`;
+      }
+      // 文字距顶部距离：
+      if (val == "textTop" || val == "all") {
+        document.getElementsByClassName("inputTextClass1")[0].style.top = `${
+          document.getElementsByName("textTop")[0].value
+        }px`;
+        document.getElementsByClassName("inputTextClass2")[0].style.top = `${
+          document.getElementsByName("textTop")[0].value
+        }px`;
+      }
+      // 阴影颜色：
+      if (val == "shadowColor" || val == "all") {
+        document.getElementsByClassName("inputTextClass2")[0].style.color = `${
+          document.getElementsByName("shadowColor")[0].value
+        }`;
+      }
+      // 阴影偏移量：
+      if (val == "shadowLeft" || val == "all") {
+        document.getElementsByClassName("inputTextClass2")[0].style.left = `${
+          Number(document.getElementsByName("textLeft")[0].value) +
+          Number(document.getElementsByName("shadowLeft")[0].value)
+        }px`;
+      }
+      clearTimeout(timer);
+    }, 100);
+  }
+  function getkey(e, n) {
+    changeImage(n);
+  }
+  function downLoadImage(){
+    document.getElementsByClassName("centerVerticalLine")[0].style.display = 'none'
+    document.getElementsByClassName("centerAcrossLine")[0].style.display = 'none'
+    var timer2 = setTimeout(() => {
+      html2canvas(document.querySelector("#myImg")).then(canvas => {
+          var imgName = new Date().toISOString() + '.png'
+          if(document.getElementsByName("imgName")[0].value){
+            imgName = document.getElementsByName("imgName")[0].value+'.png'
+          }
+          var a = document.createElement("a");
+          a.href = canvas.toDataURL("image/png");    //canvas转base64图片
+          a.download = imgName;
+          a.click();
+          document.getElementsByClassName("centerVerticalLine")[0].style.display = 'unset'
+          document.getElementsByClassName("centerAcrossLine")[0].style.display = 'unset'
+      });
+      clearTimeout(timer2);
+    }, 100);
+  }
+  $(document).ready(function() { 
+       changeImage("all");
+  })
+</script>
 
-    var myChart = echarts.init(document.getElementById('test1'));
+<h2 class="bamboo-h " id="图片">图片</h2><br/>
+
+  <div style="overflow: auto;">
+    <div
+      id='myImg'
+      class="canvasImg"
+    >
+      <div class='centerVerticalLine'></div>
+      <div class='centerAcrossLine'></div>
+      <div
+        id="inputText1" class='inputTextClass1'
+      >
+      </div>
+      <div
+        id="inputText2" class='inputTextClass2'
+      >
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .canvasImg{
+      position: relative;
+      font-family: SimHei;
+    }
+    .centerVerticalLine{
+      position: absolute;
+      z-index: 10;
+      border-right: 1px dashed #eeeeee;
+    }
+    .centerAcrossLine{
+      position: absolute;
+      z-index: 10;
+      border-top: 1px dashed #eeeeee;
+    }
+    .inputTextClass1{
+      position: absolute;
+      z-index: 9;
+    }
+    .inputTextClass2{
+      position: absolute;
+      z-index: 8;
+    }
+    input{
+      width:100px;
+    }
+    button{
+      width:100px;
+      cursor:pointer;
+    }
+  </style>
+
+      </div>
+      <div class="post-tags-categories">
+        
+        <div class="tags">
+          
+            <a href="/tags/CSS/" class="">
+              CSS
+            </a>
+          
+        </div>
+        
+      </div>
+      
+        <div class="copyright">
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+    <strong>作者:  </strong>糖醋灬里脊</a>
+    </li>
+    <li class="post-copyright-link">
+    <strong>文章链接:  </strong>
+    <a href="/2022/08/02/technology/frontEnd/Webcss/generate-cover/" target="_blank" title="简易封面生成器">https://surviavalf.github.io/2022/08/02/technology/frontEnd/Webcss/generate-cover/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明:   </strong>
+      著作权归作者所有。<a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)"></a>
+      商业转载请联系作者获得授权，非商业转载请保留以上作者信息和原文链接。
+    </li>
+  </ul>
+<div>
+      
+    </article>
+    <!-- 上一篇文章和下一篇文章 -->
+    
+      <!-- 文章详情页的上一页和下一页 -->
+<div class="post-nav">
+
+
+
+  
+  <div class="post-nav-prev post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/medias/background/uni-app-background.png" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/2022/08/08/technology/frontEnd/uni-app/save-image-dom/" class="post-nav-link">
+      <div class="title">
+        <i class="fa fa-angle-left"></i> 上一篇:
+        <div class="title-text">uni-app使用html2canvas-renderjs根据页面dom生成图片</div>
+      </div>
+      
+      <!-- <div class="content">
+        原作者
+
+插件市场 ：https://ext.dcloud.net.cn/plugin?id=2466GitHub : 
+      </div> -->
+    </a>
+  </div>
+
+
+
+  
+  <div class="post-nav-next post-nav-item">
+    <div class="post-nav-img lazyload" data-original="/medias/background/hexo-background.png" style="background-size: cover; 
+      background-position: center center;">
+    </div>
+    <a href="/2022/08/01/technology/hexo/hexo-writing-norms/" class="post-nav-link">
+      <div class="title">
+        下一篇: <i class="fa fa-angle-right"></i>
+        <div class="title-text">hexo写文章创作规范</div>
+      </div>
+      <!-- <div class="content">
+        前言
+
+本文仅是作者本人在文章时给自己设定的规范，是为了统一文章样式以及预防长时间鸽更新导致忘记如何写文章而设定的规范，
+      </div> -->
+    </a>
+  </div>
+
+</div>
 
     
-    setTimeout(() => {
-    var option = {
-        title: {
-            top: 0,
-            text: '文章日历',
-            left: 'center',
-            textStyle: {
-                color: '#3C4858'
-            }
-        },
-        tooltip: {
-            padding: 10,
-            backgroundColor: '#555',
-            borderColor: '#777',
-            borderWidth: 1,
-            formatter: function (obj) {
-                var value = obj.value;
-                return '<div style="font-size: 14px; color: #FFFFFF;">' + value[0] + '：' + value[1] + '</div>';
-            }
-        },
-        visualMap: {
-            show: true,
-            showLabel: true,
-            categories: [0, 1, 2, 3, 4, 5, 6],
-            calculable: true,
-            inRange: {
-                symbol: 'rect',
-                color: ['#ebedf0', '#cea1e1', '#c188d8', '#b36ed0', '#a654c8','#983dbd','#8335a3']
-            },
-            itemWidth: 12,
-            itemHeight: 12,
-            orient: visualMapOrients,
-            left: visualMapLeft,
-            bottom: visualMapBottom
-        },
-        calendar: [{
-            orient: visualMapOrients,
-            left: 'center',
-            range: ["2021-08-08", "2022-08-08"],
-            cellSize: [13, 13],
-            splitLine: {
-                show: false
-            },
-            itemStyle: {
-                color: '#ebedf0',
-                borderColor: '#fff',
-                borderWidth: 2
-            },
-            yearLabel: {
-                show: false
-            },
-            monthLabel: {
-                nameMap: 'cn',
-                fontSize: 11
-            },
-            dayLabel: {
-                formatter: '{start}  1st',
-                nameMap: 'cn',
-                fontSize: 11
-            }
-        }],
-        series: [{
-            type: 'heatmap',
-            coordinateSystem: 'calendar',
-            calendarIndex: 0,
-            data: [["2021-08-08", 0], ["2021-08-09", 0], ["2021-08-10", 0], ["2021-08-11", 0], ["2021-08-12", 0], ["2021-08-13", 0], ["2021-08-14", 0], ["2021-08-15", 0], ["2021-08-16", 1], ["2021-08-17", 0], ["2021-08-18", 1], ["2021-08-19", 0], ["2021-08-20", 0], ["2021-08-21", 0], ["2021-08-22", 0], ["2021-08-23", 0], ["2021-08-24", 6], ["2021-08-25", 0], ["2021-08-26", 0], ["2021-08-27", 1], ["2021-08-28", 0], ["2021-08-29", 0], ["2021-08-30", 1], ["2021-08-31", 0], ["2021-09-01", 1], ["2021-09-02", 1], ["2021-09-03", 1], ["2021-09-04", 0], ["2021-09-05", 0], ["2021-09-06", 1], ["2021-09-07", 1], ["2021-09-08", 0], ["2021-09-09", 0], ["2021-09-10", 0], ["2021-09-11", 0], ["2021-09-12", 0], ["2021-09-13", 0], ["2021-09-14", 0], ["2021-09-15", 0], ["2021-09-16", 0], ["2021-09-17", 0], ["2021-09-18", 0], ["2021-09-19", 0], ["2021-09-20", 0], ["2021-09-21", 0], ["2021-09-22", 0], ["2021-09-23", 0], ["2021-09-24", 0], ["2021-09-25", 0], ["2021-09-26", 0], ["2021-09-27", 0], ["2021-09-28", 0], ["2021-09-29", 0], ["2021-09-30", 0], ["2021-10-01", 0], ["2021-10-02", 0], ["2021-10-03", 0], ["2021-10-04", 0], ["2021-10-05", 0], ["2021-10-06", 0], ["2021-10-07", 0], ["2021-10-08", 0], ["2021-10-09", 0], ["2021-10-10", 0], ["2021-10-11", 0], ["2021-10-12", 0], ["2021-10-13", 0], ["2021-10-14", 0], ["2021-10-15", 0], ["2021-10-16", 0], ["2021-10-17", 0], ["2021-10-18", 0], ["2021-10-19", 0], ["2021-10-20", 0], ["2021-10-21", 0], ["2021-10-22", 0], ["2021-10-23", 0], ["2021-10-24", 0], ["2021-10-25", 0], ["2021-10-26", 0], ["2021-10-27", 0], ["2021-10-28", 0], ["2021-10-29", 0], ["2021-10-30", 0], ["2021-10-31", 0], ["2021-11-01", 0], ["2021-11-02", 0], ["2021-11-03", 0], ["2021-11-04", 0], ["2021-11-05", 0], ["2021-11-06", 0], ["2021-11-07", 0], ["2021-11-08", 0], ["2021-11-09", 0], ["2021-11-10", 0], ["2021-11-11", 0], ["2021-11-12", 0], ["2021-11-13", 0], ["2021-11-14", 0], ["2021-11-15", 0], ["2021-11-16", 0], ["2021-11-17", 0], ["2021-11-18", 0], ["2021-11-19", 0], ["2021-11-20", 0], ["2021-11-21", 0], ["2021-11-22", 0], ["2021-11-23", 0], ["2021-11-24", 0], ["2021-11-25", 0], ["2021-11-26", 0], ["2021-11-27", 0], ["2021-11-28", 0], ["2021-11-29", 0], ["2021-11-30", 0], ["2021-12-01", 0], ["2021-12-02", 0], ["2021-12-03", 0], ["2021-12-04", 0], ["2021-12-05", 0], ["2021-12-06", 0], ["2021-12-07", 0], ["2021-12-08", 0], ["2021-12-09", 0], ["2021-12-10", 0], ["2021-12-11", 0], ["2021-12-12", 0], ["2021-12-13", 0], ["2021-12-14", 0], ["2021-12-15", 0], ["2021-12-16", 0], ["2021-12-17", 0], ["2021-12-18", 0], ["2021-12-19", 0], ["2021-12-20", 0], ["2021-12-21", 0], ["2021-12-22", 0], ["2021-12-23", 0], ["2021-12-24", 0], ["2021-12-25", 0], ["2021-12-26", 0], ["2021-12-27", 0], ["2021-12-28", 0], ["2021-12-29", 0], ["2021-12-30", 0], ["2021-12-31", 0], ["2022-01-01", 0], ["2022-01-02", 0], ["2022-01-03", 0], ["2022-01-04", 0], ["2022-01-05", 0], ["2022-01-06", 0], ["2022-01-07", 0], ["2022-01-08", 0], ["2022-01-09", 0], ["2022-01-10", 0], ["2022-01-11", 0], ["2022-01-12", 0], ["2022-01-13", 0], ["2022-01-14", 0], ["2022-01-15", 0], ["2022-01-16", 0], ["2022-01-17", 0], ["2022-01-18", 0], ["2022-01-19", 0], ["2022-01-20", 0], ["2022-01-21", 0], ["2022-01-22", 0], ["2022-01-23", 0], ["2022-01-24", 0], ["2022-01-25", 0], ["2022-01-26", 0], ["2022-01-27", 0], ["2022-01-28", 0], ["2022-01-29", 0], ["2022-01-30", 0], ["2022-01-31", 0], ["2022-02-01", 0], ["2022-02-02", 0], ["2022-02-03", 0], ["2022-02-04", 0], ["2022-02-05", 0], ["2022-02-06", 0], ["2022-02-07", 0], ["2022-02-08", 0], ["2022-02-09", 0], ["2022-02-10", 0], ["2022-02-11", 0], ["2022-02-12", 0], ["2022-02-13", 0], ["2022-02-14", 0], ["2022-02-15", 0], ["2022-02-16", 0], ["2022-02-17", 0], ["2022-02-18", 0], ["2022-02-19", 0], ["2022-02-20", 0], ["2022-02-21", 0], ["2022-02-22", 0], ["2022-02-23", 0], ["2022-02-24", 0], ["2022-02-25", 0], ["2022-02-26", 0], ["2022-02-27", 0], ["2022-02-28", 0], ["2022-03-01", 0], ["2022-03-02", 0], ["2022-03-03", 0], ["2022-03-04", 0], ["2022-03-05", 0], ["2022-03-06", 0], ["2022-03-07", 0], ["2022-03-08", 0], ["2022-03-09", 0], ["2022-03-10", 0], ["2022-03-11", 0], ["2022-03-12", 0], ["2022-03-13", 0], ["2022-03-14", 0], ["2022-03-15", 0], ["2022-03-16", 0], ["2022-03-17", 0], ["2022-03-18", 0], ["2022-03-19", 0], ["2022-03-20", 0], ["2022-03-21", 0], ["2022-03-22", 0], ["2022-03-23", 0], ["2022-03-24", 0], ["2022-03-25", 0], ["2022-03-26", 0], ["2022-03-27", 0], ["2022-03-28", 0], ["2022-03-29", 0], ["2022-03-30", 0], ["2022-03-31", 0], ["2022-04-01", 0], ["2022-04-02", 0], ["2022-04-03", 0], ["2022-04-04", 0], ["2022-04-05", 0], ["2022-04-06", 0], ["2022-04-07", 0], ["2022-04-08", 0], ["2022-04-09", 0], ["2022-04-10", 0], ["2022-04-11", 0], ["2022-04-12", 0], ["2022-04-13", 0], ["2022-04-14", 0], ["2022-04-15", 0], ["2022-04-16", 0], ["2022-04-17", 0], ["2022-04-18", 0], ["2022-04-19", 0], ["2022-04-20", 0], ["2022-04-21", 0], ["2022-04-22", 0], ["2022-04-23", 0], ["2022-04-24", 0], ["2022-04-25", 0], ["2022-04-26", 0], ["2022-04-27", 0], ["2022-04-28", 0], ["2022-04-29", 0], ["2022-04-30", 0], ["2022-05-01", 0], ["2022-05-02", 0], ["2022-05-03", 0], ["2022-05-04", 0], ["2022-05-05", 0], ["2022-05-06", 0], ["2022-05-07", 0], ["2022-05-08", 0], ["2022-05-09", 0], ["2022-05-10", 0], ["2022-05-11", 0], ["2022-05-12", 0], ["2022-05-13", 0], ["2022-05-14", 0], ["2022-05-15", 0], ["2022-05-16", 0], ["2022-05-17", 0], ["2022-05-18", 0], ["2022-05-19", 0], ["2022-05-20", 0], ["2022-05-21", 0], ["2022-05-22", 0], ["2022-05-23", 0], ["2022-05-24", 0], ["2022-05-25", 0], ["2022-05-26", 0], ["2022-05-27", 0], ["2022-05-28", 0], ["2022-05-29", 0], ["2022-05-30", 0], ["2022-05-31", 0], ["2022-06-01", 0], ["2022-06-02", 0], ["2022-06-03", 0], ["2022-06-04", 0], ["2022-06-05", 0], ["2022-06-06", 0], ["2022-06-07", 0], ["2022-06-08", 0], ["2022-06-09", 0], ["2022-06-10", 0], ["2022-06-11", 0], ["2022-06-12", 0], ["2022-06-13", 0], ["2022-06-14", 0], ["2022-06-15", 0], ["2022-06-16", 0], ["2022-06-17", 0], ["2022-06-18", 0], ["2022-06-19", 0], ["2022-06-20", 0], ["2022-06-21", 0], ["2022-06-22", 0], ["2022-06-23", 0], ["2022-06-24", 0], ["2022-06-25", 0], ["2022-06-26", 0], ["2022-06-27", 0], ["2022-06-28", 0], ["2022-06-29", 0], ["2022-06-30", 0], ["2022-07-01", 0], ["2022-07-02", 0], ["2022-07-03", 0], ["2022-07-04", 0], ["2022-07-05", 0], ["2022-07-06", 0], ["2022-07-07", 0], ["2022-07-08", 0], ["2022-07-09", 0], ["2022-07-10", 0], ["2022-07-11", 0], ["2022-07-12", 0], ["2022-07-13", 0], ["2022-07-14", 0], ["2022-07-15", 0], ["2022-07-16", 0], ["2022-07-17", 0], ["2022-07-18", 0], ["2022-07-19", 0], ["2022-07-20", 0], ["2022-07-21", 0], ["2022-07-22", 0], ["2022-07-23", 0], ["2022-07-24", 0], ["2022-07-25", 0], ["2022-07-26", 0], ["2022-07-27", 0], ["2022-07-28", 0], ["2022-07-29", 0], ["2022-07-30", 0], ["2022-07-31", 0], ["2022-08-01", 3], ["2022-08-02", 1], ["2022-08-03", 0], ["2022-08-04", 0], ["2022-08-05", 0], ["2022-08-06", 0], ["2022-08-07", 0], ["2022-08-08", 1]]
-        }]
+    
 
-    };
-    setTimeout(() => {
-        myChart.setOption(option);
-    }, 500);
-  }, 500);
+    <!-- 打赏 -->
+    
+
+    <!-- 分享 -->
+    
+      <!-- https://github.com/overtrue/share.js -->
+<!-- 文章详情页的分享 -->
+<div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+
+<script src="/js/shareJs/social-share.min.js"></script>
 </script>
 
-<div class="archive-main">
-  <section class="archive">
-    <div class="archive-content">
-      <ul class="post-archive">
+<style>
+  .social-share {
+    margin: 20px 0;
+  }
+</style>
+
+
+    
+    
+    <!-- 评论 -->
+    <!-- 评论 -->
+
+  <div id="myComment">
+    
+  </div>
+
+<!-- comment script in themes\hexo-theme-bamboo\layout\_partial\scripts\index.ejs -->
+
+
+  </div>
+
+  <!-- 目录 -->
+  <!-- 文章详情页右侧目录 -->
+
+  <div class="toc-aside">
+    <div class="toc-main">
+      <div class="toc-aside-title">
+        <i class="fa fa-list-ul" aria-hidden="true"></i><span>本文目录</span>
         
+          <div class="toc-open-close">本文目录</div>
         
-          
-            
-            <div class="year" data-aos="zoom-in-up">
-                <div class="bullet"></div>
-                <a href="/archives/2022">2022</a>
-            </div>
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2022/08/08/technology/frontEnd/uni-app/save-image-dom/" class="post-img lazyload" data-original="/medias/background/uni-app-background.png" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">08-08</span>
-              </div>
-              <a class="post-title" href="/2022/08/08/technology/frontEnd/uni-app/save-image-dom/">uni-app使用html2canvas-renderjs根据页面dom生成图片</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2022/08/02/technology/frontEnd/Webcss/generate-cover/" class="post-img lazyload" data-original="/medias/background/css-background.png" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">08-02</span>
-              </div>
-              <a class="post-title" href="/2022/08/02/technology/frontEnd/Webcss/generate-cover/">简易封面生成器</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2022/08/01/technology/hexo/hexo-writing-norms/" class="post-img lazyload" data-original="/medias/background/hexo-background.png" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">08-01</span>
-              </div>
-              <a class="post-title" href="/2022/08/01/technology/hexo/hexo-writing-norms/">hexo写文章创作规范</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2022/08/01/technology/other/commit-technology/" class="post-img lazyload" data-original="/medias/background/10.jpg" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">08-01</span>
-              </div>
-              <a class="post-title" href="/2022/08/01/technology/other/commit-technology/">commit规范</a>
-            </div>
-          </li>
-        
-          
-          <li class="post-item" data-aos="fade-left">
-            
-            <div class="post-img-box">
-              <a href="/2022/08/01/technology/frontEnd/Webjs/quick-sort/" class="post-img lazyload" data-original="/medias/background/js-background.png" style="background-size: cover; 
-                background-position: center center;">
-              </a>
-            </div>
-            <div class="post-date-title">
-              <div>
-                <span class="post-date">08-01</span>
-              </div>
-              <a class="post-title" href="/2022/08/01/technology/frontEnd/Webjs/quick-sort/">快排</a>
-            </div>
-          </li>
-        
-      </ul>
+      </div>
+      <div class="toc-content">
+        <div class="toc"></div>
+      </div>
     </div>
-  </section>
+  </div>
+  <!-- js在scripts目录下的的toc.ejs里面 -->
   
+
+  <script>
+    function openBtnClickFn () {
+      let openOrCloseBtn = $('.toc-aside .toc-aside-title .toc-open-close');
+      let open = eval('' || 'true');
+      openOrCloseBtn.click(function() {
+        if (open === true) {
+          $(".toc-aside").css({'width': 0, 'padding': 0});
+          $(".toc-content").css({'width': 0});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'none'});
+          $(".main-content").css({'width': '75%', 'margin': '10px auto'});
+          open = false;
+        } else {
+          $(".toc-aside").css({'width': '300px', 'padding': '0 10px'});
+          $(".toc-content").css({'width': '300px'});
+          $(".toc-aside-title span, .toc-aside-title i").css({'display': 'inline-block'});
+          $(".main-content").css({'width': '65%', 'margin-right': '10px', 'margin-left': 'calc(35% - 350px)'});
+          open = true;
+        }
+      });
+    };
+    openBtnClickFn();
+    document.addEventListener('pjax:complete', function () {
+      openBtnClickFn();
+    })
+  </script>
+
+
+  
+
+  <!-- 图片放大 Wrap images with fancybox support -->
+  <script src="/js/wrapImage.js"></script>
 </div>
+
+<!-- 文章详情页背景图 -->
+<div id="appBgSwiper" style="position: fixed;left: 0;top: 0;width: 100%;height: 100%;z-index: -2;" :style="{'background-color': bgColor ? bgColor : 'transparent'}">
+    <transition-group tag="ul" :name="names">
+        <li v-for='(image,index) in img' :key='index' v-show="index === mark" class="bg-swiper-box">
+            <img :src="image" class="bg-swiper-img">
+        </li>
+    </transition-group>
+</div>
+<script>
+    var vm = new Vue({
+        el: '#appBgSwiper',
+        data: {
+            names: '' || 'fade' || 'fade', // translate-fade fade
+            mark: 0,
+            img: [],
+            bgColor: '',
+            time: null
+        },
+        methods: {   //添加方法
+            change(i, m) {
+                if (i > m) {
+                    // this.names = 'fade';
+                } else if (i < m) {
+                    // this.names = 'fade';
+                } else {
+                    return;
+                }
+                this.mark = i;
+            },
+            prev() {
+                // this.names = 'fade';
+                this.mark--;
+                if (this.mark === -1) {
+                    this.mark = 3;
+                    return
+                }
+            },
+            next() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            autoPlay() {
+                // this.names = 'fade';
+                this.mark++;
+                if (this.mark === this.img.length) {
+                    this.mark = 0;
+                    return
+                }
+            },
+            play() {
+                let bgImgDelay = '' || '180000'
+                let delay = parseInt(bgImgDelay) || 180000;
+                this.time = setInterval(this.autoPlay, delay);
+            },
+            enter() {
+                clearInterval(this.time);
+            },
+            leave() {
+                this.play();
+            }
+        },
+        created() {
+            this.play()
+        },
+        beforeDestroy() {
+            clearInterval(this.time);
+        },
+        mounted() {
+            let prop = ''|| '';
+            let isImg = prop.includes('.bmp') || prop.includes('.jpg') || prop.includes('.png') || prop.includes('.tif') || prop.includes('.gif') || prop.includes('.pcx') || prop.includes('.tga') || prop.includes('.exif') || prop.includes('.fpx') || prop.includes('.psd') || prop.includes('.cdr') || prop.includes('.pcd') || prop.includes('.dxf') || prop.includes('.ufo') || prop.includes('.eps') || prop.includes('.ai') || prop.includes('.raw') || prop.includes('.WMF') || prop.includes('.webp') || prop.includes('.jpeg') || prop.includes('http://') || prop.includes('https://') 
+            if (isImg) {
+                let img = prop.split(',');
+                let configRoot = '/'
+                let arrImg = [];
+                img.forEach(el => {
+                    var Expression=/http(s)?:\/\/([\w-]+\.)+[\w-]+(\/[\w- .\/?%&=]*)?/;
+			        var objExp = new RegExp(Expression);
+
+                    if(objExp.test(el)) {
+                        // http or https
+                        arrImg.push(el);
+                    } else {
+                        // 非http or https开头
+                        // 本地文件
+                        let firstStr = el.charAt(0);
+                        if (firstStr == '/') {
+                            el = el.substr(1); // 删除第一个字符 '/',因为 configRoot最后一个字符为 /
+                        }
+                        el = configRoot + el;
+                        arrImg.push(el);
+                    }
+                })
+                this.img = arrImg;
+            } else {
+                this.bgColor = prop;
+            }
+        }
+    })
+</script>
+
+<style>
+    .bg-swiper-box {
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+    }
+    .bg-swiper-img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+</style>
+
     </main>
 
     <!-- 页脚 -->
